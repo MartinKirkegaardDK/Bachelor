@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/juliehinge/Documents/semester%206/Bachelor_project/mlflow_tracking/mlruns/0/ee34e15083d34870a6f650cfc8851134/artifacts
+end_time: 1677502459079
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ee34e15083d34870a6f650cfc8851134
+run_name: agreeable-mole-586
+run_uuid: ee34e15083d34870a6f650cfc8851134
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1677502442574
+status: 3
+tags: []
+user_id: juliehinge
