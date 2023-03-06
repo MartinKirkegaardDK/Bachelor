@@ -11,7 +11,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import lib
 
-friendship_data = pd.read_csv("friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+friendship_data = pd.read_csv("../friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
 
 friendship_data = lib.preprocess(friendship_data)
 
@@ -22,11 +22,11 @@ cartesian_df = lib.select_relevant_cells(cartesian_df)
 label_names = lib.from_diagonal_to_list(cartesian_df)
 friendship_data = lib.df_to_list(friendship_data)
 
-fb_data_technology = lib.load("fb_data/FBCosDist_Technology.csv",",")
+fb_data_technology = lib.load("../fb_data/FBCosDist_Technology.csv",",")
 fb_data_technology = lib.preprocess(fb_data_technology)
 fb_data_technology = lib.df_to_list(fb_data_technology)
 
-fb_data_business = lib.load("fb_data/FBCosDist_BusinessIndustry.csv",",")
+fb_data_business = lib.load("../fb_data/FBCosDist_BusinessIndustry.csv",",")
 fb_data_business = lib.preprocess(fb_data_business)
 fb_data_business = lib.df_to_list(fb_data_business)
 

@@ -59,7 +59,7 @@ def load(filename,delimiter):
 
 def preprocess(pandas_dataframe):
     #We load in the relevant iso codes as a set
-    with open("relevant_iso_codes.txt") as my_file:
+    with open("../relevant_iso_codes.txt") as my_file:
         x = my_file.read()
         headers_to_keep = set(x.split("\n"))
 
@@ -154,9 +154,10 @@ def create_label_dict(iso_codes: list, x_values: list ):
     for name, value in zip(iso_codes, new_list):
         label_dict[name] = value
     return label_dict
+
 def create_target_data():
     """Creates our taget data and a list of all the label names"""
-    friendship_data = pd.read_csv("friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+    friendship_data = pd.read_csv("../friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
     friendship_data = preprocess(friendship_data)
     codes = list(friendship_data["ISO_CODE"])
     cartesian_df = create_cartesian_product(codes)
@@ -170,16 +171,71 @@ def load_everthing():
     """Loads in everything so the data is ready to be used for training and transforming"""
     X_list = []
     label_names, taget_data = create_target_data()
-    for file in os.listdir("fb_data"):
+    for file in os.listdir("../fb_data"):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #idk what these files are, so we skip them for now
             if file in ["FBCosDist.csv","FBEucDist.csv"]:
                 continue
-            df = load("fb_data/" + file,",")
+            df = load("../fb_data/" + file,",")
             df = preprocess(df)
             df = df_to_list(df)
             X_list.append(df)
     X_dict = create_label_dict(label_names,X_list)
     Y_dict = create_label_dict(label_names, [taget_data])
     return X_dict, Y_dict
+
+def get_feature_names():
+
+    names = []
+    for file in os.listdir('../fb_data'):
+        filename = os.fsdecode(file)
+
+        if filename in ["FBCosDist.csv","FBEucDist.csv"]:
+                continue
+        if filename.endswith(".csv"):
+            names.append(filename.strip('csv'))
+    return names
+
+
+def get_indv_feature_names():
+
+    cos = []
+    euc = []
+    het = []
+    man = []
+
+    for file in os.listdir('../fb_data'):
+        filename = os.fsdecode(file)
+        if filename.endswith(".csv") and 'Empty' not in filename and '_' in filename:
+            if 'Cos' in filename:
+                cos.append(filename)
+            elif 'Euc' in filename:
+                euc.append(filename)
+            elif 'Het' in filename:
+                het.append(filename)
+            elif 'Man' in filename:
+                man.append(filename)
+    
+    return cos, euc, het, man
+
+
+def make_total_df():
+
+    label_names, taget_data = create_target_data()
+
+
+    X_dict, Y_dict = load_everthing()
+
+    X = list(X_dict.values())
+    Y = [x[0] for x in Y_dict.values()]
+
+    labels = np.reshape(Y,(len(Y),1))
+    data = np.concatenate([X,labels],axis=1)
+    df = pd.DataFrame(data)
+    feature_names = get_feature_names()
+
+    feature_names.append("Y_labels")
+    df.columns = feature_names
+
+    return df
