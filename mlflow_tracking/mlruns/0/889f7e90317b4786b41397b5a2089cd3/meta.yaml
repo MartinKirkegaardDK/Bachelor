@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/juliehinge/Documents/semester%206/Bachelor_project/mlflow_tracking/mlruns/0/889f7e90317b4786b41397b5a2089cd3/artifacts
+end_time: 1678095752547
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 889f7e90317b4786b41397b5a2089cd3
+run_name: blushing-dolphin-716
+run_uuid: 889f7e90317b4786b41397b5a2089cd3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678095736817
+status: 3
+tags: []
+user_id: juliehinge

@@ -8,7 +8,7 @@ def calculate_betweenness_centrality(filepath):
     country_to_continent = {}
 
     # Open the all.csv file
-    with open('/Users/evachristelsdottir/Documents/GitHub/Bachelor/all.csv', newline='', encoding='utf8') as csvfile:
+    with open('../all.csv', newline='', encoding='utf8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             country_code = row['alpha-2']
@@ -54,9 +54,9 @@ def calculate_betweenness_centrality(filepath):
 
     return G, centrality_by_continent
 
-calculate_betweenness_centrality("fb_data/FBCosDist.csv")
+G, centrality_by_continent = calculate_betweenness_centrality("../fb_data/FBCosDist.csv")
 
-def draw_graph(G, pos, node_size=20, node_color='blue', edge_color='gray', alpha=0.5):
+def draw_graph(G, node_size=20, node_color='blue', edge_color='gray', alpha=0.5):
     # Define the layout of the graph
     pos = nx.spring_layout(G)
 
@@ -66,4 +66,4 @@ def draw_graph(G, pos, node_size=20, node_color='blue', edge_color='gray', alpha
     # Show the plot
     plt.show()
     
-draw_graph(G,pos)
+draw_graph(G)
