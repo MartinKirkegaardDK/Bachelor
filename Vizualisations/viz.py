@@ -14,12 +14,13 @@ def make_merged_df(country_code):
     """
 
     # Loading in the Facebook data
-    friendship_data = pd.read_csv("/Users/juliehinge/Documents/semester 6/Bachelor_project/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter="\t")
+    friendship_data = pd.read_csv("../friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter="\t")
     # Only choosing the countries that are connected to the location we are interested in
     country_connect = friendship_data[friendship_data['user_loc'] == country_code]
 
     # Reading in the shapefile using Geopandas
-    shapefile = '/Users/juliehinge/Documents/semester 6/bachelor/data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp'
+    shapefile = 'data_viz/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp'
+    # Shapefile from https://github.com/jorisvandenbossche/geopandas-tutorial/blob/main/data/ne_110m_admin_0_countries.zip
     geo_df = gpd.read_file(shapefile)[['ADMIN', 'ADM0_A3', 'geometry']]
     geo_df.columns = ['country', 'country_code', 'geometry']
 
@@ -35,8 +36,6 @@ def make_merged_df(country_code):
     geo_df = geo_df.drop(geo_df.loc[geo_df['iso2_code'] == 'NULL'].index)
 
     return country_connect, geo_df
-
-
 
 
 def Choropleth_map(country_code):
