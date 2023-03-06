@@ -186,39 +186,16 @@ def load_everthing():
     return X_dict, Y_dict
 
 def get_feature_names():
-
+    """Function to get the list of all the feature categories i.e Facebook interest categories"""
     names = []
     for file in os.listdir('../fb_data'):
         filename = os.fsdecode(file)
 
-        if filename in ["FBCosDist.csv","FBEucDist.csv"]:
+        if filename in ["FBCosDist.csv","FBEucDist.csv"]: # Ignoring files with all the interest combined
                 continue
-        if filename.endswith(".csv"):
+        if filename.endswith(".csv"): # Ignoring all the files ending with dta as they are just copies of the csv
             names.append(filename.strip('csv'))
     return names
-
-
-def get_indv_feature_names():
-
-    cos = []
-    euc = []
-    het = []
-    man = []
-
-    for file in os.listdir('../fb_data'):
-        filename = os.fsdecode(file)
-        if filename.endswith(".csv") and 'Empty' not in filename and '_' in filename:
-            if 'Cos' in filename:
-                cos.append(filename)
-            elif 'Euc' in filename:
-                euc.append(filename)
-            elif 'Het' in filename:
-                het.append(filename)
-            elif 'Man' in filename:
-                man.append(filename)
-    
-    return cos, euc, het, man
-
 
 def make_total_df():
 
@@ -240,3 +217,16 @@ def make_total_df():
     return df
 
 
+
+def get_indv_df(metric):
+
+    df = make_total_df()
+    
+    metric_li = []
+    for column in df.columns:
+        if metric.title() in column:
+            metric_li.append(column)
+
+    metric_df = df[metric_li]
+
+    return metric_df

@@ -1,28 +1,4 @@
-
 import sys
-sys.path.append('..')
-import PCA.lib as lib
-import sklearn
-from sklearn.preprocessing import StandardScaler
-import numpy as np
-
-
-X_dict, Y_dict = lib.load_everthing()
-X = list(X_dict.values())
-
-df = lib.make_total_df()
-x = df.loc[:, X].values
-x = StandardScaler().fit_transform(x) # normalizing the features
-
-
-print(x.shape)
-print(np.mean(x),np.std(x))
-
-
-
-
-
-
 sys.path.append('..')
 import lib
 from sklearn.preprocessing import StandardScaler
@@ -31,28 +7,48 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-#X_dict, Y_dict = lib.load_everthing()
-#X = list(X_dict.values())
 
-X_dict, Y_dict = lib.load_everthing()
-X = list(X_dict.values())
-LOCAL_DATA = True # Reviews and models are downloaded if True
 
-df = lib.make_total_df()
-x = df.loc[:, X].values
+LOCAL_DATA = False 
 
 if  LOCAL_DATA:
-    df = pd.read_csv('combined_df.csv')
+    data = pd.read_csv('combined_df.csv')
+    df = pd.DataFrame(data)
+    print("test")
 
 else:
     df = lib.make_total_df()
 
-print(df)
 
+cos_df = lib.get_indv_df('cos')
 
-
+print(cos_df.head())
 
 """
+
+cos = []
+euc = []
+het = []
+man = []
+
+for column in df.columns:
+    if 'Cos' in column:
+        cos.append(column)
+    elif 'Euc' in column:
+        euc.append(column)
+    elif 'Het' in column:
+        het.append(column)
+    elif 'Man' in column:
+        man.append(column)
+
+cos_df = df[cos]
+euc_df = df[euc]
+het_df = df[het]
+man_df = df[man]
+
+
+
+
 feature_names = lib.get_feature_names()
 x = df.loc[:, feature_names].values
 x = StandardScaler().fit_transform(x) # normalizing the features
