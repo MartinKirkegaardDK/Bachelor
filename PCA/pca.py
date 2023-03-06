@@ -1,7 +1,8 @@
 
 import sys
 sys.path.append('..')
-import lib
+import PCA.lib as lib
+import sklearn
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 

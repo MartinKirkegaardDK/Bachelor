@@ -1,15 +1,14 @@
-
-
 import sys
 sys.path.append('..')
 import os
+import sklearn
 import mlflow
 import mlflow.sklearn
 import pandas as pd
 from sklearn.svm import SVC
 import numpy as np
 from sklearn.linear_model import LinearRegression
-import lib
+import lib 
 
 friendship_data = pd.read_csv("../friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
 

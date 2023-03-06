@@ -1,3 +1,7 @@
+
+
+import sys
+sys.path.append('..')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,6 +34,7 @@ def redundant_pairs(df):
         for j in range(0, i+1):
             pairs_to_drop.add((cols[i], cols[j]))
     return pairs_to_drop
+
 
 def top_abs_correlations(df, n=5):
     au_corr = df.corr().abs().unstack()
