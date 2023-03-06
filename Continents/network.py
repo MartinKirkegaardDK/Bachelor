@@ -8,7 +8,7 @@ def calculate_betweenness_centrality(filepath):
     country_to_continent = {}
 
     # Open the all.csv file
-    with open('/Users/evachristelsdottir/Documents/GitHub/Bachelor/all.csv', newline='', encoding='utf8') as csvfile:
+    with open('../all.csv', newline='', encoding='utf8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             country_code = row['alpha-2']
