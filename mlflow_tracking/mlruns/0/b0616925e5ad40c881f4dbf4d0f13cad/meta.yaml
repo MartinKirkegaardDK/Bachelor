@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/evachristelsdottir/Documents/GitHub/Bachelor/mlflow_tracking/mlruns/0/b0616925e5ad40c881f4dbf4d0f13cad/artifacts
+end_time: 1678110084739
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b0616925e5ad40c881f4dbf4d0f13cad
+run_name: rogue-wren-836
+run_uuid: b0616925e5ad40c881f4dbf4d0f13cad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678110063701
+status: 4
+tags: []
+user_id: juliehinge
