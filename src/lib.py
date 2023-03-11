@@ -1,8 +1,11 @@
 import pandas as pd
-import os
 import warnings
 import numpy as np
 #from pathlib import Path
+import sys
+
+import os
+from config.definitions import ROOT_DIR
 
 
 
@@ -25,9 +28,9 @@ def get_common(fb_data, friendship_data):
 
 def get_intersection():
     """Gets all the correct ISO-codes. This means the intersection of all ISO-codes in our datasets"""
-    friendship_data = pd.read_csv("../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+    friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
     friendship_data = remove_self_loops(friendship_data,"user_loc","fr_loc")
-    fb_data = pd.read_csv("../data/fb_data/FBCosDist.csv", delimiter= ",",keep_default_na=False)
+    fb_data = pd.read_csv("data/fb_data/FBCosDist.csv", delimiter= ",",keep_default_na=False)
     fb_data = remove_self_loops(fb_data,"ISO_CODE_1","ISO_CODE_2")
     fb_data, friendship_data = get_common(fb_data, friendship_data)
 
@@ -61,7 +64,7 @@ def load(filename,delimiter):
 
 def preprocess(pandas_dataframe):
     #We load in the relevant iso codes as a set
-    with open("../data/relevant_iso_codes.txt") as my_file:
+    with open("data/relevant_iso_codes.txt") as my_file:
         x = my_file.read()
         headers_to_keep = set(x.split("\n"))
 
@@ -159,7 +162,7 @@ def create_label_dict(iso_codes: list, x_values: list ):
 
 def create_target_data():
     """Creates our taget data and a list of all the label names"""
-    friendship_data = pd.read_csv("../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+    friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
     friendship_data = preprocess(friendship_data)
     codes = list(friendship_data["ISO_CODE"])
     cartesian_df = create_cartesian_product(codes)
@@ -174,13 +177,13 @@ def load_everthing():
     """Loads in everything so the data is ready to be used for training and transforming"""
     X_list = []
     label_names, taget_data = create_target_data()
-    for file in os.listdir("../data/fb_data"):
+    for file in os.listdir("data/fb_data"):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #idk what these files are, so we skip them for now
             if file in ["FBCosDist.csv","FBEucDist.csv"]:
                 continue
-            df = load("../data/fb_data/" + file,",")
+            df = load("data/fb_data/" + file,",")
             df = preprocess(df)
             df = df_to_list(df)
             X_list.append(df)
@@ -192,7 +195,7 @@ def get_feature_names(metric):
     """Function to get the list of all the feature categories i.e Facebook interest categories"""
     
     names = []
-    for file in os.listdir('../data/fb_data'):
+    for file in os.listdir('data/fb_data'):
         filename = os.fsdecode(file)
 
         if filename in ["FBCosDist.csv","FBEucDist.csv"]: # Ignoring files with all the interest combined

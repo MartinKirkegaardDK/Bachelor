@@ -1,12 +1,9 @@
-import os
+
 import sys
-
-parent_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
-data_dir = os.path.join(parent_dir, "../data")
-
-sys.path.append(data_dir)
-os.chdir(data_dir)
-
+sys.path.insert(0, '..')
+from config.definitions import ROOT_DIR
+import os
+file_path = os.path.join(ROOT_DIR, 'data')
 
 import lib
 from sklearn.preprocessing import StandardScaler
@@ -73,5 +70,6 @@ x, pca, pcamodel = pca_func(cos_df)
 
 myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),list(x.columns))
 plt.show()
+
 
 

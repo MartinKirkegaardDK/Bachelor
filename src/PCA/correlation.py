@@ -1,11 +1,11 @@
 
 
 import sys
-import os 
-parent_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
-sys.path.append(parent_dir)
-data_dir = os.path.join(parent_dir, "../data")
-os.chdir(data_dir)
+sys.path.insert(0, '..')
+from config.definitions import ROOT_DIR
+import os
+file_path = os.path.join(ROOT_DIR, 'data')
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
