@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/evachristelsdottir/Documents/GitHub/Bachelor/mlflow_tracking/mlruns/0/e91c5897c2d349219fbfa6672be5c288/artifacts
+end_time: 1678110386091
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e91c5897c2d349219fbfa6672be5c288
+run_name: upbeat-gnu-622
+run_uuid: e91c5897c2d349219fbfa6672be5c288
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678110376514
+status: 4
+tags: []
+user_id: juliehinge
