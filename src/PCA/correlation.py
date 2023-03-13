@@ -9,7 +9,7 @@ file_path = os.path.join(ROOT_DIR, 'data')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import lib
+import utils.lib as lib
 
 def correlation_matrix():
     # Getting the data 

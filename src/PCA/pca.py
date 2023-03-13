@@ -16,8 +16,8 @@ import sys
 #from config.definitions import ROOT_DIR
 
 #sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.insert(0,'..')
-import lib
+#sys.path.insert(0,'..')
+#import utils.lib as lib
 
 #data_path = os.path.join(ROOT_DIR)
 
