@@ -56,7 +56,7 @@ def calculate_betweenness_centrality(filepath):
 
     return G, centrality_by_continent
 
-G, centrality_by_continent = calculate_betweenness_centrality("../../../data/fb_data/FBCosDist.csv")
+G, centrality_by_continent = calculate_betweenness_centrality("../../data/fb_data/FBCosDist.csv")
 
 def draw_graph(G, node_size=20, node_color='blue', edge_color='gray', alpha=0.5):
     # Define the layout of the graph
