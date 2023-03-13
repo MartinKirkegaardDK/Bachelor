@@ -1,6 +1,6 @@
 import sys
 sys.path.append('..')
-import lib
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -18,12 +18,11 @@ def make_distribution_plots(categories):
         data_frames[category] = df
     
     # Plotting each data frame side by side
-    fig, axs = plt.subplots(1, len(data_frames), figsize=(17,7))
+    fig, axs = plt.subplots(3, 5, figsize=(17,10))
     for i, (category, df) in enumerate(data_frames.items()):
-        axs[i].hist(df.values.flatten(), bins=50)
-        axs[i].set_title(category,rotation = 90)
-        axs[i].set_xlabel('Value')
-        #axs[i].set_ylabel('Frequency')
+        axs[i // 5, i % 5].hist(df.values.flatten(), bins=70)
+        axs[i // 5, i % 5].set_title(category)
+        #axs[i // 5, i % 5].set_xlabel('Value')
     plt.show()
 
 # Define the list of categories
