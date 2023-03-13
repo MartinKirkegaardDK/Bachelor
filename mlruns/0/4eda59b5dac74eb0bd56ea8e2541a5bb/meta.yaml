@@ -1,0 +1,15 @@
+artifact_uri: file:///home/tjuppen/Documents/GitHub/Bachelor/mlruns/0/4eda59b5dac74eb0bd56ea8e2541a5bb/artifacts
+end_time: 1678718343396
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4eda59b5dac74eb0bd56ea8e2541a5bb
+run_name: smiling-auk-769
+run_uuid: 4eda59b5dac74eb0bd56ea8e2541a5bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678718336477
+status: 3
+tags: []
+user_id: tjuppen

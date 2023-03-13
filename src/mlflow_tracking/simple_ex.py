@@ -9,7 +9,6 @@ from sklearn.svm import SVC
 import numpy as np
 from sklearn.linear_model import LinearRegression
 #import mlflow_tracking.lib as lib 
-import lib
 
 
 print(os.getcwd())

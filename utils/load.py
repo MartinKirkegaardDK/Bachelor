@@ -51,7 +51,6 @@ def select_relevant_cells(pandas_dataframe):
 
 def create_target_data():
     """Creates our taget data and a list of all the label names"""
-    print(os.getcwd())
     friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
     friendship_data = preprocess(friendship_data)
     codes = list(friendship_data["ISO_CODE"])
