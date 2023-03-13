@@ -1,11 +1,28 @@
 
-import sys
-sys.path.insert(0, '..')
-from config.definitions import ROOT_DIR
-import os
-file_path = os.path.join(ROOT_DIR, 'data')
 
+"""
+import os
+import sys
+
+# Add root directory to Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Import definitions module
+from config import definitions
+data_path = os.path.join(definitions.ROOT_DIR, 'data')
+"""
+import os
+import sys
+#sys.path.insert(0, os.path.abspath(''))
+#from config.definitions import ROOT_DIR
+
+#sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0,'..')
 import lib
+
+#data_path = os.path.join(ROOT_DIR)
+
+
+"""
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
@@ -71,5 +88,6 @@ x, pca, pcamodel = pca_func(cos_df)
 myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),list(x.columns))
 plt.show()
 
+"""
 
 

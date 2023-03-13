@@ -1,14 +1,14 @@
 import pandas as pd
 import warnings
 import numpy as np
-#from pathlib import Path
 import sys
-
 import os
-from config.definitions import ROOT_DIR
+from config import definitions
 
-
-
+#sys.path.insert(0, '..')
+os.chdir('../')
+print('\n\n')
+print(os.getcwd())
 def test():
     print("hejsa")
 
@@ -28,7 +28,7 @@ def get_common(fb_data, friendship_data):
 
 def get_intersection():
     """Gets all the correct ISO-codes. This means the intersection of all ISO-codes in our datasets"""
-    friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+    friendship_data = pd.read_csv("friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
     friendship_data = remove_self_loops(friendship_data,"user_loc","fr_loc")
     fb_data = pd.read_csv("data/fb_data/FBCosDist.csv", delimiter= ",",keep_default_na=False)
     fb_data = remove_self_loops(fb_data,"ISO_CODE_1","ISO_CODE_2")
@@ -230,6 +230,7 @@ def make_total_df():
     return df
 
 
+print(make_total_df())
 
 def get_indv_df(metric):
 
