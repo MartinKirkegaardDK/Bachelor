@@ -16,10 +16,6 @@ def run():
     X = list(X_dict.values())
     Y = [x[0] for x in Y_dict.values()]
 
-    # pipe = Pipeline(
-    #     [('scaler', StandardScaler()), 
-    #      ('Linear regression', LinearRegression())])
-
     pipe = Pipeline(
         [('scaler', StandardScaler()), 
          ('SVM', SVR())])
