@@ -1,6 +1,6 @@
-import sys
-sys.path.append("../utils")
+from utils.load import load_everthing
 
-import load as l
+def run():
+    x_dict, y_dict = load_everthing()
 
-x_dict, y_dict = l.load_everthing()
+    print("hej")
