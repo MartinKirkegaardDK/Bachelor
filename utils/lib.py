@@ -1,16 +1,9 @@
 import pandas as pd
 import warnings
 import numpy as np
-#from pathlib import Path
-import sys
-
 import os
-from config.definitions import ROOT_DIR
+# Custom libraries
 
-
-
-def test():
-    print("hejsa")
 
 def remove_self_loops(pandas_dataframe):
     """Removes self loops from a pandas dataframe by removing where two locations are equal. Example: AE = AE gets removed. Removing 184 selfloops"""
@@ -28,9 +21,9 @@ def get_common(fb_data, friendship_data):
 
 def get_intersection():
     """Gets all the correct ISO-codes. This means the intersection of all ISO-codes in our datasets"""
-    friendship_data = pd.read_csv("../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+    friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
     friendship_data = remove_self_loops(friendship_data,"user_loc","fr_loc")
-    fb_data = pd.read_csv("../data/fb_data/FBCosDist.csv", delimiter= ",",keep_default_na=False)
+    fb_data = pd.read_csv("data/fb_data/FBCosDist.csv", delimiter= ",",keep_default_na=False)
     fb_data = remove_self_loops(fb_data,"ISO_CODE_1","ISO_CODE_2")
     fb_data, friendship_data = get_common(fb_data, friendship_data)
 
@@ -77,69 +70,16 @@ def load_everthing():
     """Loads in everything so the data is ready to be used for training and transforming"""
     X_list = []
     label_names, taget_data = create_target_data()
-    for file in os.listdir("../data/fb_data"):
+    for file in os.listdir("data/fb_data"):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #idk what these files are, so we skip them for now
             if file in ["FBCosDist.csv","FBEucDist.csv"]:
                 continue
-            df = load("../data/fb_data/" + file,",")
+            df = load("data/fb_data/" + file,",")
             df = preprocess(df)
             df = df_to_list(df)
             X_list.append(df)
     X_dict = create_label_dict(label_names,X_list)
     Y_dict = create_label_dict(label_names, [taget_data])
     return X_dict, Y_dict
-
-def get_feature_names(metric):
-    """Function to get the list of all the feature categories i.e Facebook interest categories"""
-    
-    names = []
-    for file in os.listdir('../data/fb_data'):
-        filename = os.fsdecode(file)
-
-        if filename in ["FBCosDist.csv","FBEucDist.csv"]: # Ignoring files with all the interest combined
-                continue
-        if filename.endswith(".csv"): # Ignoring all the files ending with dta as they are just copies of the csv
-            if metric != None:
-                if metric.title() in filename:
-                    names.append(filename.strip('csv'))
-            else:
-                    names.append(filename.strip('csv'))
-
-    return names # Returning names of categories
-
-def make_total_df():
-
-    label_names, taget_data = create_target_data()
-
-
-    X_dict, Y_dict = load_everthing()
-
-    X = list(X_dict.values())
-    Y = [x[0] for x in Y_dict.values()]
-
-    labels = np.reshape(Y,(len(Y),1))
-    data = np.concatenate([X,labels],axis=1) #Adding the labels to the df of all features
-    df = pd.DataFrame(data)
-    feature_names = get_feature_names(None) 
-
-    feature_names.append("Y_labels")
-    df.columns = feature_names
-    
-    return df
-
-
-
-def get_indv_df(metric):
-
-    df = make_total_df()
-    
-    metric_li = []
-    for column in df.columns:
-        if metric.title() in column:
-            metric_li.append(column)
-
-    metric_df = df[metric_li]
-
-    return metric_df

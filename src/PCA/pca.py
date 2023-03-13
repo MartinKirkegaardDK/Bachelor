@@ -1,33 +1,12 @@
 
 
-"""
-import os
-import sys
 
-# Add root directory to Python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# Import definitions module
-from config import definitions
-data_path = os.path.join(definitions.ROOT_DIR, 'data')
-"""
-import os
-import sys
-#sys.path.insert(0, os.path.abspath(''))
-#from config.definitions import ROOT_DIR
-
-#sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-#sys.path.insert(0,'..')
-#import utils.lib as lib
-
-#data_path = os.path.join(ROOT_DIR)
-
-
-"""
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from utils.load import make_total_df,get_feature_names, get_indv_df
 
 LOCAL_DATA = False 
 
@@ -37,11 +16,13 @@ if  LOCAL_DATA:
     print("test")
 
 else:
-    df = lib.make_total_df()
+    df = make_total_df()
 
 def pca_func(df):
 
-    feature_names = lib.get_feature_names('cos')
+    df = make_total_df()
+
+    feature_names = get_feature_names('cos')
     x = df.loc[:, feature_names].values
     x = StandardScaler().fit_transform(x) # normalizing the features
     x = pd.DataFrame(x, columns=feature_names)
@@ -81,13 +62,13 @@ def myplot(score,coeff,labels=None):
     plt.grid()
 
 
-cos_df = lib.get_indv_df('cos')
+cos_df = get_indv_df('cos')
 
 x, pca, pcamodel = pca_func(cos_df)
 
 myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),list(x.columns))
 plt.show()
 
-"""
+
 
 

@@ -151,3 +151,58 @@ def load_everthing():
     Y_dict = create_label_dict(label_names, [taget_data])
     return X_dict, Y_dict
 
+
+
+
+
+
+def get_feature_names(metric):
+    """Function to get the list of all the feature categories i.e Facebook interest categories"""
+    
+    names = []
+    for file in os.listdir('data/fb_data'):
+        filename = os.fsdecode(file)
+
+        if filename in ["FBCosDist.csv","FBEucDist.csv"]: # Ignoring files with all the interest combined
+                continue
+        if filename.endswith(".csv"): # Ignoring all the files ending with dta as they are just copies of the csv
+            if metric != None:
+                if metric.title() in filename:
+                    names.append(filename.strip('csv'))
+            else:
+                    names.append(filename.strip('csv'))
+
+    return names # Returning names of categories
+
+def make_total_df():
+
+    label_names, taget_data = create_target_data()
+    X_dict, Y_dict = load_everthing()
+
+    X = list(X_dict.values())
+    Y = [x[0] for x in Y_dict.values()]
+
+    labels = np.reshape(Y,(len(Y),1))
+    data = np.concatenate([X,labels],axis=1) #Adding the labels to the df of all features
+    df = pd.DataFrame(data)
+    feature_names = get_feature_names(None) 
+
+    feature_names.append("Y_labels")
+    df.columns = feature_names
+    
+    return df
+
+
+
+def get_indv_df(metric):
+
+    df = make_total_df()
+    
+    metric_li = []
+    for column in df.columns:
+        if metric.title() in column:
+            metric_li.append(column)
+
+    metric_df = df[metric_li]
+
+    return metric_df
