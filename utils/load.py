@@ -131,28 +131,6 @@ def create_label_dict(iso_codes: list, x_values: list ):
     return label_dict
 
 
-def load_everthing():
-    """Loads in everything so the data is ready to be used for training and transforming"""
-    X_list = []
-    label_names, taget_data = create_target_data() 
-    
-    for file in os.listdir("data/fb_data"):
-        #We only look for csv files, not the other files
-        if file.endswith(".csv"):
-            #idk what these files are, so we skip them for now
-            if file in ["FBCosDist.csv","FBEucDist.csv"]:
-                continue
-            df = load("data/fb_data/" + file,",")
-            df = preprocess(df)
-            df = df_to_list(df)
-            X_list.append(df)
-    X_dict = create_label_dict(label_names,X_list)
-    Y_dict = create_label_dict(label_names, [taget_data])
-    return X_dict, Y_dict
-
-
-
-
 
 
 def get_feature_names(metric):
@@ -205,3 +183,41 @@ def get_indv_df(metric):
     metric_df = df[metric_li]
 
     return metric_df
+
+
+
+def load_everthing():
+    """Loads in everything so the data is ready to be used for training and transforming"""
+    X_dict = dict()
+    Y_dict = dict()
+    d = dict()
+    d["CosDist"] = []
+    d["EucDist"] = []
+    d["HetDist"] = []
+    d["ManDist"] = []
+    label_names, taget_data = create_target_data() 
+
+    for file in os.listdir("data/fb_data"):
+        #We only look for csv files, not the other files
+        if file.endswith(".csv"):
+            #idk what these files are, so we skip them for now
+            if file in ["FBCosDist.csv","FBEucDist.csv"]:
+                continue
+
+            df = load("data/fb_data/" + file,",")
+            df = preprocess(df)
+            df = df_to_list(df)
+            if "CosDist" in file:
+                d["CosDist"].append(df)
+            elif "EucDist" in file:
+                d["EucDist"].append(df)
+            elif "HetDist" in file:
+                d["HetDist"].append(df)
+            elif "ManDist" in file:
+                d["ManDist"].append(df)
+            
+    for key,val in d.items():
+        X_dict[key] = create_label_dict(label_names,val)
+        Y_dict[key] = create_label_dict(label_names, [taget_data])
+
+    return X_dict, Y_dict

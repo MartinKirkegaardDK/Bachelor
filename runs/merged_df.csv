@@ -1,0 +1,25 @@
+params,mean_test_score,dataset,model
+{'SVM__kernel': 'poly'},-0.0076868920824115,CosDist,models/test_10.pkl
+{'SVM__kernel': 'linear'},-0.0081793075021908,CosDist,models/test_10.pkl
+{'SVM__kernel': 'poly'},-0.0076868920824115,CosDist,models/test_18.pkl
+{'SVM__kernel': 'linear'},-0.0081793075021908,CosDist,models/test_18.pkl
+{'SVM__kernel': 'poly'},-0.0081732220979749,EucDist,models/test_19.pkl
+{'SVM__kernel': 'linear'},-0.0081845651215509,EucDist,models/test_19.pkl
+{'SVM__kernel': 'poly'},-0.008176873901803,HetDist,models/test_20.pkl
+{'SVM__kernel': 'linear'},-0.0081823835042119,HetDist,models/test_20.pkl
+{'SVM__kernel': 'poly'},-0.0081814857094354,ManDist,models/test_21.pkl
+{'SVM__kernel': 'linear'},-0.0081830866487927,ManDist,models/test_21.pkl
+{'SVM__kernel': 'poly'},-0.0081732220979749,EucDist,models/test_11.pkl
+{'SVM__kernel': 'linear'},-0.0081845651215509,EucDist,models/test_11.pkl
+{'SVM__kernel': 'poly'},-0.008176873901803,HetDist,models/test_12.pkl
+{'SVM__kernel': 'linear'},-0.0081823835042119,HetDist,models/test_12.pkl
+{'SVM__kernel': 'poly'},-0.0081814857094354,ManDist,models/test_13.pkl
+{'SVM__kernel': 'linear'},-0.0081830866487927,ManDist,models/test_13.pkl
+{'SVM__kernel': 'poly'},-0.0076868920824115,CosDist,models/test_14.pkl
+{'SVM__kernel': 'linear'},-0.0081793075021908,CosDist,models/test_14.pkl
+{'SVM__kernel': 'poly'},-0.0081732220979749,EucDist,models/test_15.pkl
+{'SVM__kernel': 'linear'},-0.0081845651215509,EucDist,models/test_15.pkl
+{'SVM__kernel': 'poly'},-0.008176873901803,HetDist,models/test_16.pkl
+{'SVM__kernel': 'linear'},-0.0081823835042119,HetDist,models/test_16.pkl
+{'SVM__kernel': 'poly'},-0.0081814857094354,ManDist,models/test_17.pkl
+{'SVM__kernel': 'linear'},-0.0081830866487927,ManDist,models/test_17.pkl
