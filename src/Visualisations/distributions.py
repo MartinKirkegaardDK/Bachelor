@@ -10,8 +10,8 @@ def make_distribution_plots(categories):
     # read in all the data files as a dictionary of data frames
     data_frames = {}
     for category in categories:
-        file_path = f"../data/fb_data/FBManDist_{category}.csv"
-        #file_path = f"../data/fb_data/FBCosDist_{category}.csv"
+        #file_path = f"../data/fb_data/FBManDist_{category}.csv"
+        file_path = f"../data/fb_data/FBCosDist_{category}.csv"
         #file_path = f"../data/fb_data/FBEucDist_{category}.csv"
         #file_path = f"../data/fb_data/FBHetDist_{category}.csv"
         df = pd.read_csv(file_path, index_col=0)
