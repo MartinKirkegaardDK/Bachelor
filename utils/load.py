@@ -210,9 +210,10 @@ def load_everthing_old():
 
 
 def make_total_df():
+    """ This function returns a dataframe with both the X-values and the Y-values along 
+    with the country labels as idices e.g DK-SE"""
 
     label_names, taget_data = create_target_data()
-
 
     X_dict, Y_dict = load_everthing_old()
 
@@ -232,6 +233,9 @@ def make_total_df():
 
 
 def get_indv_df(metric):
+
+    """Returns the same data frame as above but with only the 
+    cos, euc, man, het values """
 
     df = make_total_df()
     
