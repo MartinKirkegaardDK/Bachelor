@@ -7,26 +7,41 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
-def dist_labels(filepath, countrycode):
+def dist_labels(filepath, countrycode, number):
     # Read in the data
-    df = pd.read_csv(filepath, delimiter= "\t",keep_default_na=False)
+    df = pd.read_csv(filepath, delimiter="\t", keep_default_na=False)
 
     # Defining the country of interest
     country = countrycode
 
-    # Filtering the data to include the country of interest and all other countries
-    df_filtered = df.loc[((df["user_loc"] == country) & (df["fr_loc"] != country)) | ((df["user_loc"] != country) & (df["fr_loc"] == country))].copy()
+    # Filter the data to only include relations where the country of interest is the user_loc
+    relations = df[df["user_loc"] == country]
 
-    # Calculating the standardization for the entire dataset
-    scaler = StandardScaler()
-    df_filtered["scaled_sci"] = scaler.fit_transform(df_filtered[["scaled_sci"]])
+    # Filter out self-loops
+    relations = relations.loc[relations['fr_loc'] != country]
 
-    # Take the log of the scaled_sci column
-    df_filtered["log_scaled_sci"] = np.log(df_filtered["scaled_sci"])
+    # Sort the relations by scaled_sci values and select the top 10 and bottom 10
+    top_relations = relations.nlargest(number, "scaled_sci")
+    bottom_relations = relations.nsmallest(number, "scaled_sci")
 
-    # Plot the distribution of log_scaled_sci for the country of interest as user_loc
-    sns.histplot(data=df_filtered, x="log_scaled_sci", kde=True)
-    plt.title(f"Distribution of log scaled_sci for {country} as user_loc")
+    # Create subplots
+    fig, axs = plt.subplots(1, 2, figsize=(10, 5))
+
+    # Plot the top 10 relations
+    axs[0].bar(top_relations["fr_loc"], top_relations["scaled_sci"])
+    axs[0].set_xlabel("Country")
+    axs[0].set_ylabel("Scaled Sci Value")
+    axs[0].set_title(f"Top {number} relations for {country}")
+    axs[0].tick_params(axis='x', labelrotation=90)
+
+    # Plot the bottom 10 relations
+    axs[1].bar(bottom_relations["fr_loc"], bottom_relations["scaled_sci"])
+    axs[1].set_xlabel("Country")
+    axs[1].set_ylabel("Scaled Sci Value")
+    axs[1].set_title(f"Bottom {number} relations for {country}")
+    axs[1].tick_params(axis='x', labelrotation=90)
+
+    # Show the plot
     plt.show()
 
-dist_labels("../../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv","SE")
+dist_labels("../../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv","DK",15)
