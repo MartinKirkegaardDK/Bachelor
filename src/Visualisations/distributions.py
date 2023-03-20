@@ -1,6 +1,3 @@
-import sys
-sys.path.append('..')
-
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -56,30 +53,3 @@ categories = ["BusinessIndustry", "Education", "Uncategorized","FamilyRelationsh
 std_make_distribution_plots("Cos",categories)
 # Metrics: Cos, Euc, Man, Het
 
-# Log-scale transformed version 
-def logged_plots(metric, categories):
-    # read in all the data files as a dictionary of data frames
-    data_frames = {}
-    for category in categories:
-        file_path = f"data/fb_data/FB{metric}Dist_{category}.csv"
-        df = pd.read_csv(file_path, index_col=0)
-        
-        # Replace non-positive values with a small positive value to be able to log-scale transform
-        df[df <= 0] = 1e-10
-        
-        # Log-scale transform the data
-        df_log = np.log10(df)
-        data_frames[category] = df_log
-    
-    # Plotting each data frame side by side
-    fig, axs = plt.subplots(3, 5, figsize=(17,10))
-    for i, (category, df) in enumerate(data_frames.items()):
-        axs[i // 5, i % 5].hist(df.values.flatten(), bins=70)
-        axs[i // 5, i % 5].set_title(category)
-    plt.show()
-
-# Define the list of categories
-categories = ["BusinessIndustry", "Education", "Uncategorized","FamilyRelationships","FitnessWellness","FoodDrink","HobbiesActivities","LifestyleCulture",'NewsEntertainment','NonLocalBus','People','ShoppingFashion','SportsOutdoors','Technology','TravelPlacesEvents']
-
-# Calling the function with the list of categories
-logged_plots("Cos",categories)
