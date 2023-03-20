@@ -1,19 +1,12 @@
 
-
-import sys
-sys.path.insert(0, '..')
-from config.definitions import ROOT_DIR
-import os
-file_path = os.path.join(ROOT_DIR, 'data')
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import utils.lib as lib
+from utils.load import make_total_df
 
 def correlation_matrix():
     # Getting the data 
-    df4 = lib.make_total_df()
+    df4 = make_total_df()
 
     # Dropping the column Y_labels
     df4 = df4.drop(columns=['Y_labels'])
@@ -46,4 +39,4 @@ def top_abs_correlations(df, n=5):
     au_corr = au_corr.drop(labels=labels_to_drop).sort_values(ascending=False)
     return au_corr[0:n]
 
-print("Top 10 correlations:\n",top_abs_correlations(lib.make_total_df(),10))
+print("Top 10 correlations:\n",top_abs_correlations(make_total_df(),10))

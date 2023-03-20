@@ -1,12 +1,8 @@
-import sys
-sys.path.insert(0, '..')
-from config.definitions import ROOT_DIR
-import os
-file_path = os.path.join(ROOT_DIR, 'data')
+
 
 import pandas as pd
 
-friendship_data = pd.read_csv("../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv",delimiter='\t')
+friendship_data = pd.read_csv("../../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv",delimiter='\t')
 
 def check_link_values(country1, country2, data):
     df1 = data[(data['user_loc'] == country1) & (data['fr_loc'] == country2)]
