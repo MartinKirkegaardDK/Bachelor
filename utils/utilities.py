@@ -25,15 +25,19 @@ class result_object():
         self.data_type = dataset
         self.model_name = naming("models/","test","pkl")
         self.run_name = naming("runs/","test","csv")
-        joblib.dump(self.gridsearch, self.model_name)
+        self.pipeline = grid_search.estimator
+        joblib.dump(self.gridsearch, self.model_name) 
         d = pd.DataFrame(self.gridsearch.cv_results_)
         d = d[["params","mean_test_score"]]
         d["dataset"] =  [dataset for _ in range(len(d)) ]
-        d["model"] =  [self.model_name for _ in range(len(d)) ]
+        #d["score"] = grid_search.best_score_
+        d["model_file_name"] =  [self.model_name for _ in range(len(d)) ]
+        d["pipeline"] = self.pipeline
+        d["model_name"] = [self.pipeline[-1] for _ in range(len(d)) ] 
         self.dataframe = d
         self.X = X
         self.Y = Y
-        self.model = grid_search.best_estimator_.steps[-1]
+        
         self.dataframe.to_csv(self.run_name, index = False)
 
 def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True):
@@ -42,10 +46,10 @@ def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True
     X_dict, Y_dict =load_everthing()
 
 
-    for X_d, Y_d in zip(X_dict.items(),Y_dict.items()):
+    for X_d, Y_d in zip(X_dict.items(),Y_dict):
         dataset = X_d[0]
         X = list(X_d[1].values())
-        Y = [x[0] for x in Y_d[1].values()]
+        Y = [x[0] for x in Y_dict.values()]
         if log_transform == True:
             Y = np.log10(Y)
         print(dataset)

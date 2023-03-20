@@ -1,3 +1,0 @@
-params,mean_test_score,dataset,model
-{'SVM__kernel': 'poly'},0.013428641662421614,HetDist,models/test_37.pkl
-{'SVM__kernel': 'linear'},-0.0015662613206867792,HetDist,models/test_37.pkl
