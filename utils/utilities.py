@@ -33,6 +33,7 @@ class result_object():
         self.dataframe = d
         self.X = X
         self.Y = Y
+        self.model = grid_search.best_estimator_.steps[-1]
         self.dataframe.to_csv(self.run_name, index = False)
 
 def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True):
@@ -56,7 +57,7 @@ def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True
         print(search.best_params_)
         obj = result_object(search, dataset,X,Y)
         obj_list.append(obj)
-    
+        print("-"*75)
     if update_merge_df == True:
         merge_dfs()
     return obj_list

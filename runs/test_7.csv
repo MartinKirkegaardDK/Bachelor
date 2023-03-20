@@ -1,3 +1,0 @@
-params,mean_test_score,dataset,model
-{'SVM__kernel': 'poly'},-0.008173222097974974,EucDist,models/test_15.pkl
-{'SVM__kernel': 'linear'},-0.008184565121550946,EucDist,models/test_15.pkl

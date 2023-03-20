@@ -218,6 +218,7 @@ def load_everthing():
             
     for key,val in d.items():
         X_dict[key] = create_label_dict(label_names,val)
-        Y_dict[key] = create_label_dict(label_names, [taget_data])
+    
+    Y_dict = create_label_dict(label_names, [taget_data])
 
     return X_dict, Y_dict
