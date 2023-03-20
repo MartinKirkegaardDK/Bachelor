@@ -1,8 +1,8 @@
-
+from utils.load import make_total_df
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from utils.load import make_total_df
+
 
 def correlation_matrix():
     # Getting the data 
