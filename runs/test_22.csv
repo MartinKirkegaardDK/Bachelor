@@ -1,0 +1,3 @@
+params,mean_test_score,dataset,model
+{'SVM__kernel': 'poly'},0.26031203849946377,CosDist,models/test_30.pkl
+{'SVM__kernel': 'linear'},0.18559661880221695,CosDist,models/test_30.pkl
