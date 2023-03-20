@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 
 
-
 #reflection 2 juni
 #global 31 maj
 #24 maj - forsvar 12-14
@@ -151,40 +150,6 @@ def get_feature_names(metric):
 
     return names # Returning names of categories
 
-def make_total_df():
-
-    label_names, taget_data = create_target_data()
-    X_dict, Y_dict = load_everthing()
-
-    X = list(X_dict.values())
-    Y = [x[0] for x in Y_dict.values()]
-
-    labels = np.reshape(Y,(len(Y),1))
-    data = np.concatenate([X,labels],axis=1) #Adding the labels to the df of all features
-    df = pd.DataFrame(data)
-    feature_names = get_feature_names(None) 
-
-    feature_names.append("Y_labels")
-    df.columns = feature_names
-    
-    return df
-
-
-
-def get_indv_df(metric):
-
-    df = make_total_df()
-    
-    metric_li = []
-    for column in df.columns:
-        if metric.title() in column:
-            metric_li.append(column)
-
-    metric_df = df[metric_li]
-
-    return metric_df
-
-
 
 def load_everthing():
     """Loads in everything so the data is ready to be used for training and transforming"""
@@ -222,3 +187,59 @@ def load_everthing():
     Y_dict = create_label_dict(label_names, [taget_data])
 
     return X_dict, Y_dict
+
+
+
+def load_everthing_old():
+    """Loads in everything so the data is ready to be used for training and transforming"""
+    X_list = []
+    label_names, taget_data = create_target_data()
+    for file in os.listdir("data/fb_data"):
+        #We only look for csv files, not the other files
+        if file.endswith(".csv"):
+            #idk what these files are, so we skip them for now
+            if file in ["FBCosDist.csv","FBEucDist.csv"]:
+                continue
+            df = load("data/fb_data/" + file,",")
+            df = preprocess(df)
+            df = df_to_list(df)
+            X_list.append(df)
+    X_dict = create_label_dict(label_names,X_list)
+    Y_dict = create_label_dict(label_names, [taget_data])
+    return X_dict, Y_dict
+
+
+def make_total_df():
+
+    label_names, taget_data = create_target_data()
+
+
+    X_dict, Y_dict = load_everthing_old()
+
+    X = list(X_dict.values())
+    Y = [x[0] for x in Y_dict.values()]
+
+    labels = np.reshape(Y,(len(Y),1))
+    data = np.concatenate([X,labels],axis=1) #Adding the labels to the df of all features
+    df = pd.DataFrame(data)
+    feature_names = get_feature_names(None) 
+
+    feature_names.append("Y_labels")
+    df.columns = feature_names
+
+    return df
+
+
+
+def get_indv_df(metric):
+
+    df = make_total_df()
+    
+    metric_li = []
+    for column in df.columns:
+        if metric.title() in column:
+            metric_li.append(column)
+
+    metric_df = df[metric_li]
+
+    return metric_df

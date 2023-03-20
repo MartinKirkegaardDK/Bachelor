@@ -1,0 +1,2 @@
+params,mean_test_score,dataset,model
+{'SVM__kernel': 'poly'},-33673.91385021517,EucDist,models/test_23.pkl
