@@ -1,5 +1,5 @@
-from src.PCA.pca import scree_plot
+from src.Visualisations.map.viz import Choropleth_map
 
 
-print(scree_plot())
+Choropleth_map('DE')
 
