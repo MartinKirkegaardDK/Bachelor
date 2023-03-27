@@ -1,8 +1,8 @@
-
-
 import pandas as pd
 
-friendship_data = pd.read_csv("../../data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv",delimiter='\t')
+# Here we check if two links between two countries are the same. 
+
+friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv",delimiter='\t')
 
 def check_link_values(country1, country2, data):
     df1 = data[(data['user_loc'] == country1) & (data['fr_loc'] == country2)]
