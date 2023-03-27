@@ -1,8 +1,8 @@
 from utils.load import make_total_df
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
+# Here we find the Pearson correlation between the features. First we plot the correlation matrix, then we print out the top 10 correlations. 
 
 def correlation_matrix():
     # Getting the data 
@@ -22,16 +22,14 @@ def correlation_matrix():
     
 correlation_matrix()
 
-# Getting the top correlations 
+# Getting the top correlations. Here getting the diagonal and lower triangular pairs of correlation matrix
 def redundant_pairs(df):
-    '''Get diagonal and lower triangular pairs of correlation matrix'''
     pairs_to_drop = set()
     cols = df.columns
     for i in range(0, df.shape[1]):
         for j in range(0, i+1):
             pairs_to_drop.add((cols[i], cols[j]))
     return pairs_to_drop
-
 
 def top_abs_correlations(df, n=5):
     au_corr = df.corr().abs().unstack()
