@@ -18,7 +18,7 @@ if  LOCAL_DATA:
 else:
     df = make_total_df()
 
-def pca_func(df):
+def pca_func():
 
     df = make_total_df()
 
@@ -33,11 +33,12 @@ def pca_func(df):
     return x,pca, pcamodel
 
 
-def scree_plot(df):
-    x, pca,pcamodel = pca_func(df)
+def scree_plot():
+    x, pca,pcamodel = pca_func()
     plt.plot(pcamodel.explained_variance_)
-    plt.xlabel('number of components')
-    plt.ylabel('cumulative explained variance')
+    plt.title('Scree Plot')
+    plt.xlabel('Number of components')
+    plt.ylabel('Cumulative explained variance')
     plt.show()
 
 
@@ -62,12 +63,12 @@ def myplot(score,coeff,labels=None):
     plt.grid()
 
 
-cos_df = get_indv_df('cos')
+#cos_df = get_indv_df('cos')
 
-x, pca, pcamodel = pca_func(cos_df)
+#x, pca, pcamodel = pca_func(cos_df)
 
-myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),list(x.columns))
-plt.show()
+#myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),list(x.columns))
+#plt.show()
 
 
 
