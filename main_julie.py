@@ -1,5 +1,3 @@
-from src.PCA.pca import scree_plot
+from src.examples.gridsearch import model
 
-
-print(scree_plot())
-
+model()

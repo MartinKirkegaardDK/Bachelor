@@ -6,58 +6,56 @@ from sklearn.model_selection import GridSearchCV
 from utils.utilities import gridsearch
 from sklearn.preprocessing import Normalizer
 from sklearn.pipeline import Pipeline
-from sklearn.svm import SVR
-
-pipe = Pipeline(
-    [("normalize",Normalizer()),
-    ('SVM', SVR())])
-
-<<<<<<< Updated upstream
-param_grid = {
-            "SVM__kernel": ["poly","linear"]
-        }
-=======
-
-def run():
-    obj_list = []
-    print("Loading in data")
-    X_dict, Y_dict =load_everthing()
+#from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor
+from utils.load import load_everthing_old
+from sklearn.model_selection import RandomizedSearchCV
 
 
-    for X_d, Y_d in zip(X_dict.items(),Y_dict.items()):
-        dataset = X_d[0]
-        X = list(X_d[1].values())
-        Y = [x[0] for x in Y_d[1].values()]
+
+def model():
+    # Number of trees in random forest
+    n_estimators = [int(x) for x in np.linspace(start = 200, stop = 2000, num = 10)]
+    # Number of features to consider at every split
+    max_features = ['auto', 'sqrt']
+    # Maximum number of levels in tree
+    max_depth = [int(x) for x in np.linspace(10, 110, num = 11)]
+    max_depth.append(None)
+    # Minimum number of samples required to split a node
+    min_samples_split = [2, 5, 10]
+    # Minimum number of samples required at each leaf node
+    min_samples_leaf = [1, 2, 4]
+    # Method of selecting samples for training each tree
+    bootstrap = [True, False]
+    # Create the random grid
 
 
-        pipe = Pipeline(
-            [("normalize",Normalizer()),
-            ('SVM', SVR())])
-        #X_train, X_test, Y_train, Y_test = train_test_split(
-        #X, Y, test_size=0.15, random_state=42)
+    X_dict, Y_dict = load_everthing_old()
 
-        #reg = LinearRegression().fit(X_train, Y_train)
-        #pipe.fit(X_train, Y_train)
-        #score = pipe.score(X_test, Y_test)
-        
-        #param_grid = {
-        #    "SVM__kernel": ["rbf","linear","poly"]
-        #}
-        param_grid = {
-            "SVM__kernel": ["poly"]
-        }
-        print("running gridsearch")
-        search = GridSearchCV(pipe, param_grid, n_jobs=2,scoring= "neg_mean_absolute_error")
-        
-
-        search.fit(X, Y)
-        print("Best parameter (CV score=%0.3f):" % search.best_score_)
-        print(search.best_params_)
-        obj = result_object(search, dataset,X,Y)
-        obj_list.append(obj)
-    return obj_list
+    X = list(X_dict.values())
+    Y = [x[0] for x in Y_dict.values()]
+    Y = np.log10(Y)
 
 
->>>>>>> Stashed changes
 
-gridsearch(pipe, param_grid)
+    pipe = Pipeline(
+        [("normalize",Normalizer()),
+        ('rf', RandomForestRegressor())])
+
+    param_grid = {'rf__n_estimators': n_estimators}
+             #   'rf__max_features': max_features,
+              #  'rf__max_depth': max_depth,
+               # 'rf__min_samples_split': min_samples_split,
+               # 'rf__min_samples_leaf': min_samples_leaf,
+               # 'rf__bootstrap': bootstrap}
+
+
+    #rf_random = RandomizedSearchCV(pipe, param_distributions = param_grid)
+    rf_random = gridsearch(pipe, param_grid)
+    rf_random.fit(X, Y)
+    print(rf_random.best_params_)
+
+
+
+
+
