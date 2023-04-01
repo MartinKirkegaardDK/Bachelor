@@ -1,0 +1,11 @@
+params,mean_test_score,dataset,model_file_name,pipeline,model_name
+{'rf__n_estimators': 0},,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 2},0.1278445862195476,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 4},0.2860818185345858,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 6},0.3525940287760848,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 8},0.3836165915321713,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 11},0.40093449120079594,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 13},0.41190576915701776,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 15},0.4155827830735337,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 17},0.41967269985822836,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()
+{'rf__n_estimators': 20},0.42183436921360135,HetDist,models/test_22.pkl,"Pipeline(steps=[('normalize', Normalizer()), ('rf', RandomForestRegressor())])",RandomForestRegressor()

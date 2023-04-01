@@ -3,23 +3,29 @@ from utils.load import load_everthing
 from utils.utilities import result_object
 import numpy as np
 from sklearn.model_selection import GridSearchCV
-from utils.utilities import gridsearch
+from utils.utilities import gridsearchJulie
 from sklearn.preprocessing import Normalizer
 from sklearn.pipeline import Pipeline
 #from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestRegressor
 from utils.load import load_everthing_old
 from sklearn.model_selection import RandomizedSearchCV
+from sklearn import metrics
+from sklearn.model_selection import train_test_split
+
+from sklearn import preprocessing
+
+
 
 
 
 def model():
     # Number of trees in random forest
-    n_estimators = [int(x) for x in np.linspace(start = 200, stop = 2000, num = 10)]
+    n_estimators = [int(x) for x in np.linspace(start = 2, stop = 20, num = 10)]
     # Number of features to consider at every split
-    max_features = ['auto', 'sqrt']
+    #max_features = ['auto', 'sqrt']
     # Maximum number of levels in tree
-    max_depth = [int(x) for x in np.linspace(10, 110, num = 11)]
+    max_depth = [int(x) for x in np.linspace(2,20, num = 11)]
     max_depth.append(None)
     # Minimum number of samples required to split a node
     min_samples_split = [2, 5, 10]
@@ -33,27 +39,44 @@ def model():
     X_dict, Y_dict = load_everthing_old()
 
     X = list(X_dict.values())
-    Y = [x[0] for x in Y_dict.values()]
-    Y = np.log10(Y)
+    X = preprocessing.normalize(X)
 
+    y = [x[0] for x in Y_dict.values()]
+    y = np.log10(y)
 
 
     pipe = Pipeline(
         [("normalize",Normalizer()),
         ('rf', RandomForestRegressor())])
 
-    param_grid = {'rf__n_estimators': n_estimators}
-             #   'rf__max_features': max_features,
-              #  'rf__max_depth': max_depth,
-               # 'rf__min_samples_split': min_samples_split,
-               # 'rf__min_samples_leaf': min_samples_leaf,
-               # 'rf__bootstrap': bootstrap}
+    #param_grid = {'rf__n_estimators': n_estimators,
+     #           #'rf__max_features': max_features,
+      #          'rf__max_depth': max_depth,
+       #         'rf__min_samples_split': min_samples_split,
+        ##        'rf__min_samples_leaf': min_samples_leaf,
+          #      'rf__bootstrap': bootstrap}
+
+    param_grid = {
+                'rf__n_estimators':[200,225,250], 'rf__max_depth':[None], 'rf__min_samples_split': [2, 4, 6]
+            }
+
+    rf_random = gridsearchJulie(pipe, param_grid)
 
 
-    #rf_random = RandomizedSearchCV(pipe, param_distributions = param_grid)
-    rf_random = gridsearch(pipe, param_grid)
-    rf_random.fit(X, Y)
-    print(rf_random.best_params_)
+
+
+       # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+   # regr = RandomForestRegressor(max_depth=2, random_state=0)
+   # regr.fit(X_train, y_train)
+
+   # y_pred = regr.predict(X_test)
+
+
+   # print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
+   # print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
+   # print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+
+
 
 
 

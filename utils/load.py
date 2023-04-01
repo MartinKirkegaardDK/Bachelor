@@ -142,13 +142,13 @@ def get_feature_names(metric):
         if filename in ["FBCosDist.csv","FBEucDist.csv"]: # Ignoring files with all the interest combined
                 continue
         if filename.endswith(".csv"): # Ignoring all the files ending with dta as they are just copies of the csv
-            if metric != None:
-                if metric.title() in filename:
+            if metric != None: # If we just want to look at all metrics
+                if metric.lower() in filename.lower(): # Seeing if the metric is in any of the filenames
                     names.append(filename.strip('csv'))
             else:
-                    names.append(filename.strip('csv'))
+                names.append(filename.strip('csv')) 
 
-    return names # Returning names of categories
+    return names # Returning names of categories within the distance
 
 
 def load_everthing():
