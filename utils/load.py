@@ -108,6 +108,7 @@ def preprocess(pandas_dataframe):
         final_df =  pandas_dataframe[pandas_dataframe.columns.intersection(headers_to_keep)]
     #Since we only expect shape[1] == 226 or 3, we raise a warning, but not an error
     else:
+        print(pandas_dataframe.shape)
         warnings.warn(f"The shape of the dataframe is likely to be wrong. Expected df.shape[1] == 3 or 226, but got {pandas_dataframe.shape}")
     return final_df
 
