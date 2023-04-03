@@ -49,7 +49,7 @@ def Choropleth_map(country_code):
 
     # Logging the scaled_sci column to make changes appear more easily in the map
     friendship_df['scaled_sci'] = np.log2(friendship_df['scaled_sci']+1)
-
+    friendship_df = friendship_df.round({'scaled_sci'})
     # Merging the Geodf with our Friendship DF
     df = pd.merge(left=geo_df, right=friendship_df, how='left', left_on='iso2_code', right_on='fr_loc')
     df = df[df['fr_loc'] != country_code]
@@ -70,6 +70,7 @@ def Choropleth_map(country_code):
     ).add_to(m)
 
     # Adding a tooltip to each country and saving the map
+
     folium.GeoJsonTooltip(['country_code', 'scaled_sci']).add_to(cp.geojson)
     m.save('src/Visualisations/map/index.html')
 

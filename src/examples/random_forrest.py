@@ -14,6 +14,7 @@ from sklearn import metrics
 from sklearn.model_selection import train_test_split
 
 from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler
 
 
 
@@ -49,7 +50,7 @@ def model():
 
 
     pipe = Pipeline(
-        [("normalize",Normalizer()),
+        [("StandardScaler",StandardScaler()),
         ('rf', RandomForestRegressor())])
 
 

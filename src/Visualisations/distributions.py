@@ -15,7 +15,7 @@ def dist_plots(metric, categories):
     # Plotting the dataframes
     fig, axs = plt.subplots(3, 5, figsize=(17,10))
     for i, (category, df) in enumerate(data_frames.items()):
-        axs[i // 5, i % 5].hist(df.values.flatten(), bins=70)
+        axs[i // 5, i % 5].hist(df.values.flatten(), kde=True,bins=70)
         axs[i // 5, i % 5].set_title(category)
     plt.show()
 
