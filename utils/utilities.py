@@ -92,13 +92,14 @@ def gridsearchJulie(pipeline,param_grid, log_transform = True, update_merge_df =
         print("running gridsearch")
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
        
-        X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.33, random_state=42)
-        search.fit(X_train, y_train)
+      #  X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.33, random_state=42)
+      #  search.fit(X_train, y_train)
+        search.fit(X, Y)
 
-        y_pred = search.predict(X_test)
-        print('\n\n')
+      #  y_pred = search.predict(X_test)
+      #  print('\n\n')
         print("Best Parameters", search.best_params_)
-        print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
+      #  print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
             
         select = SelectKBest(score_func=f_regression, k=1)
         
@@ -112,8 +113,8 @@ def gridsearchJulie(pipeline,param_grid, log_transform = True, update_merge_df =
             if bool_val:
                 new_features.append(feature)
         print(new_features)
-       # print("Best parameter (CV score=%0.3f):" % search.best_score_)
-       # print(search.best_params_)
+        print("Best parameter (CV score=%0.3f):" % search.best_score_)
+        print(search.best_params_)
         obj = result_object(search, dataset,X,Y)
         obj_list.append(obj)
         print("-"*75)

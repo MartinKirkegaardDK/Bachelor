@@ -21,7 +21,10 @@ from sklearn import preprocessing
 
 def model():
     # Number of trees in random forest
-    n_estimators = [int(x) for x in np.linspace(start = 2, stop = 20, num = 10)]
+    n_estimators = [int(x) for x in np.linspace(start = 2, stop = 40, num = 10)]
+    n_estimators.append(100)
+    n_estimators.append(200)
+
     # Number of features to consider at every split
     #max_features = ['auto', 'sqrt']
     # Maximum number of levels in tree
@@ -49,15 +52,9 @@ def model():
         [("normalize",Normalizer()),
         ('rf', RandomForestRegressor())])
 
-    #param_grid = {'rf__n_estimators': n_estimators,
-     #           #'rf__max_features': max_features,
-      #          'rf__max_depth': max_depth,
-       #         'rf__min_samples_split': min_samples_split,
-        ##        'rf__min_samples_leaf': min_samples_leaf,
-          #      'rf__bootstrap': bootstrap}
 
     param_grid = {
-                'rf__n_estimators':[200,225,250], 'rf__max_depth':[None], 'rf__min_samples_split': [2, 4, 6]
+                'rf__n_estimators':n_estimators, 'rf__max_depth':[None], 'rf__min_samples_split': [2, 4, 6], 'rf__min_samples_leaf': min_samples_leaf
             }
 
     rf_random = gridsearchJulie(pipe, param_grid)
