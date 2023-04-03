@@ -1,0 +1,9 @@
+params,mean_test_score,dataset,model_file_name,pipeline,model_name
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488005,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488005,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488005,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488005,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)

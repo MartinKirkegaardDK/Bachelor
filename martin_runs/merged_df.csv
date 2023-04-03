@@ -1,0 +1,271 @@
+params,mean_test_score,dataset,model_file_name,pipeline,model_name
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,CosDist,models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,CosDist,models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,CosDist,models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,CosDist,models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,CosDist,models/test_9.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,EucDist,models/test_10.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,HetDist,models/test_11.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,ManDist,models/test_12.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,CosDist,models/test_13.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=4)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,EucDist,models/test_14.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=4)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,HetDist,models/test_15.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=4)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,ManDist,models/test_16.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=4)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,CosDist,models/test_17.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=5)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,EucDist,models/test_18.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=5)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,EucDist,models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,EucDist,models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,EucDist,models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,EucDist,models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,HetDist,models/test_19.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=5)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,ManDist,models/test_20.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=5)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},0.4929290103960963,CosDist,models/test_21.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.2842503396791412,EucDist,models/test_22.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.0788702149546636,HetDist,models/test_23.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.2703450524101491,ManDist,models/test_24.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.5040118728283394,CosDist,models/test_25.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.2985145266425527,EucDist,models/test_26.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.0843105735264414,HetDist,models/test_27.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.2806893350987723,ManDist,models/test_28.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,HetDist,models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,HetDist,models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,HetDist,models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,HetDist,models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},0.5128918032854652,CosDist,models/test_29.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=4)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.3046623015342597,EucDist,models/test_30.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=4)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
+{},0.4434560591475178,CosDist,models/test_31.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.2189011732284456,EucDist,models/test_32.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.0337526559268118,HetDist,models/test_33.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.2151798736289471,ManDist,models/test_34.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{'Ridge_regressor__alpha': 1},0.4434672066649053,CosDist,models/test_35.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.4435649738724906,CosDist,models/test_35.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.4437183046991405,CosDist,models/test_35.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.4443408012625678,CosDist,models/test_35.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.21897993785943,EucDist,models/test_36.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.219312857046421,EucDist,models/test_36.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.2194697489368804,EucDist,models/test_36.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.2198469803624519,EucDist,models/test_36.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.033966710036408,HetDist,models/test_37.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.0345907448323231,HetDist,models/test_37.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.0348237534518387,HetDist,models/test_37.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.0341489387577174,HetDist,models/test_37.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.2153402985907641,ManDist,models/test_38.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.2119370675769104,ManDist,models/test_38.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.2066005876246367,ManDist,models/test_38.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.1962713369122349,ManDist,models/test_38.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,ManDist,models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,ManDist,models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,ManDist,models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,ManDist,models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},0.4434560591475178,CosDist,models/test_39.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.2189011732284456,EucDist,models/test_40.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.0337526559268118,HetDist,models/test_41.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.2151798736289471,ManDist,models/test_42.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{'Ridge_regressor__alpha': 1},0.4434672066649053,CosDist,models/test_43.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.4435649738724906,CosDist,models/test_43.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.4437183046991405,CosDist,models/test_43.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.4443408012625678,CosDist,models/test_43.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.21897993785943,EucDist,models/test_44.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.219312857046421,EucDist,models/test_44.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.2194697489368804,EucDist,models/test_44.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.2198469803624519,EucDist,models/test_44.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.033966710036408,HetDist,models/test_45.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.0345907448323231,HetDist,models/test_45.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.0348237534518387,HetDist,models/test_45.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.0341489387577174,HetDist,models/test_45.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.2153402985907641,ManDist,models/test_46.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.2119370675769104,ManDist,models/test_46.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.2066005876246367,ManDist,models/test_46.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.1962713369122349,ManDist,models/test_46.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{},0.4434560591475178,CosDist,models/test_47.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.2189011732284456,EucDist,models/test_48.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.0337526559268118,HetDist,models/test_49.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{},0.2151798736289471,ManDist,models/test_50.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()
+{'Ridge_regressor__alpha': 1},0.4434672066649053,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.4435649738724906,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.4437183046991405,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.4443408012625678,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.21897993785943,EucDist,models/test_52.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.219312857046421,EucDist,models/test_52.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.2194697489368804,EucDist,models/test_52.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.2198469803624519,EucDist,models/test_52.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.033966710036408,HetDist,models/test_53.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.0345907448323231,HetDist,models/test_53.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.0348237534518387,HetDist,models/test_53.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.0341489387577174,HetDist,models/test_53.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 1},0.2153402985907641,ManDist,models/test_54.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 10},0.2119370675769104,ManDist,models/test_54.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 25},0.2066005876246367,ManDist,models/test_54.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{'Ridge_regressor__alpha': 100},0.1962713369122349,ManDist,models/test_54.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
+{},0.4449963961202977,CosDist,models/test_55.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=10000))])",LassoCV(max_iter=10000)
+{},0.219488505574796,EucDist,models/test_56.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=10000))])",LassoCV(max_iter=10000)
+{},0.0354513867899003,HetDist,models/test_57.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=10000))])",LassoCV(max_iter=10000)
+{},0.2151331820615794,ManDist,models/test_58.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=10000))])",LassoCV(max_iter=10000)
+{},-0.013196634534488,CosDist,models/test_5.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,CosDist,models/test_59.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,CosDist,models/test_59.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,CosDist,models/test_59.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,CosDist,models/test_59.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,EucDist,models/test_60.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,EucDist,models/test_60.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,EucDist,models/test_60.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,EucDist,models/test_60.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,HetDist,models/test_61.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 1},-0.013196634534488,ManDist,models/test_62.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 10},-0.013196634534488,ManDist,models/test_62.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 25},-0.013196634534488,ManDist,models/test_62.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{'ElasticNet_regressor__alpha': 100},-0.013196634534488,ManDist,models/test_62.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet(max_iter=10000))])",ElasticNet(max_iter=10000)
+{},-0.013196634534488,EucDist,models/test_6.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,HetDist,models/test_7.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()
+{},-0.013196634534488,ManDist,models/test_8.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures()),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()

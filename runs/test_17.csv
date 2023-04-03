@@ -1,2 +1,0 @@
-params,mean_test_score,dataset,model
-{'SVM__kernel': 'poly'},-33704.54223817268,ManDist,models/test_25.pkl

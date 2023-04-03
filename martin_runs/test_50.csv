@@ -1,0 +1,3 @@
+params,mean_test_score,dataset,model_file_name,pipeline,model_name
+{},0.03375265592681183,HetDist,models/test_49.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Linear_regressor', LinearRegression())])",LinearRegression()

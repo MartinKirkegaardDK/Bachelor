@@ -1,0 +1,4 @@
+params,mean_test_score,dataset,model_file_name,pipeline,model_name
+{},-0.013196634534488005,EucDist,models/test_18.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=5)),
+                ('StandardScaler', StandardScaler()),
+                ('ElasticNet_regressor', ElasticNet())])",ElasticNet()

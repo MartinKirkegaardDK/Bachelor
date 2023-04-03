@@ -1,0 +1,11 @@
+1. Overview
+	a) Hvilken retning - Er det meningen at vi skal kigge på fx sociologi papire
+	og sammenligne deres kvalitative resultater med vores kvantitative? Nej tak :(
+	b) Hvad er målet med vores papir? The big picture 
+	c) hvor meget skal vi bruge de andre papire? 
+	
+2. vis resultater
+3. Hvad skal vi bruge de bedste features til. SÅ hvis vi har fundet fx lifestyle, hvad skal vi bruge det til?
+4. Vi har fundet de bedste kon tinenter, hvad skal de bnruges til.
+5. Hvordan finder vi den bedste "distance"? Er det bare den med bedst resultater? Vi får 2 forskellige
+6. Hvad er het distance

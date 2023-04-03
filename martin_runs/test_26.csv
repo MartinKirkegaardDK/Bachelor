@@ -1,0 +1,4 @@
+params,mean_test_score,dataset,model_file_name,pipeline,model_name
+{},0.5040118728283394,CosDist,models/test_25.pkl,"Pipeline(steps=[('poly_features', PolynomialFeatures(degree=3)),
+                ('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV())])",LassoCV()
