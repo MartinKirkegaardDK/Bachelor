@@ -6,7 +6,7 @@
 #from src.PCA.check_links import check_link_values
 #from src.PCA.correlation import top_abs_correlations
 #from src.Visualisations.Continents.network import calculate_betweenness_centrality, draw_graph
-#from src.Visualisations.Continents.continents_fb import continent
+from src.Visualisations.Continents.continents_fb import split_by_continent
 
 #from src.Visualisations.Continents.continents_friend import split_social_continent
 #from src.Visualisations.distributions import std_dist_plots
