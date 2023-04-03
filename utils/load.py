@@ -136,7 +136,7 @@ def get_feature_names(metric):
     """Function to get the list of all the feature categories i.e Facebook interest categories"""
     
     names = []
-    for file in os.listdir('data/fb_data'):
+    for file in sorted(os.listdir('data/fb_data')):
         filename = os.fsdecode(file)
 
         if filename in ["FBCosDist.csv","FBEucDist.csv"]: # Ignoring files with all the interest combined
@@ -147,7 +147,6 @@ def get_feature_names(metric):
                     names.append(filename.strip('csv'))
             else:
                 names.append(filename.strip('csv')) 
-
     return names # Returning names of categories within the distance
 
 
@@ -162,7 +161,7 @@ def load_everthing():
     d["ManDist"] = []
     label_names, taget_data = create_target_data() 
 
-    for file in os.listdir("data/fb_data"):
+    for file in sorted(os.listdir("data/fb_data")):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #idk what these files are, so we skip them for now
@@ -194,7 +193,7 @@ def load_everthing_old():
     """Loads in everything so the data is ready to be used for training and transforming"""
     X_list = []
     label_names, taget_data = create_target_data()
-    for file in os.listdir("data/fb_data"):
+    for file in sorted(os.listdir("data/fb_data")):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #idk what these files are, so we skip them for now
@@ -213,21 +212,27 @@ def make_total_df():
     """ This function returns a dataframe with both the X-values and the Y-values along 
     with the country labels as idices e.g DK-SE"""
 
-    label_names, taget_data = create_target_data()
+   # label_names, taget_data = create_target_data()
 
     X_dict, Y_dict = load_everthing_old()
 
     X = list(X_dict.values())
     Y = [x[0] for x in Y_dict.values()]
+    label_names = list(X_dict.keys())
+
 
     labels = np.reshape(Y,(len(Y),1))
     data = np.concatenate([X,labels],axis=1) #Adding the labels to the df of all features
+    
     df = pd.DataFrame(data)
+ 
     feature_names = get_feature_names(None) 
-
-    feature_names.append("Y_labels")
+    feature_names.append("Y_labels") # Adding the actual labels
     df.columns = feature_names
 
+    df['c_to_c'] = label_names # Adding th ecountry to country column
+    df = df.set_index('c_to_c') # Using the country to country as the index
+ 
     return df
 
 

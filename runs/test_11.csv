@@ -1,217 +1,217 @@
 params,mean_test_score,dataset,model_file_name,pipeline,model_name
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 2}",0.2923769287819166,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 2}",0.14430398734150737,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 6}",0.46422683092515493,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 6}",0.3426497657760543,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 10}",0.4970248162148403,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 10}",0.38118730577814797,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 14}",0.5148992191468067,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 14}",0.3969839852262214,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 18}",0.5188452579007844,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 18}",0.4118553750480004,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 23}",0.5211413492290378,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 23}",0.4178035332946292,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 27}",0.529574579027585,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 27}",0.42365587274734134,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 31}",0.5343864891392649,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 31}",0.42851674997772654,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 35}",0.5326132868286155,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 35}",0.42730497714897064,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 40}",0.5362331540904155,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 40}",0.43122213595167447,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 100}",0.5433089712678127,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 100}",0.4359771803505059,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 200}",0.5455982408043489,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 200}",0.4400653859866576,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 2}",0.30188118696280297,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 2}",0.12939661707762418,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 6}",0.46826267150813206,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 6}",0.34071871838532697,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 10}",0.4934944718294217,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 10}",0.3876443993655279,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 14}",0.5106786191270913,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 14}",0.3972919693186726,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 18}",0.5217239299159417,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 18}",0.40283259187257026,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 23}",0.5265582338302919,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 23}",0.4183622366376392,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 27}",0.5299715843392468,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 27}",0.4216544736194039,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 31}",0.531909613733845,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 31}",0.425150524781093,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 35}",0.5329207513001981,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 35}",0.42627972236099365,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 40}",0.5347272664208118,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 40}",0.42812453821172136,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 100}",0.5437861704710584,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 100}",0.43703822654296187,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 200}",0.5455003626956321,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 4, 'rf__n_estimators': 200}",0.4383082436296622,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 2}",0.30673680307535045,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 2}",0.1353754797590459,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 6}",0.4686448356566584,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 6}",0.34598850317376323,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 10}",0.49636310448643617,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 10}",0.3808817239024548,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 14}",0.5120865357852209,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 14}",0.39294716463104085,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 18}",0.5185390045242622,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 18}",0.4065592497887197,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 23}",0.5270936061044924,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 23}",0.4137222769537828,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 27}",0.5308232140168052,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 27}",0.41957746292470854,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 31}",0.5316909951544228,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 31}",0.42430279123501846,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 35}",0.5375929037677386,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 35}",0.4216718164183765,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 40}",0.5376645784485952,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 40}",0.42153847557750285,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 100}",0.5424368011976565,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 100}",0.43002594882860434,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 200}",0.5447323527303374,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 6, 'rf__n_estimators': 200}",0.4327707265073782,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 2}",0.31038597449277505,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 2}",0.1693821807863903,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 6}",0.47361150086298076,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 6}",0.35848796519948156,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 10}",0.5029773661933747,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 10}",0.3894066351099775,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 14}",0.5173285552641658,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 14}",0.4105159047378527,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 18}",0.5198083694829052,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 18}",0.4121571272845924,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 23}",0.5236876776054373,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 23}",0.42256561499217826,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 27}",0.5292255680865698,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 27}",0.42248907032335514,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 31}",0.5350010972285597,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 31}",0.4250717069786045,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 35}",0.5330504651314796,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 35}",0.42988867898449284,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 40}",0.5371980626906259,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 40}",0.42895792551254397,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 100}",0.542871810786086,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 100}",0.4410442489914905,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 200}",0.5448088083658427,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 200}",0.44115403044509627,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 2}",0.3094410310498819,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 2}",0.18574819386761857,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 6}",0.46807016600164575,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 6}",0.3546189921765002,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 10}",0.5019909911510622,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 10}",0.39590810828201617,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 14}",0.5168843592485317,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 14}",0.40205764660443144,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 18}",0.5223635989707143,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 18}",0.4165835410685629,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 23}",0.5305010521738982,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 23}",0.42297333490902417,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 27}",0.5333619938980221,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 27}",0.4227782704961939,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 31}",0.5352740196838124,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 31}",0.42626747404046467,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 35}",0.5332811852533919,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 35}",0.42580578661857127,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 40}",0.5365678235191258,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 40}",0.4291230434848924,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 100}",0.5441473928681881,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 100}",0.4398000759029176,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 200}",0.5455122326688322,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 4, 'rf__n_estimators': 200}",0.44178220621603614,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 2}",0.33324206521025157,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 2}",0.17997518343528618,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 6}",0.4736429870903313,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 6}",0.35426505888827553,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 10}",0.5042865335429798,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 10}",0.3870302264850129,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 14}",0.5169147755795048,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 14}",0.4052510355132135,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 18}",0.5234728731540403,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 18}",0.4050946146120629,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 23}",0.5272864508687682,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 23}",0.41925247311116465,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 27}",0.5275306803759799,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 27}",0.4237878133288054,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 31}",0.5349816827593926,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 31}",0.4195071335787074,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 35}",0.5348100820006659,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 35}",0.42348084351695353,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 40}",0.5370861194858103,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 40}",0.42591231035348676,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 100}",0.5436069301862446,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 100}",0.4349500571177808,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 200}",0.5447137293358445,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 6, 'rf__n_estimators': 200}",0.43820906981826635,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 2}",0.3586952378671947,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 2}",0.21552272369177367,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 6}",0.48351535364506876,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 6}",0.3589695416293397,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 10}",0.5072398395516524,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 10}",0.39901106842993056,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 14}",0.5184847436494711,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 14}",0.40392252579224125,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 18}",0.5227730069107027,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 18}",0.4056008307217144,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 23}",0.5301256367916775,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 23}",0.4164302584172342,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 27}",0.5313334916182646,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 27}",0.4155156886929178,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 31}",0.5333435017553104,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 31}",0.4199131581215808,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 35}",0.5343905975955434,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 35}",0.41794543318248073,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 40}",0.534729630077881,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 40}",0.41978281966985465,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 100}",0.5411208075261944,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 100}",0.4274084493106042,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 200}",0.5414780166260514,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 2, 'rf__n_estimators': 200}",0.43079366238469163,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 2}",0.3717911567992781,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 2}",0.23166712900082578,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 6}",0.4841624920090169,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 6}",0.359899355072765,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 10}",0.5074208481057575,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 10}",0.390501206646816,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 14}",0.5213227692137287,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 14}",0.40036709864623965,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 18}",0.5218069841873982,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 18}",0.40626960929278644,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 23}",0.5293701815586304,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 23}",0.40988862703151563,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 27}",0.5303887871023907,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 27}",0.415399950877467,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 31}",0.5347080626382865,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 31}",0.418287862526063,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 35}",0.5364341078222781,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 35}",0.4209406276429192,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 40}",0.5344681598238716,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 40}",0.42097101914462953,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 100}",0.5410277385836146,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 100}",0.4278665553806954,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 200}",0.5426680413409602,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 4, 'rf__n_estimators': 200}",0.42951209666220275,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 2}",0.35701341899079364,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 2}",0.21287263087781697,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 6}",0.4821044259216431,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 6}",0.364724984359456,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 10}",0.5074573089028775,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 10}",0.3871978302902809,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 14}",0.5184861975030411,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 14}",0.40471745396344705,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 18}",0.5243163465014888,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 18}",0.4110630014117267,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 23}",0.5284864614870216,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 23}",0.4091780953970254,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 27}",0.5324255145521999,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 27}",0.41845344371892734,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 31}",0.5330922154568469,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 31}",0.4182717428854311,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 35}",0.5344058325948142,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 35}",0.4189502206178098,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 40}",0.535531421904113,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 40}",0.4214016458635864,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 100}",0.5400832245792461,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 100}",0.4266223089728391,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 200}",0.5433269790893946,CosDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+"{'rf__max_depth': None, 'rf__min_samples_leaf': 4, 'rf__min_samples_split': 6, 'rf__n_estimators': 200}",0.43135565201711346,HetDist,models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('rf', RandomForestRegressor())])",RandomForestRegressor()

@@ -15,7 +15,7 @@ def dist_plots(metric, categories):
     # Plotting the dataframes
     fig, axs = plt.subplots(3, 5, figsize=(17,10))
     for i, (category, df) in enumerate(data_frames.items()):
-        axs[i // 5, i % 5].hist(df.values.flatten(), kde=True,bins=70)
+        axs[i // 5, i % 5].hist(df.values.flatten(),bins=70)
         axs[i // 5, i % 5].set_title(category)
     plt.show()
 
@@ -50,3 +50,42 @@ def std_dist_plots(metric,categories):
 std_dist_plots("Cos",categories)
 
 
+
+def julie_dist(df, metric):
+
+
+    
+    l = list(df.columns)
+
+    # Getting the names of each category
+    clean = []
+    for i in l:
+        i = i.split("_")
+        clean.append(i[1].strip('.'))
+
+
+    fig, axes = plt.subplots(3,5, figsize=(20, 10))
+    ax = axes.flatten()
+
+
+    columns = []
+
+    for i in df.columns: # Getting only the columns with the metric that we're looking for
+        if metric in i:
+            columns.append(i)
+
+
+    for i, col in enumerate(columns):
+        sns.histplot(df[col],ax=ax[i],color = 'navy', kde = True) #Make evert individual histogram
+
+        ax[i].set_title(clean[i], fontdict={'size': 10, 'weight': 'bold'})
+        ax[i].set(xlabel='Count')
+        
+        sns.despine()
+
+    plt.subplots_adjust(top=0.9) 
+    plt.suptitle(f"Distributions of each category using {metric} distance" )
+    fig.tight_layout() # change padding 
+
+
+    plt.show()

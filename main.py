@@ -1,1 +1,4 @@
-from src.Visualisations.distributions import dist_plots
+from utils.load import make_total_df
+
+
+make_total_df()
