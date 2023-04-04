@@ -1,0 +1,33 @@
+Abstrac
+Introduction
+ -Project statement
+  A) Er det muligt? - spørg verdran, hvordan? evt bare byg ovenpå nuværende studie
+  B) Which factors predict the connectedness between contries
+  C) Are some continents more interconnected than others
+  D) Which simmilarity metrics is the best
+Background
+ -Where is the research currently
+ -Related works
+ -
+Data and Material
+Methods
+Results
+  - Evt kig på transfer learning?
+Discussion
+ -Compare results to other papers doing something similar
+   a) Do we get the same results? Are the same features as important?  Something else?
+ -Limitations
+   a) Some countries dont have facebook
+   b) friends on facebook representative to real world? 
+      Do people still have old friends? Do people have more connections on facebook?
+ -Could we have done something else?
+ -SHAP måske 
+Conclussion
+
+
+Vores historie:
+Der kommer mere og mere data som bliver uendeligt mere komplekst. Det er bevist at man i teorien
+kan bruge kvantitativt data til at beskrive noget så subjektivt og komplekst som en menneskelig relation
+i *papir fra verdran*, som førhen var domineret at et kvantitativt approach.
+Vi vil vise at man ved brug af facebooks data kan fortolke hvad der samler folk i en ellers grdvist
+mere polariseret verden, og beskrive hvilke kulturelle fænomener som skaber venskaber på tværs af landegrænser

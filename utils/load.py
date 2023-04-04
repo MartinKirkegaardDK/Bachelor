@@ -162,7 +162,7 @@ def load_everthing():
     d["ManDist"] = []
     label_names, taget_data = create_target_data() 
 
-    for file in sorted(os.listdir("data/fb_data")):
+    for file in (os.listdir("data/fb_data")):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #idk what these files are, so we skip them for now
