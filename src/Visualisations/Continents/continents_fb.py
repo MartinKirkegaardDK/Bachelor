@@ -1,3 +1,4 @@
+'''
 import pandas as pd
 import os
 
@@ -35,23 +36,9 @@ oceania = continent_dfs['Oceania']
 africa = continent_dfs['Africa']
 
 print(africa)
- 
-# The following function creastes CSV files of the continent dataframes in the folder fb_data_continents
 '''
-directory = "data/fb_data_continents"
-if not os.path.exists(directory):
-    os.makedirs(directory)
-
-# Iterating over the dictionary of dataframes and saving each one to a CSV file
-for continent, df in continent_dfs.items():
-    filename = f"{metric}_{category}_{continent}.csv"
-    filepath = os.path.join(directory, filename)
-    df.to_csv(filepath, index=False)
-    print(f"Saved {filename} with {len(df)} rows")
-'''
-
 # This following function does the job for all the data files 
-'''
+
 import os
 import pandas as pd
 
@@ -59,13 +46,15 @@ import pandas as pd
 def split_by_continent(metric, category):
     # Reading in the data 
     file_path = f"data/fb_data/FB{metric}Dist_{category}.csv"
-    df = pd.read_csv(file_path, index_col=0)
+    df = pd.read_csv(file_path)
     
     # Loading the necessary country information
+    # The all.csv is from https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
     country_info = pd.read_csv('src/Visualisations/Continents/all.csv', usecols=['alpha-2', 'region'], index_col='alpha-2')
     
     # Merging the country information with the main dataframe
-    merged = df.merge(country_info, left_on='ISO_CODE', right_index=True).merge(country_info, left_on='ISO_CODE', right_index=True, suffixes=['_1', '_2'])
+    merged = df.merge(country_info, left_on='ISO_CODE', right_index=True)
+    merged = merged.merge(country_info, left_on='ISO_CODE', right_index=True, suffixes=['_1', '_2'])
     
     # Splitting the data into separate dataframes for each continent
     continents = merged['region_1'].unique()
@@ -96,4 +85,4 @@ for metric in metrics:
         # Saving the dataframes to csv files for each continent
         for continent, df in continent_dataframes.items():
             df.to_csv(os.path.join(save_path, f"{filename}_{continent}.csv"), index=False)
-'''
+
