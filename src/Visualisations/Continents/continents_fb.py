@@ -49,7 +49,6 @@ def split_by_continent(metric, category):
     df = pd.read_csv(file_path)
     
     # Loading the necessary country information
-    # The all.csv is from https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
     country_info = pd.read_csv('src/Visualisations/Continents/all.csv', usecols=['alpha-2', 'region'], index_col='alpha-2')
     
     # Merging the country information with the main dataframe
