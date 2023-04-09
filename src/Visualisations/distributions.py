@@ -53,8 +53,6 @@ std_dist_plots("Cos",categories)
 
 def julie_dist(df, metric):
 
-
-    
     l = list(df.columns)
 
     # Getting the names of each category
@@ -63,21 +61,16 @@ def julie_dist(df, metric):
         i = i.split("_")
         clean.append(i[1].strip('.'))
 
-
     fig, axes = plt.subplots(3,5, figsize=(20, 10))
     ax = axes.flatten()
 
-
     columns = []
-
     for i in df.columns: # Getting only the columns with the metric that we're looking for
         if metric in i:
             columns.append(i)
 
-
     for i, col in enumerate(columns):
         sns.histplot(df[col],ax=ax[i],color = 'navy', kde = True) #Make evert individual histogram
-
         ax[i].set_title(clean[i], fontdict={'size': 10, 'weight': 'bold'})
         ax[i].set(xlabel='Count')
         

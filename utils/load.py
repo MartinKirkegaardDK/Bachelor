@@ -186,6 +186,10 @@ def load_everthing():
     
     Y_dict = create_label_dict(label_names, [taget_data])
 
+    for i,j in X_dict.items():
+        print(len(j.keys()))
+
+        break
     return X_dict, Y_dict
 
 

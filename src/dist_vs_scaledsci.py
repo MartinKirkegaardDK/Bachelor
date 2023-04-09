@@ -61,6 +61,9 @@ def plot_with_title(print_spearman_correlation=True):
     ax.set_title(title)
     ax.set_xlabel("x")
     ax.set_ylabel("y")
+    
+    #plt.savefig("plots/spearman_corr_of_dist.png")
+
 
     plt.show()
     
