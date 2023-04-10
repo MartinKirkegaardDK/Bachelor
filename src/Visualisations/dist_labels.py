@@ -67,14 +67,14 @@ def logged_top_dist_labels(filepath, countrycode, number):
     fig, axs = plt.subplots(1, 2, figsize=(10, 5))
 
     # Plotting the top 10 relations
-    axs[0].bar(top_relations["fr_loc"], top_relations["scaled_sci"])
+    axs[0].bar(top_relations["fr_loc"], top_relations["scaled_sci"], color='navy')
     axs[0].set_xlabel("Country")
     axs[0].set_ylabel("Scaled Sci Value")
     axs[0].set_title(f"Top {number} relations for {country}")
     axs[0].tick_params(axis='x', labelrotation=90)
 
     # Plotting the bottom 10 relations
-    axs[1].bar(bottom_relations["fr_loc"], bottom_relations["scaled_sci"])
+    axs[1].bar(bottom_relations["fr_loc"], bottom_relations["scaled_sci"], color='navy')
     axs[1].set_xlabel("Country")
     axs[1].set_ylabel("Scaled Sci Value")
     axs[1].set_title(f"Bottom {number} relations for {country}")
@@ -105,7 +105,7 @@ def all(filepath, countrycode):
     fig, ax = plt.subplots(figsize=(14, 6))
 
     # Plotting
-    ax.bar(relations["fr_loc"], relations["scaled_sci"])
+    ax.bar(relations["fr_loc"], relations["scaled_sci"], color='navy')
     ax.set_xlabel("Country")
     ax.set_ylabel("Scaled Sci Value")
     ax.set_title(f"Relations for {country} (not log-scale transformed)")
@@ -133,13 +133,13 @@ def logged_all(filepath, countrycode):
     relations = relations.sort_values(by="scaled_sci", ascending=False)
 
     # Log-scale transforming the scaled_sci values
-    relations["scaled_sci"] = np.log10(relations["scaled_sci"])
+    relations["scaled_sci"] = np.log10(relations["scaled_sci"], color='navy')
 
     # Create plot
     fig, ax = plt.subplots(figsize=(14, 6))
 
     # Plotting
-    ax.bar(relations["fr_loc"], relations["scaled_sci"])
+    ax.bar(relations["fr_loc"], relations["scaled_sci"], color='navy')
     ax.set_xlabel("Country")
     ax.set_ylabel("Scaled Sci Value")
     ax.set_title(f"Relations for {country} (log-scale transformed)")

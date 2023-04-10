@@ -1,4 +1,4 @@
-from utils.load import make_total_df
+from src.Visualisations.map.choropleth import Choropleth_map
 
 
-make_total_df()
+Choropleth_map('DK')
