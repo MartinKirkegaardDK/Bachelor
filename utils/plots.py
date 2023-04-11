@@ -47,6 +47,7 @@ def plot_confidence_interval(feature_dict):
     for lower,upper,y in zip(dataset['lower'],dataset['upper'],range(len(dataset))):
         plt.plot((lower,upper),(y,y),'ro-',color='orange')
     plt.title("Coefficient estimate within 0.95 confidence interval")
+    plt.axvline(x = 0, color = 'b', label = 'axvline - full height')
     plt.xlabel("Coefficient estimate")
     plt.yticks(range(len(dataset)),list(dataset['category']))
     plt.subplots_adjust(left = 0.25)

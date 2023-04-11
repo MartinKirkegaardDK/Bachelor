@@ -2,7 +2,7 @@ import os
 import warnings
 import pandas as pd
 import numpy as np
-
+from collections import defaultdict
 
 #reflection 2 juni
 #global 31 maj
@@ -48,9 +48,11 @@ def select_relevant_cells(pandas_dataframe):
     return pandas_dataframe
 
 
-def create_target_data():
+def create_target_data(file = "data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv"):
     """Creates our taget data and a list of all the label names"""
-    friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
+    friendship_data = pd.read_csv(file, delimiter= "\t",keep_default_na=False)
+    friendship_data = friendship_data.drop(["region"], axis=1, errors='ignore')
+
     friendship_data = preprocess(friendship_data)
     codes = list(friendship_data["ISO_CODE"])
     cartesian_df = create_cartesian_product(codes)
@@ -91,14 +93,20 @@ def preprocess(pandas_dataframe):
             subset = pandas_dataframe[pandas_dataframe.iloc[:,0] == val]
             d[val] = list(subset.iloc[:,-1])
         
-
+        d = {k:v for k,v in d.items() if v}
+        
         final_df = pd.DataFrame(d)
+        
         #We sort the keys so they have the correct order
         final_df.sort_index(axis=1, inplace= True)
         iso_codes = list(headers_to_keep)
+        iso_codes = list(set(iso_codes) & set(final_df.columns))
+
         iso_codes.sort()
+
         #We insert the last column to transform it into a matrix
         final_df.insert(0,'ISO_CODE',iso_codes)
+        
 
     elif pandas_dataframe.shape[1] == 226:
         #We only keep the correct headers
@@ -107,6 +115,11 @@ def preprocess(pandas_dataframe):
         headers_to_keep.add("ISO_CODE")
         final_df =  pandas_dataframe[pandas_dataframe.columns.intersection(headers_to_keep)]
     #Since we only expect shape[1] == 226 or 3, we raise a warning, but not an error
+
+    #This is used for the country df's like africa and so on
+    elif (pandas_dataframe.shape[0] == pandas_dataframe.shape[1] - 1) and (pandas_dataframe.shape[0] < 65):
+        final_df = pandas_dataframe 
+
     else:
         print(pandas_dataframe.shape)
         warnings.warn(f"The shape of the dataframe is likely to be wrong. Expected df.shape[1] == 3 or 226, but got {pandas_dataframe.shape}")
@@ -194,6 +207,79 @@ def load_everthing():
 
 
 
+
+def sort_by_country(file_name):
+    if "europe" in file_name:
+        return "europe"
+    elif "africa" in file_name:
+        return "africa"
+    elif "asia" in file_name:
+        return "asia"
+    elif "oceania" in file_name:
+        return "oceania"
+    elif "americas" in file_name:
+        return "americas"
+
+def load_everthing_with_countries():
+    """Loads in everything so the data is ready to be used for training and transforming"""
+
+    X_dict = defaultdict(dict)
+    Y_dict = defaultdict(dict)
+    d = dict()
+    d["CosDist"] = defaultdict(list)
+    d["EucDist"] = defaultdict(list)
+    d["HetDist"] = defaultdict(list)
+    d["ManDist"] = defaultdict(list)
+    
+    label_d = defaultdict(dict)
+    label_dir = "data/friendship_data_continents_new/"
+    for file in os.listdir(label_dir):
+        if file.endswith("tsv"):
+            label_names, target_data = create_target_data(label_dir + file)
+            country = file.replace(".tsv","").lower()
+            label_d[country]["label_names"] = label_names
+            label_d[country]["target_data"] = target_data
+
+    label_names, target_data = create_target_data() 
+    path = "fb_data_continents_new/"
+    for file in os.listdir(f"data/{path}"):
+        #We only look for csv files, not the other files
+        if file.endswith(".csv"):
+            #idk what these files are, so we skip them for now
+            if file in ["FBCosDist.csv","FBEucDist.csv"]:
+                continue
+            
+            df = load(f"data/{path}" + file,",")
+            df = preprocess(df)
+            df = df_to_list(df)
+            #print(sort_by_country(file))
+            if "CosDist" in file:
+                d["CosDist"][sort_by_country(file)].append(df)
+            elif "EucDist" in file:
+                d["EucDist"][sort_by_country(file)].append(df)
+            elif "HetDist" in file:
+                d["HetDist"][sort_by_country(file)].append(df)
+            elif "ManDist" in file:
+                d["ManDist"][sort_by_country(file)].append(df)
+
+
+    for country, val in label_d.items():
+        Y_dict[country] = create_label_dict(val["label_names"], [val["target_data"]])
+
+    
+    final = defaultdict(dict)
+    for distance, country_dict in d.items():
+        for country, val in country_dict.items():
+            label_names = [x for x in Y_dict[country].keys()]
+            #print(country, val)
+            final[distance][country] = create_label_dict(label_names, val)
+    
+    return final, Y_dict
+
+
+
+
+
 def load_everthing_old():
     """Loads in everything so the data is ready to be used for training and transforming"""
     X_list = []
@@ -257,3 +343,14 @@ def get_indv_df(metric):
     metric_df = df[metric_li]
 
     return metric_df
+
+
+
+def load_iso_dict():
+    """Loads in a dictionary of iso codes"""
+    d = dict()
+    for file in os.listdir("data/iso_codes"):
+        with open(f"data/iso_codes/{file}") as f:
+            f = f.readlines()
+            d[file.replace(".txt","")] = [x.replace("\n","") for x in f]
+    return d

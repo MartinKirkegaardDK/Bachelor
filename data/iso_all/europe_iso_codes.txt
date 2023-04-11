@@ -1,0 +1,50 @@
+Albania	AL	ALB	.al
+Andorra	AD	AND	.ad
+Austria	AT	AUT	.at
+Belarus	BY	BLR	.by
+Belgium	BE	BEL	.be
+Bosnia and Herzegovina	BA	BIH	.ba
+Bulgaria	BG	BGR	.bg
+Croatia	HR	HRV	.hr
+Cyprus	CY	CYP	.cy
+Czech Republic	CZ	CZE	.cz
+Denmark	DK	DNK	.dk
+Estonia	EE	EST	.ee
+Faroe Islands	FO	FRO	.fo
+Finland	FI	FIN	.fi
+France	FR	FRA	.fr
+Germany	DE	DEU	.de
+Gibraltar	GI	GIB	.gi
+Greece	GR	GRC	.gr
+Hungary	HU	HUN	.hu
+Iceland	IS	ISL	.is
+Ireland	IE	IRL	.ie
+Isle of Man	IM	IMN	.im
+Italy	IT	ITA	.it
+Kosovo	RS	XKX	
+Latvia	LV	LVA	.lv
+Liechtenstein	LI	LIE	.li
+Lithuania	LT	LTU	.lt
+Luxembourg	LU	LUX	.lu
+Macedonia	MK	MKD	.mk
+Malta	MT	MLT	.mt
+Moldova	MD	MDA	.md
+Monaco	MC	MCO	.mc
+Montenegro	ME	MNE	.me
+Netherlands	NL	NLD	.nl
+Norway	NO	NOR	.no
+Poland	PL	POL	.pl
+Portugal	PT	PRT	.pt
+Romania	RO	ROU	.ro
+Russia	RU	RUS	.ru
+San Marino	SM	SMR	.sm
+Serbia	RS	SRB	.rs
+Slovakia	SK	SVK	.sk
+Slovenia	SI	SVN	.si
+Spain	ES	ESP	.es
+Sweden	SE	SWE	.se
+Switzerland	CH	CHE	.ch
+Ukraine	UA	UKR	.ua
+United Kingdom	GB	GBR	.uk
+Vatican city	VA	VAT	.va
+Yugoslavia	RS	RSB	.rs

@@ -1,0 +1,59 @@
+Anguilla	AI	AIA	.ai
+Antigua and Barbuda	AG	ATG	.ag
+Aruba	AW	ABW	.aw
+Bahamas	BS	BHS	.bs
+Barbados	BB	BRB	.bb
+Belize	BZ	BLZ	.bz
+Bermuda	BM	BMU	.bm
+Bonaire	BQ	BES	.an
+British Virgin Islands	VG	VGB	.vg
+Canada	CA	CAN	.ca
+Cayman Islands	KY	CYM	.ky
+Costa Rica	CR	CRI	.cr
+Cuba	CU	CUB	.cu
+Curacao	CW	CUW	.cw
+Dominica	DM	DMA	.dm
+Dominican Republic	DO	DOM	.do
+El Salvador	SV	SLV	.sv
+Greenland	GL	GRL	.gl
+Grenada and Carriacuou	GD	GRD	.gd
+Guadeloupe	GP	GLP	.gp
+Guatemala	GT	GTM	.gt
+Haiti	HT	HTI	.ht
+Honduras	HN	HND	.hn
+Jamaica	JM	JAM	.jm
+Martinique	MQ	MTQ	.mq
+Mexico	MX	MEX	.mx
+Miquelon	PM	SPM	.pm
+Montserrat	MS	MSR	.ms
+Netherlands Antilles	CW	ANT	.an
+Nevis	KN	KNA	.kn
+Nicaragua	NI	NIC	.ni
+Panama	PA	PAN	.pa
+Puerto Rico	PR	PRI	.pr
+Saba	BQ	BES	.an
+Sint Eustatius	BQ	BES	.an
+Sint Maarten	SX	SXM	.sx
+St. Kitts	KN	KNA	.kn
+St. Lucia	LC	LCA	.lc
+St. Pierre and Miquelon	PM	SPM	.pm
+St. Vincent	VC	VCT	.vc
+Trinidad and Tobago	TT	TTO	.tt
+Turks and Caicos Islands	TC	TCA	.tc
+United States	US	USA	.us
+US Virgin Islands	VI	VIR	.vi
+Argentina	AR	ARG	.ar
+Bolivia	BO	BOL	.bo
+Brazil	BR	BRA	.br
+Chile	CL	CHL	.cl
+Colombia	CO	COL	.co
+Ecuador	EC	ECU	.ec
+Falkland Islands	FK	FLK	.fk
+French Guiana	GF	GUF	.gf
+Guiana	GY	GUF	.gf
+Guyana	GY	GUY	.gy
+Paraguay	PY	PRY	.py
+Peru	PE	PER	.pe
+Suriname	SR	SUR	.sr
+Uruguay	UY	URY	.uy
+Venezuela	VE	VEN	.ve

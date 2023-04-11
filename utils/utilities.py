@@ -14,6 +14,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_regression
 from utils.load import load
 from collections import defaultdict
+from utils.load import load_everthing_with_countries
 
 def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
@@ -29,7 +30,7 @@ def merge_dfs():
     df.to_csv("runs/merged_df.csv",index = False)
 
 class result_object():
-    def __init__(self, grid_search: object, dataset: str,X,Y):
+    def __init__(self, grid_search: object, dataset: str,X,Y,region):
         self.gridsearch = grid_search
         self.data_type = dataset
         self.model_name = naming("models/","test","pkl")
@@ -42,10 +43,12 @@ class result_object():
         #d["score"] = grid_search.best_score_
         d["model_file_name"] =  [self.model_name for _ in range(len(d)) ]
         d["pipeline"] = self.pipeline
+        d["region"] = self.region = region
         d["model_name"] = [self.pipeline[-1] for _ in range(len(d)) ] 
         self.dataframe = d
         self.X = X
         self.Y = Y
+        
         
         self.dataframe.to_csv(self.run_name, index = False)
 
@@ -68,13 +71,43 @@ def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True
         search.fit(X, Y)
         print("Best parameter (CV score=%0.3f):" % search.best_score_)
         print(search.best_params_)
-        obj = result_object(search, dataset,X,Y)
+        obj = result_object(search, dataset,X,Y,"world")
         obj_list.append(obj)
         print("-"*75)
     if update_merge_df == True:
         merge_dfs()
     return obj_list
 
+
+
+def gridsearch_country(pipeline,param_grid, log_transform = True, update_merge_df = True):
+    obj_list = []
+    print("Loading in data")
+    x_dict, y_dict = load_everthing_with_countries()
+    for distance_metrics in x_dict.keys():
+        print(distance_metrics)
+        for x_d, labels in zip(x_dict[distance_metrics].items(),y_dict.values()):
+            country = x_d[0]
+            X = list(x_d[1].values())
+            labels = list(labels.values())
+            labels = [x[0] for x in labels]
+            print(country)
+            if log_transform == True:
+                Y = np.log10(labels)
+           
+
+            print("running gridsearch")
+            search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
+
+            search.fit(X, Y)
+            print("Best parameter (CV score=%0.3f):" % search.best_score_)
+            print(search.best_params_)
+            obj = result_object(search, distance_metrics,X,Y,country)
+            obj_list.append(obj)
+            print("-"*75)
+        if update_merge_df == True:
+            merge_dfs()
+    return obj_list
 
 def get_params(path):
     """It returns a list of tuples, where the tuples are the featurenames and the coefficient

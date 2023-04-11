@@ -1,2 +1,2 @@
-from src.examples.confidence_plot import run
+from src.examples.gridsearch_countries import run
 run()
