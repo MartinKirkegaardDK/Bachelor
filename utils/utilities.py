@@ -4,12 +4,7 @@ import joblib
 import numpy as np
 import random
 from utils.load import load_everthing, get_feature_names
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LassoCV
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import train_test_split
-from sklearn import metrics
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_regression
 from utils.load import load
@@ -177,27 +172,31 @@ def gridsearchJulie(pipeline,param_grid, log_transform = True, update_merge_df =
 
 
 def get_pred_and_labels(clf,n = 50 ):
-    """samples n amount of datapoints and uses the model clf to predict"""
+    """samples n amount of datapoints and uses the model clf to predict
+    if n = 0, then we dont sample anything and use the entire dataset"""
     x, y = load_everthing()
     x_l = list(x["CosDist"].values())
     
     y_l = list(y.values())
     
     #We sample n different indexes
-    import random
-    sample_from = list(range(len(x_l)))
-    index = random.sample(sample_from, n)
-    
-    #Here we get the actual values randomly sampled from the list
-    x_final = [x_l[x] for x in index]
-    labels = np.log10([y_l[x] for x in index])
+
+    if n != 0:
+        sample_from = list(range(len(x_l)))
+        index = random.sample(sample_from, n)
+        #Here we get the actual values randomly sampled from the list
+        x_final = [x_l[x] for x in index]
+        labels = np.log10([y_l[x] for x in index])
+    else:
+        x_final = x_l
+        labels = np.log10(y_l)
 
     pred = clf.best_estimator_.predict(x_final)
     labels = [item for sublist in labels for item in sublist]
     return pred, labels
 
 
-def bootstrap(n = 100):
+def bootstrap(pipeline, param_grid,n = 100):
     print("running bootstrap")
     print("number of sample runs:", n)
     result = []
@@ -213,9 +212,9 @@ def bootstrap(n = 100):
         bts_y = np.log10([ylist[x][0] for x in bts_index])
 
 
-        pipe = Pipeline([("StandardScaler",StandardScaler()),("Lasso_regressor",LassoCV(max_iter= 10000))])
+        
         param_grid = {}
-        search = GridSearchCV(pipe, param_grid, n_jobs=2,scoring= "r2")
+        search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
         search.fit(bts_x, bts_y)
         result.append(search)
     return result
