@@ -1,0 +1,29 @@
+American Samoa	AS	ASM	.as
+Australia	AU	AUS	.au
+Chatham Island, NZ	NZ	NZL	.nz
+Cook Islands	CK	COK	.ck
+East Timor	TL	TLS	.tl
+Federated States of Micronesia	FM	FSM	.fm
+Fiji Islands	FJ	FJI	.fj
+French Polynesia	PF	PYF	.pf
+Guam	GU	GUM	.gu
+Kiribati	KI	KIR	.ki
+Mariana Islands	MP	MNP	.mp
+Marshall Islands	MH	MHL	.mh
+Midway Islands	UM	UMI	.um
+Nauru	NR	NRU	.nr
+New Caledonia	NC	NCL	.nc
+New Zealand	NZ	NZL	.nz
+Niue	NU	NIU	.nu
+Norfolk Island	NF	NFK	.nf
+Palau	PW	PLW	.pw
+Papua New Guinea	PG	PNG	.pg
+Saipan	MP	MNP	.mp
+Samoa	WS	WSM	.ws
+Solomon Islands	SB	SLB	.sb
+Tokelau	TK	TKL	.tk
+Tonga	TO	TON	.to
+Tuvalu	TV	TUV	.tv
+Vanuatu	VU	VUT	.vu
+Wake Island	UM	UMI	.um
+Wallis and Futuna Islands	WF	WLF	.wf
