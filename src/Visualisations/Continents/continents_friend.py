@@ -39,3 +39,10 @@ oceania = continent_dfs['Oceania']
 africa = continent_dfs['Africa']
 
 print(africa)
+
+
+
+
+def continent_connections_plot():
+
+    for continent in os.listdir("")

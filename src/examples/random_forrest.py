@@ -44,12 +44,12 @@ def model():
     X_dict, Y_dict = load_everthing_old()
 
     X = list(X_dict.values())
-    X = preprocessing.normalize(X)
+    #X = preprocessing.normalize(X)
 
     y = [x[0] for x in Y_dict.values()]
     y = np.log10(y)
 
-
+    print(X)
     pipe = Pipeline(
         [("StandardScaler",StandardScaler()),
         ('rf', RandomForestRegressor())])
@@ -60,7 +60,7 @@ def model():
             }
 
 
-    rf_random = gridsearchJulie(pipe, param_grid)
+   # rf_random = gridsearchJulie(pipe, param_grid)
 
 
 
