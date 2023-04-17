@@ -1,2 +1,2 @@
-from src.examples.gridsearch_countries import run
+from src.examples.plots import run
 run()
