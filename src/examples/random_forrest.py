@@ -23,19 +23,19 @@ from sklearn.preprocessing import StandardScaler
 def model():
     # Number of trees in random forest
    # n_estimators = [int(x) for x in np.linspace(start = 2, stop = 40, num = 10)]
-    n_estimators = [180,190,200,210,220,230]
+    n_estimators = [180,200,220] #[180,190,200,210,220,230]
     #n_estimators.append(100)
     #n_estimators.append(200)
 
     # Number of features to consider at every split
     #max_features = ['auto', 'sqrt']
     # Maximum number of levels in tree
-    max_depth = [int(x) for x in np.linspace(2,20, num = 11)]
+    max_depth = []#[int(x) for x in np.linspace(2,20, num = 11)]
     max_depth.append(None)
     # Minimum number of samples required to split a node
-    min_samples_split = [2,3, 4,5,6]
+    min_samples_split = [2,3,4]
     # Minimum number of samples required at each leaf node
-    min_samples_leaf = [2,3, 4,5,6]
+    min_samples_leaf = [2,3,4]
     # Method of selecting samples for training each tree
     bootstrap = [True, False]
     # Create the random grid
@@ -56,8 +56,9 @@ def model():
 
 
     param_grid = {
-                'rf__n_estimators':n_estimators, 'rf__max_depth':[None], 'rf__min_samples_split': [2, 4, 6], 'rf__min_samples_leaf': min_samples_leaf
+                'rf_max_features':1.0, 'rf__n_estimators':150, 'rf__max_depth':None, 'rf__min_samples_split': 2, 'rf__min_samples_leaf': 2
             }
+
 
     rf_random = gridsearchJulie(pipe, param_grid)
 
