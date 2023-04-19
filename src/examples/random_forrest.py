@@ -60,7 +60,7 @@ def model():
             }
 
 
-   # rf_random = gridsearchJulie(pipe, param_grid)
+    rf_random = gridsearchJulie(pipe, param_grid)
 
 
 
