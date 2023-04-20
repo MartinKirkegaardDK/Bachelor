@@ -3,7 +3,7 @@ from utils.load import load_everthing
 from utils.utilities import result_object
 import numpy as np
 from sklearn.model_selection import GridSearchCV
-from utils.utilities import gridsearchJulie
+from utils.utilities import gridsearch, gridsearchJulie
 from sklearn.preprocessing import Normalizer
 from sklearn.pipeline import Pipeline
 #from sklearn.svm import SVR
@@ -22,16 +22,15 @@ from sklearn.preprocessing import StandardScaler
 
 def model():
     # Number of trees in random forest
-   # n_estimators = [int(x) for x in np.linspace(start = 2, stop = 40, num = 10)]
-    n_estimators = [180,200,220] #[180,190,200,210,220,230]
+    n_estimators = [160,180,200,220] #[180,190,200,210,220,230]
     #n_estimators.append(100)
     #n_estimators.append(200)
 
     # Number of features to consider at every split
-    #max_features = ['auto', 'sqrt']
+    max_features = ['auto', 'sqrt']
     # Maximum number of levels in tree
-    max_depth = []#[int(x) for x in np.linspace(2,20, num = 11)]
-    max_depth.append(None)
+    #max_depth = [int(x) for x in np.linspace(2,20, num = 11)]
+   # max_depth.append(None)
     # Minimum number of samples required to split a node
     min_samples_split = [2,3,4]
     # Minimum number of samples required at each leaf node
@@ -47,23 +46,20 @@ def model():
     #X = preprocessing.normalize(X)
 
     y = [x[0] for x in Y_dict.values()]
-    y = np.log10(y)
+   # y = np.log10(y)
 
-    print(X)
     pipe = Pipeline(
         [("StandardScaler",StandardScaler()),
         ('rf', RandomForestRegressor())])
 
 
     param_grid = {
-                'rf_max_features':1.0, 'rf__n_estimators':150, 'rf__max_depth':None, 'rf__min_samples_split': 2, 'rf__min_samples_leaf': 2
+                'rf__n_estimators':n_estimators, 'rf__max_depth':[None], 'rf__min_samples_split': min_samples_split, 'rf__min_samples_leaf': min_samples_leaf
             }
 
 
-    rf_random = gridsearchJulie(pipe, param_grid)
-
-
-
+    rf_random = gridsearchJulie(pipe, param_grid, log_transform = True, update_merge_df = True)
+    
 
        # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
    # regr = RandomForestRegressor(max_depth=2, random_state=0)
