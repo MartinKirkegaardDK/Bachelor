@@ -1,6 +1,7 @@
 import pandas as pd
 import os
-
+import seaborn as sns
+import matplotlib as plt
 def split_social_continent():
     # Reading in the data
     file_path = 'data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv'
@@ -44,5 +45,26 @@ print(africa)
 
 
 def continent_connections_plot():
+    
 
-    for continent in os.listdir("")
+    continent_dfs = split_social_continent()
+    asia = continent_dfs['Asia']
+    america = continent_dfs['Americas']
+    europe = continent_dfs['Europe']
+    oceania = continent_dfs['Oceania']
+    africa = continent_dfs['Africa']
+
+    frames = [asia, america, europe,oceania,africa]
+    df = pd.concat(frames)
+    
+    s = df.groupby(['user_loc']).sum()
+
+    sns_plot = sns.scatterplot(x=df['user_loc'], y=df['scaled_sci'], hue=df["region"])
+
+    sns_plot.savefig("output.png")
+
+
+
+
+
+
