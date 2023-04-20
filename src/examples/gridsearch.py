@@ -1,10 +1,10 @@
 from utils.utilities import gridsearch
-from sklearn.preprocessing import Normalizer
+from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.svm import SVR
 
 pipe = Pipeline(
-    [("normalize",Normalizer()),
+    [("normalize",StandardScaler()),
     ('SVM', SVR())])
 
 param_grid = {

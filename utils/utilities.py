@@ -47,10 +47,15 @@ class result_object():
         
         self.dataframe.to_csv(self.run_name, index = False)
 
-def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True):
+def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, update_merge_df = True):
+    """If the remove_threshold is set to a positive value above 0, then it removes the labels
+    which has a score of lower then thre remove_threshold"""
     obj_list = []
     print("Loading in data")
     X_dict, Y_dict =load_everthing()
+
+    if remove_threshold != 0:
+        X_dict, Y_dict, _ = remove_under_threshold(remove_threshold, X_dict,Y_dict)
 
 
     for X_d, Y_d in zip(X_dict.items(),Y_dict):
@@ -76,9 +81,11 @@ def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True
 
 
 def gridsearch_country(pipeline,param_grid, log_transform = True, update_merge_df = True):
+    
     obj_list = []
     print("Loading in data")
     x_dict, y_dict = load_everthing_with_countries()
+    
     for distance_metrics in x_dict.keys():
         print(distance_metrics)
         for x_d, labels in zip(x_dict[distance_metrics].items(),y_dict.values()):
@@ -229,8 +236,46 @@ def remove_outside_confidence_interval(n, li):
 
 
 
-def gen_feature_dict(bootstrap_results):
+def gen_feature_dict_lasso(bootstrap_results):
     param_list = [x.best_estimator_.steps[-1][-1].coef_ for x in bootstrap_results]
+    feature_list = []
+    for file in os.listdir("data/fb_data/"):
+        if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
+            feature = file.split("_")[1]
+            feature = feature.replace(".csv","")
+            feature_list.append(feature)
+    d = defaultdict(list)
+    for run in param_list:
+        for feature, value in zip(feature_list,run):
+            d[feature].append(value)
+
+    #Removes values outside n% confidence interval
+    for key, val in d.items():
+        n = 0.95
+        d[key] = remove_outside_confidence_interval(n,val)
+    return d
+
+
+def remove_under_threshold(n: int,X_dict: dict, Y_dict: dict):
+    """Loads in all the labels, and removes the entries returns a set of the entries which are below n"""
+    data = load("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv","\t")
+    subset = data[data["scaled_sci"] < n]
+    to_remove = set()
+    for _, row in subset.iterrows():
+        s = row["user_loc"] + "_" + row["fr_loc"]
+        to_remove.add(s)
+    for distance_metric in X_dict.values():
+        for connection in to_remove:
+            #del distance_metric[connection]
+            distance_metric.pop(connection, None)
+
+    for connection in to_remove:
+        Y_dict.pop(connection, None)
+    return X_dict, Y_dict, to_remove
+
+
+def gen_feature_dict_d_trees(bootstrap_results):
+    param_list = [x.best_estimator_.steps[-1][-1].feature_importances_ for x in bootstrap_results]
     feature_list = []
     for file in os.listdir("data/fb_data/"):
         if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
