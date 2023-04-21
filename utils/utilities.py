@@ -305,3 +305,25 @@ def gen_feature_dict_lasso(bootstrap_results, with_dist = False):
         n = 0.95
         d[key] = remove_outside_confidence_interval(n,val)
     return d
+
+
+def gen_feature_dict_d_tree(bootstrap_results, with_dist = False):
+    param_list = [x.best_estimator_.steps[-1][-1].feature_importances_ for x in bootstrap_results]
+    feature_list = []
+    for file in os.listdir("data/fb_data/"):
+        if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
+            feature = file.split("_")[1]
+            feature = feature.replace(".csv","")
+            feature_list.append(feature)
+    if with_dist == True:
+        feature_list.append("distance")
+    d = defaultdict(list)
+    for run in param_list:
+        for feature, value in zip(feature_list,run):
+            d[feature].append(value)
+
+    #Removes values outside n% confidence interval
+    for key, val in d.items():
+        n = 0.95
+        d[key] = remove_outside_confidence_interval(n,val)
+    return d
