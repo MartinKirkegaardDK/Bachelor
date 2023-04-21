@@ -15,22 +15,24 @@ def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
 
 def merge_dfs():
-    path = "runs/"
+    path = "martin_runs/"
     df_list = []
     for elm in os.listdir(path):
         if "merged" in elm:
             continue
         df_list.append(pd.read_csv(path + elm))
     df = pd.concat(df_list)
-    df.to_csv("runs/merged_df.csv",index = False)
+    df.to_csv("martin_runs/merged_df.csv",index = False)
 
 class result_object():
-    def __init__(self, grid_search: object, dataset: str,X,Y,region):
+    def __init__(self, grid_search: object, dataset: str,X,Y,region,with_distance):
         self.gridsearch = grid_search
         self.data_type = dataset
-        self.model_name = naming("models/","test","pkl")
-        self.run_name = naming("runs/","test","csv")
+        self.model_name = naming("martin_models/","test","pkl")
+        self.run_name = naming("martin_runs/","test","csv")
         self.pipeline = grid_search.estimator
+        self.region = region
+        self.with_distance = with_distance
         joblib.dump(self.gridsearch, self.model_name) 
         d = pd.DataFrame(self.gridsearch.cv_results_)
         d = d[["params","mean_test_score"]]
@@ -38,7 +40,8 @@ class result_object():
         #d["score"] = grid_search.best_score_
         d["model_file_name"] =  [self.model_name for _ in range(len(d)) ]
         d["pipeline"] = self.pipeline
-        d["region"] = self.region = region
+        d["region"] = [self.region for _ in range(len(d))]
+        d["with_distance"] = [self.with_distance for _ in range(len(d))]
         d["model_name"] = [self.pipeline[-1] for _ in range(len(d)) ] 
         self.dataframe = d
         self.X = X
@@ -60,7 +63,8 @@ def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, u
 
     if remove_threshold != 0:
         #This was removed?
-        X_dict, Y_dict, _ = remove_under_threshold(remove_threshold, X_dict,Y_dict)
+        #X_dict, Y_dict, _ = remove_under_threshold(remove_threshold, X_dict,Y_dict)
+        pass
 
 
     for X_d, Y_d in zip(X_dict.items(),Y_dict):
@@ -77,7 +81,7 @@ def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, u
         search.fit(X, Y)
         print("Best parameter (CV score=%0.3f):" % search.best_score_)
         print(search.best_params_)
-        obj = result_object(search, dataset,X,Y,"world")
+        obj = result_object(search, dataset,X,Y,"world",with_distance)
         obj_list.append(obj)
         print("-"*75)
     if update_merge_df == True:

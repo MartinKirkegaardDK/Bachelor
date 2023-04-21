@@ -1,3 +1,0 @@
-params,mean_test_score,dataset,model_file_name,pipeline,model_name
-{},0.21517987362894714,ManDist,models/test_34.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Linear_regressor', LinearRegression())])",LinearRegression()

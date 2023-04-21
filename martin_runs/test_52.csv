@@ -1,9 +1,0 @@
-params,mean_test_score,dataset,model_file_name,pipeline,model_name
-{'Ridge_regressor__alpha': 1},0.44346720666490536,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
-{'Ridge_regressor__alpha': 10},0.4435649738724906,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
-{'Ridge_regressor__alpha': 25},0.4437183046991405,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
-{'Ridge_regressor__alpha': 100},0.4443408012625678,CosDist,models/test_51.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Ridge_regressor', Ridge(max_iter=10000))])",Ridge(max_iter=10000)
