@@ -1,0 +1,11 @@
+Vi har kigget på kontinenter, det gav meget dårlige resultater
+
+Vi har trænet på udelukket distance og label, vi har fået 0.69 r2 score
+
+Interconnectedness inde i kontinenterne. Er det bare at kigge på y-dataen, altså antal venner? Evt mean/median
+
+
+Lav 3 modeller:
+Distance, kultural og Distance + kultural
+
+

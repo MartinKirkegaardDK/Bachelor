@@ -37,7 +37,7 @@ def plot_r2(clf, pred, labels):
     plt.savefig("plots/pred_vs_labels.png")
     plt.show()
 
-def plot_confidence_interval(feature_dict):
+def plot_confidence_interval(feature_dict,name):
     data_dict = defaultdict(list)
     for key, val in feature_dict.items():
         data_dict['category'].append(key)
@@ -51,5 +51,5 @@ def plot_confidence_interval(feature_dict):
     plt.xlabel("Coefficient estimate")
     plt.yticks(range(len(dataset)),list(dataset['category']))
     plt.subplots_adjust(left = 0.25)
-    plt.savefig("plots/Coefficient_estimate.png")
+    plt.savefig(f"plots/{name}.png")
     plt.show()
