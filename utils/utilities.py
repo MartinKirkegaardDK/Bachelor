@@ -120,8 +120,8 @@ def get_params(path):
     return li
 
 def gridsearchJulie(pipeline, param_grid):
-
     """
+
     print("Loading in data")
     X_dict, Y_dict =load_everthing()
 
@@ -135,13 +135,14 @@ def gridsearchJulie(pipeline, param_grid):
         Y = np.log10(Y)
         print(dataset) # The metric we are looking at
         print("running gridsearch")
+
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
         search.fit(X, Y)
         print("Best Parameters", search.best_params_)
         print("Best parameter (CV score=%0.3f):" % search.best_score_)
         print("-"*75)
+
     """
- 
     # All data together
     X_dict, Y_dict = load_everthing_old()
     distance  = pd.read_csv("data/distance_data/processed_distances.csv")
@@ -151,7 +152,7 @@ def gridsearchJulie(pipeline, param_grid):
         X_dict[key] = value + (new_number,)
 
 
-    X = X_dict.values()
+    X = list(X_dict.values())
     Y = [i[0] for i in Y_dict.values()]
     Y = np.log10(Y)
 
@@ -175,7 +176,7 @@ def gridsearchJulie(pipeline, param_grid):
         print("Best Parameters", search.best_params_)
         print("Best parameter (CV score=%0.3f):" % search.best_score_)
         print("-"*75)
-   
+
     return 
 
 

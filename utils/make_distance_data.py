@@ -41,6 +41,8 @@ def make_X_data():
     csv_data = df.to_csv(index=False)
     df.to_csv('data/distance_data/processed_distances.csv', index=False)
 
+    return df
+
 
 
 def make_Y_data():
@@ -53,6 +55,7 @@ def make_Y_data():
     plot_df = pd.merge(left=friendship_data, right=distance_df, how='left', left_on='user_loc', right_on='iso_o')
     plot_df = plot_df.dropna()
 
+    return plot_df
 
 
 

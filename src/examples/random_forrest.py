@@ -37,7 +37,7 @@ def model():
     # Minimum number of samples required at each leaf node
     min_samples_leaf = [1, 2, 4,6,8]
     # Method of selecting samples for training each tree
-    bootstrap = [True, False]
+    bootstrap = ['memory', 'steps', 'verbose']
     # Create the random grid
     param_grid = {'n_estimators': n_estimators,
                 'max_features': max_features,
