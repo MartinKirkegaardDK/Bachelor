@@ -21,7 +21,7 @@ def plot_gpt4(pred, labels):
     plt.savefig("plots/idk.png")
     plt.show()
 
-def plot_r2(clf, pred, labels):
+def plot_r2(clf, pred, labels, title):
     """This is the scatterplot with the r2 line"""
     plt.figure(figsize=(5,5))
     plt.scatter(labels, pred, c='crimson')
@@ -34,10 +34,11 @@ def plot_r2(clf, pred, labels):
     plt.ylabel('Predictions', fontsize=15)
     plt.axis('equal')
     plt.legend()
-    plt.savefig("plots/pred_vs_labels.png")
+    plt.title(title)
+    plt.savefig(f"plots/{title}.png")
     plt.show()
 
-def plot_confidence_interval(feature_dict,name):
+def plot_confidence_interval(feature_dict,name, continent = None):
     data_dict = defaultdict(list)
     for key, val in feature_dict.items():
         data_dict['category'].append(key)
@@ -46,7 +47,10 @@ def plot_confidence_interval(feature_dict,name):
     dataset = pd.DataFrame(data_dict)
     for lower,upper,y in zip(dataset['lower'],dataset['upper'],range(len(dataset))):
         plt.plot((lower,upper),(y,y),'ro-',color='orange')
-    plt.title("Coefficient estimate within 0.95 confidence interval")
+    title = "Coefficient estimate within 0.95 confidence interval"
+    if continent:
+        title = title + " "+ continent.capitalize()
+    plt.title(title)
     plt.axvline(x = 0, color = 'b', label = 'axvline - full height')
     plt.xlabel("Coefficient estimate")
     plt.yticks(range(len(dataset)),list(dataset['category']))

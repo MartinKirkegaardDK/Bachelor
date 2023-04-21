@@ -163,6 +163,32 @@ def get_feature_names(metric):
                 names.append(filename.strip('csv')) 
     return names # Returning names of categories within the distance
 
+def load_everthing_with_distance(transform_function = None):
+    """You can pass it a function to transform the value. 
+    An example would be transform_function = np.log10 """
+    x,y = load_everthing()
+    dist = pd.read_csv("data/misc/iso_dist.csv")
+    dist_dict = dict()
+    for _, row in dist.iterrows():
+        dist_dict[row.iso_o] = row.dist
+    iso_to_keep = set(dist["iso_o"])
+    newdict = {k: y[k] for k in iso_to_keep}
+    new_y = dict(sorted(newdict.items()))
+    
+    new_x = defaultdict(dict)
+    for dist_metric, val in x.items():
+        for iso_code, feature in val.items():
+            if iso_code in iso_to_keep:
+                feature = list(feature)
+
+                #This value we append here is the dist feature. We can transform it here
+                if transform_function != None:
+                    feature.append(float(transform_function(dist_dict[iso_code])))
+                else:
+                    feature.append(float(dist_dict[iso_code]))
+                new_x[dist_metric][iso_code] = feature
+    return new_x, new_y
+        
 
 def load_everthing():
     """Loads in everything so the data is ready to be used for training and transforming"""

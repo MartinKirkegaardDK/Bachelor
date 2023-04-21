@@ -4,10 +4,10 @@ from utils.utilities import gridsearch
 from sklearn.pipeline import Pipeline
 
 
-def train_models(dict):
+def train_models(dict, with_distance = False):
     """Train multiple models from single dict"""
     for key, val in dict.items():
-        gridsearch(Pipeline(val["pipeline"]),val["param_grid"])
+        gridsearch(Pipeline(val["pipeline"]),val["param_grid"],with_distance= with_distance)
 
 def lasso():
     """This is the linear regression model using lasso"""
