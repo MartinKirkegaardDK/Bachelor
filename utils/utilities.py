@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import numpy as np
 import random
-from utils.load import load_everthing, get_feature_names
+from utils.load import load_everthing, get_feature_names, load_everthing_old
 from sklearn.model_selection import GridSearchCV
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_regression
@@ -47,10 +47,10 @@ class result_object():
         
         self.dataframe.to_csv(self.run_name, index = False)
 
-def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True):
+def gridsearch():#(pipeline,param_grid, log_transform = True, update_merge_df = True):
     obj_list = []
     print("Loading in data")
-    X_dict, Y_dict =load_everthing()
+    X_dict, Y_dict = load_everthing()
 
 
     for X_d, Y_d in zip(X_dict.items(),Y_dict):
@@ -60,6 +60,7 @@ def gridsearch(pipeline,param_grid, log_transform = True, update_merge_df = True
         if log_transform == True:
             Y = np.log10(Y)
         print(dataset)
+
         print("running gridsearch")
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
 
@@ -90,7 +91,6 @@ def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge
             if log_transform == True:
                 Y = np.log10(labels)
            
-
             print("running gridsearch")
             search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
 
@@ -119,9 +119,9 @@ def get_params(path):
         li.append((feature, coef))
     return li
 
+def gridsearchJulie(pipeline, param_grid):
 
-def gridsearchJulie(pipeline,param_grid, log_transform = True, update_merge_df = True):
-    obj_list = []
+    """
     print("Loading in data")
     X_dict, Y_dict =load_everthing()
 
@@ -132,43 +132,51 @@ def gridsearchJulie(pipeline,param_grid, log_transform = True, update_merge_df =
         
         X = list(X_d[1].values())
         Y = [x[0] for x in Y_dict.values()]
-        if log_transform == True:
-            Y = np.log10(Y)
+        Y = np.log10(Y)
         print(dataset) # The metric we are looking at
         print("running gridsearch")
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
-       
-      #  X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.33, random_state=42)
-      #  search.fit(X_train, y_train)
         search.fit(X, Y)
-
-      #  y_pred = search.predict(X_test)
-      #  print('\n\n')
         print("Best Parameters", search.best_params_)
-      #  print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
-            
-        select = SelectKBest(score_func=f_regression, k=1)
-        
-        z = select.fit_transform(X, Y) 
-        mask = select.get_support()
- 
-
-        new_features = [] # The list of your K best features
-
-        for bool_val, feature in zip(mask, names):
-            if bool_val:
-                new_features.append(feature)
-        print(new_features)
         print("Best parameter (CV score=%0.3f):" % search.best_score_)
-        print(search.best_params_)
-        obj = result_object(search, dataset,X,Y)
-        obj_list.append(obj)
         print("-"*75)
+    """
+ 
+    # All data together
+    X_dict, Y_dict = load_everthing_old()
+    distance  = pd.read_csv("data/distance_data/processed_distances.csv")
+    distance = distance['0'].to_list()
 
-   # if update_merge_df == True:
-    #    merge_dfs()
+    for key, value, new_number in zip(X_dict.keys(), X_dict.values(), distance):
+        X_dict[key] = value + (new_number,)
+
+
+    X = X_dict.values()
+    Y = [i[0] for i in Y_dict.values()]
+    Y = np.log10(Y)
+
+    print("all metrics together without distance") # The metric we are looking at
+    print("running gridsearch...")
+    search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
+    search.fit(X, Y)
+    print("Best Parameters", search.best_params_)
+    print("Best parameter (CV score=%0.3f):" % search.best_score_)
+    print("-"*75)
+
+
+    for dist, X_d, Y_d in zip(distance, X_dict.values(),Y_dict.values()):
+        X = list(X_d)
+        X.append(dist) #adding distance
+        Y = np.log10(Y_d[0]).to_list()
+        print("all metrics together with distance") # The metric we are looking at
+        print("running gridsearch...")
+        search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
+        search.fit(X, Y)
+        print("Best Parameters", search.best_params_)
+        print("Best parameter (CV score=%0.3f):" % search.best_score_)
+        print("-"*75)
    
-    return obj_list
+    return 
 
 
 def get_pred_and_labels(clf,n = 50 ):
@@ -210,8 +218,6 @@ def bootstrap(pipeline, param_grid,n = 100):
         bts_index = [random.choice(index_to_pick_from) for _ in xlist]
         bts_x = [xlist[x] for x in bts_index]
         bts_y = np.log10([ylist[x][0] for x in bts_index])
-
-
         
         param_grid = {}
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")

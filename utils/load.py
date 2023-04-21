@@ -198,11 +198,7 @@ def load_everthing():
         X_dict[key] = create_label_dict(label_names,val)
     
     Y_dict = create_label_dict(label_names, [taget_data])
-
-    for i,j in X_dict.items():
-        print(len(j.keys()))
-
-        break
+    
     return X_dict, Y_dict
 
 
@@ -252,7 +248,6 @@ def load_everthing_with_countries():
             df = load(f"data/{path}" + file,",")
             df = preprocess(df)
             df = df_to_list(df)
-            #print(sort_by_country(file))
             if "CosDist" in file:
                 d["CosDist"][sort_by_country(file)].append(df)
             elif "EucDist" in file:
@@ -271,7 +266,6 @@ def load_everthing_with_countries():
     for distance, country_dict in d.items():
         for country, val in country_dict.items():
             label_names = [x for x in Y_dict[country].keys()]
-            #print(country, val)
             final[distance][country] = create_label_dict(label_names, val)
     
     return final, Y_dict
