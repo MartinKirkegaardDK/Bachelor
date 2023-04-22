@@ -39,12 +39,11 @@ def model():
     # Method of selecting samples for training each tree
     bootstrap = ['memory', 'steps', 'verbose']
     # Create the random grid
-    param_grid = {'n_estimators': n_estimators,
-                'max_features': max_features,
-                'max_depth': max_depth,
-                'min_samples_split': min_samples_split,
-                'min_samples_leaf': min_samples_leaf,
-                'bootstrap': bootstrap}
+    param_grid = {'rf__n_estimators': n_estimators,
+                'rf__max_features': max_features,
+                'rf__max_depth': max_depth,
+                'rf__min_samples_split': min_samples_split,
+                'rf__min_samples_leaf': min_samples_leaf}
 
 
    # param_grid = {
