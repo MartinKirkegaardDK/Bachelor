@@ -1,0 +1,4 @@
+
+
+- Principal component analysis på hele datasettet giver os bedre resultater. Hvordan kan man bruge det?
+- Skal vi stadig lave transfer learning selv om modellen bar så dårlig?

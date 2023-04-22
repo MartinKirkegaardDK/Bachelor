@@ -1,4 +1,4 @@
-from src.examples.random_forrest import model
+#from src.examples.random_forrest import model
 
-
-model()
+from src.PCA.pca import scree_plot
+scree_plot()
