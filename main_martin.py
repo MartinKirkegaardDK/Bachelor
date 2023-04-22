@@ -1,10 +1,8 @@
-from src.examples.confidence_plot_continents_lasso import run
+from src.examples.confidence_plot_d_tree_with_distance import run
 #run()
-import pandas as pd
-from utils.load import load_everthing
-dist = pd.read_csv("data/misc/iso_dist.csv")
-
-x,y = load_everthing()
-
-for dist_metric, val in x.items():
-    print(val)
+#print("done 1")
+from src.examples.confidence_plot_continents_d_tree import run as run2
+run2()
+print("done 2")
+from src.examples.confidence_plot_d_tree import run as run3
+run3()
