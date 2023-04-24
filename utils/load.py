@@ -190,7 +190,7 @@ def load_everthing_with_distance(transform_function = None):
     return new_x, new_y
         
 
-def load_everthing():
+def load_everthing(test_size = 0, val_size = 0):
     """Loads in everything so the data is ready to be used for training and transforming"""
     X_dict = dict()
     Y_dict = dict()
