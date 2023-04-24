@@ -1,9 +1,10 @@
 from src.examples.random_forrest import model
 
-from src.PCA.pca import scree_plot, myplot, pca_func
+from src.PCA.pcr import scree_plot_all_data, scree_plot_for_indv_metrics, rf_with_distance, rf_without_distance
 import numpy as np
 import matplotlib as plt
-x, pca, pcamodel = pca_func()
-#myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),list(x.columns))
 
-scree_plot()
+scree_plot_all_data()
+scree_plot_for_indv_metrics()
+rf_with_distance()
+rf_without_distance()
