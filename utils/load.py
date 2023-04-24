@@ -242,7 +242,7 @@ def sort_by_country(file_name):
     elif "americas" in file_name:
         return "americas"
 
-def load_everthing_with_countries():
+def load_everthing_with_continents():
     """Loads in everything so the data is ready to be used for training and transforming"""
 
     X_dict = defaultdict(dict)
@@ -293,8 +293,13 @@ def load_everthing_with_countries():
         for country, val in country_dict.items():
             label_names = [x for x in Y_dict[country].keys()]
             final[distance][country] = create_label_dict(label_names, val)
+
+    #We need to sort the continents
+    new = defaultdict(dict)
+    for distance_metric, x_dict in final.items():
+        new[distance_metric] = dict( sorted(x_dict.items(), key=lambda a: a[0].lower()) )
     
-    return final, Y_dict
+    return new, dict(sorted(Y_dict.items(), key=lambda x: x[0].lower()) )
 
 
 

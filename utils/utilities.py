@@ -9,7 +9,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_regression
 from utils.load import load
 from collections import defaultdict
-from utils.load import load_everthing_with_countries
+from utils.load import load_everthing_with_continents
 
 def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
@@ -93,15 +93,18 @@ def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, u
 def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge_df = True):
     obj_list = []
     print("Loading in data")
-    x_dict, y_dict = load_everthing_with_countries()
+    x_dict, y_dict = load_everthing_with_continents()
     for distance_metrics in x_dict.keys():
         print(distance_metrics)
-        for x_d, labels in zip(x_dict[distance_metrics].items(),y_dict.values()):
+        for x_d, y_d in zip(x_dict[distance_metrics].items(),y_dict.items()):
             continent = x_d[0]
             X = list(x_d[1].values())
-            labels = list(labels.values())
+
+            labels = list(y_d[1].values())
+
             labels = [x[0] for x in labels]
-            print(continent)
+
+            
             if log_transform == True:
                 Y = np.log10(labels)
            
@@ -111,7 +114,7 @@ def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge
             search.fit(X, Y)
             print("Best parameter (CV score=%0.3f):" % search.best_score_)
             print(search.best_params_)
-            obj = result_object(search, distance_metrics,X,Y,continent)
+            obj = result_object(search, distance_metrics,X,Y,continent,False)
             obj_list.append(obj)
             print("-"*75)
         if update_merge_df == True:

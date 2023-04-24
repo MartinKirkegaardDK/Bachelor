@@ -1,0 +1,81 @@
+params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
+{},0.0272484686328347,ManDist,martin_models/test_16.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",africa,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.117201929317186,ManDist,martin_models/test_37.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",americas,False,RandomForestRegressor()
+{},-0.0041102802206533,EucDist,martin_models/test_9.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",europe,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},-0.0175802175664303,ManDist,martin_models/test_19.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",europe,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},-0.041165520956934,ManDist,martin_models/test_17.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",americas,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.0265768741603218,ManDist,martin_models/test_36.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",africa,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.1838065786280811,EucDist,martin_models/test_28.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",asia,False,RandomForestRegressor()
+{},0.0554603108465775,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",africa,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.0327824758646112,HetDist,martin_models/test_34.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",europe,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.0390507606720972,CosDist,martin_models/test_21.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",africa,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.0708994868360244,ManDist,martin_models/test_40.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",oceania,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.3199613603680197,EucDist,martin_models/test_30.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",oceania,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.0334722284448713,EucDist,martin_models/test_26.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",africa,False,RandomForestRegressor()
+{},-0.0414921835144187,EucDist,martin_models/test_7.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",americas,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},0.0764869212067707,HetDist,martin_models/test_11.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",africa,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},-0.1631483237106808,EucDist,martin_models/test_8.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",asia,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},0.0100731267019855,ManDist,martin_models/test_20.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",oceania,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.0030079701806471,CosDist,martin_models/test_24.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",europe,False,RandomForestRegressor()
+{},-0.0752204126328845,HetDist,martin_models/test_13.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",asia,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.4993675174687115,HetDist,martin_models/test_35.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",oceania,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.0836190720020241,HetDist,martin_models/test_31.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",africa,False,RandomForestRegressor()
+{},0.0137990508809448,CosDist,martin_models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",europe,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},-0.6068234424067055,HetDist,martin_models/test_15.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",oceania,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.0997766742875356,CosDist,martin_models/test_22.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",americas,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.1900582252956325,HetDist,martin_models/test_32.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",americas,False,RandomForestRegressor()
+{},0.0395397619038598,EucDist,martin_models/test_6.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",africa,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},-0.0465862909935047,CosDist,martin_models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",americas,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.0680820871346006,ManDist,martin_models/test_39.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",europe,False,RandomForestRegressor()
+{},-0.1659654156465045,CosDist,martin_models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",asia,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.2030392020389342,HetDist,martin_models/test_33.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",asia,False,RandomForestRegressor()
+{},0.0071540292618794,HetDist,martin_models/test_14.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",europe,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.0683842429501931,EucDist,martin_models/test_27.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",americas,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.1641389820906563,ManDist,martin_models/test_38.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",asia,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.2394320688073484,CosDist,martin_models/test_25.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",oceania,False,RandomForestRegressor()
+{},-0.3538922132578619,CosDist,martin_models/test_5.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",oceania,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},-0.0535952980922218,HetDist,martin_models/test_12.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",americas,False,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.0150973607998966,EucDist,martin_models/test_29.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",europe,False,RandomForestRegressor()
+"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.1359053076918778,CosDist,martin_models/test_23.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",asia,False,RandomForestRegressor()
+{},-0.1279751251324861,ManDist,martin_models/test_18.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",asia,False,"LassoCV(max_iter=100000, tol=0.001)"
+{},0.0365959001629249,EucDist,martin_models/test_10.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",oceania,False,"LassoCV(max_iter=100000, tol=0.001)"
