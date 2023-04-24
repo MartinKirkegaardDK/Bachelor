@@ -57,15 +57,16 @@ def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, u
     obj_list = []
     print("Loading in data")
     if with_distance == True:
-        X_dict, Y_dict = load_everthing_with_distance()
+        X_dict, Y_dict = load_everthing_with_distance(test_size = 0.2, val_size= 0)
     else:
-        X_dict, Y_dict =load_everthing()
-
+        X_dict, Y_dict =load_everthing(test_size= 0.2,val_size=0)
+    X_dict = X_dict["train"]
+    Y_dict = Y_dict["train"]
     if remove_threshold != 0:
         #This was removed?
         #X_dict, Y_dict, _ = remove_under_threshold(remove_threshold, X_dict,Y_dict)
         pass
-
+    
 
     for X_d, Y_d in zip(X_dict.items(),Y_dict):
         dataset = X_d[0]

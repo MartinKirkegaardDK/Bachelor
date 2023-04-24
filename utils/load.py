@@ -163,7 +163,7 @@ def get_feature_names(metric):
                 names.append(filename.strip('csv')) 
     return names # Returning names of categories within the distance
 
-def load_everthing_with_distance(transform_function = None):
+def load_everthing_with_distance(test_size = 0, val_size = 0,transform_function = None):
     """You can pass it a function to transform the value. 
     An example would be transform_function = np.log10 """
     x,y = load_everthing()
@@ -187,8 +187,61 @@ def load_everthing_with_distance(transform_function = None):
                 else:
                     feature.append(float(dist_dict[iso_code]))
                 new_x[dist_metric][iso_code] = feature
+    
+
+    new_x, new_y = test_train_val_split(new_x,new_y,test_size = test_size,val_size = val_size)
+
     return new_x, new_y
         
+
+
+import random
+def make_split_dict(list_of_keys, test_size, val_size, seed = 1234):
+    """Takes a list of keys, and the size of the test and val dataset as percentages"""
+    random.seed(seed)
+    d = dict()
+    test_size = 0.2
+    val_size = 0.1
+    total = len(list_of_keys)
+    all_keys = list_of_keys
+    test = int(total*test_size)
+    val = int(total*val_size)
+    test_keys = random.sample(all_keys, test)
+    all_keys = [i for i in all_keys if i not in test_keys]
+    val_keys = random.sample(all_keys, val)
+    all_keys = [i for i in all_keys if i not in val_keys]
+    d["train"] = all_keys
+    d["test"] = test_keys
+    d["val"] = val_keys
+    return d
+
+
+from collections import defaultdict
+
+def test_train_val_split(x,y,test_size, val_size):
+    new_x = defaultdict(lambda: defaultdict(dict))
+    #We just sample from CosDist. The reason is that we see no reason to sample independently from the different
+    #distance metrics, since the goal is simply to split the data up and compare the different distance metrics equally.
+    d = make_split_dict(list(x["CosDist"].keys()), test_size, val_size)
+    for distance_metric, x_dict in x.items():
+        for iso, feature in x_dict.items():
+            if iso in d["train"]:
+                new_x["train"][distance_metric][iso] = feature
+            elif iso in d["test"]:
+                new_x["test"][distance_metric][iso] = feature
+            elif iso in d["val"]:
+                new_x["val"][distance_metric][iso] = feature
+    new_y = defaultdict(dict)
+    for iso, label in y.items():
+        if iso in d["train"]:
+            new_y["train"][iso] = label
+        if iso in d["test"]:
+            new_y["test"][iso] = label
+        if iso in d["val"]:
+            new_y["val"][iso] = label
+    return new_x, new_y
+
+
 
 def load_everthing(test_size = 0, val_size = 0):
     """Loads in everything so the data is ready to be used for training and transforming"""
@@ -224,7 +277,9 @@ def load_everthing(test_size = 0, val_size = 0):
         X_dict[key] = create_label_dict(label_names,val)
     
     Y_dict = create_label_dict(label_names, [taget_data])
-    
+    if (test_size != 0) or (val_size != 0):
+        X_dict, Y_dict = test_train_val_split(X_dict,Y_dict,test_size,val_size) 
+
     return X_dict, Y_dict
 
 

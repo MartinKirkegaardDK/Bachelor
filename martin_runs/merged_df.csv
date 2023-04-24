@@ -1,17 +1,9 @@
 params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
-{},0.5403959492065703,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.0354813210842547,HetDist,martin_models/test_7.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+{},0.454942668269362,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,False,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.4451456977032147,CosDist,martin_models/test_5.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+{},0.2226203563731709,ManDist,martin_models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,False,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.2151289867538281,ManDist,martin_models/test_8.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+{},0.2286543477083493,EucDist,martin_models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,False,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.4053862369842578,ManDist,martin_models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.2181502886423126,EucDist,martin_models/test_6.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+{},0.0323202129700091,HetDist,martin_models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,False,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.4008229425489709,EucDist,martin_models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{},0.2969573107226974,HetDist,martin_models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"

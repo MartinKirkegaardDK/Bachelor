@@ -1,2 +1,2 @@
-from src.drivers.train_models.lasso_without_distance import run
+from src.drivers.train_models.lasso_with_distance import run
 run()

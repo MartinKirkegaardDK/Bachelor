@@ -1,3 +1,0 @@
-params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
-"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",-0.18380657862808114,EucDist,martin_models/test_28.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",asia,False,RandomForestRegressor()
