@@ -1,9 +1,0 @@
-params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
-"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.6551024624095405,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.5652682133610584,EucDist,martin_models/test_2.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.599087620825647,HetDist,martin_models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
-"{'rf__max_depth': None, 'rf__max_features': 1.0, 'rf__min_samples_leaf': 2, 'rf__min_samples_split': 2, 'rf__n_estimators': 150}",0.5711820396700389,ManDist,martin_models/test_4.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
