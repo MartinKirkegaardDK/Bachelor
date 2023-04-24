@@ -74,10 +74,6 @@ def pca_random_forest():
 
 
 
-
-
-
-
 def scree_plot():
     x, pca,pcamodel = pca_func()
 
@@ -97,17 +93,18 @@ def myplot(score,coeff,labels=None):
     n = coeff.shape[0]
     scalex = 1.0/(xs.max() - xs.min())
     scaley = 1.0/(ys.max() - ys.min())
-    plt.scatter(xs * scalex,ys * scaley,s=5)
+    plt.scatter(xs * scalex,ys * scaley,s=2,edgecolors='none')
     for i in range(n):
         plt.arrow(0, 0, coeff[i,0], coeff[i,1],color = 'r',alpha = 0.5)
         if labels is None:
-            plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, "Var"+str(i+1), color = 'green', ha = 'center', va = 'center')
+            plt.text(coeff[i,0]* 1, coeff[i,1] * 1, "Var"+str(i+1), color = 'green', ha = 'center', va = 'center', weight='bold')
         else:
-            plt.text(coeff[i,0]* 1.15, coeff[i,1] * 1.15, labels[i], color = 'g', ha = 'center', va = 'center')
+            plt.text(coeff[i,0]* 1, coeff[i,1] * 1, labels[i], color = 'green', ha = 'center', va = 'center', weight='bold')
  
     plt.xlabel("PC{}".format(1))
     plt.ylabel("PC{}".format(2))
     plt.grid()
+    plt.show()
 
 
 #cos_df = get_indv_df('cos')
