@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from collections import defaultdict
 
+from sklearn.metrics import r2_score
+
 def plot_gpt4(pred, labels):
     """the gpt4 plot, idk"""
     d = dict()
@@ -21,7 +23,9 @@ def plot_gpt4(pred, labels):
     plt.savefig("plots/idk.png")
     plt.show()
 
-def plot_r2(clf, pred, labels, title):
+
+
+def plot_r2(pred, labels, title):
     """This is the scatterplot with the r2 line"""
     plt.figure(figsize=(5,5))
     plt.scatter(labels, pred, c='crimson')
@@ -29,7 +33,8 @@ def plot_r2(clf, pred, labels, title):
     plt.xscale('log')
     p1 = max(max(pred), max(labels))
     p2 = min(min(pred), min(labels))
-    plt.plot([p1, p2], [p1, p2], 'b-',label = f"$R^2$ score = {round(clf.cv_results_['mean_test_score'][0],2)}")
+    
+    plt.plot([p1, p2], [p1, p2], 'b-',label = f"$R^2$ score = {round(r2_score(labels, pred),2)}")
     plt.xlabel('True Values', fontsize=15)
     plt.ylabel('Predictions', fontsize=15)
     plt.axis('equal')
@@ -47,7 +52,7 @@ def plot_confidence_interval(feature_dict,name, continent = None):
     dataset = pd.DataFrame(data_dict)
     for lower,upper,y in zip(dataset['lower'],dataset['upper'],range(len(dataset))):
         plt.plot((lower,upper),(y,y),'ro-',color='orange')
-    title = "Coefficient estimate within 0.95 confidence interval"
+    title = "95 confidence interval " + name.lower().replace("_", " ")
     if continent:
         title = title + " "+ continent.capitalize()
     plt.title(title)

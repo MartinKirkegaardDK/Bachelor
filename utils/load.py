@@ -188,8 +188,8 @@ def load_everthing_with_distance(test_size = 0, val_size = 0,transform_function 
                     feature.append(float(dist_dict[iso_code]))
                 new_x[dist_metric][iso_code] = feature
     
-
-    new_x, new_y = test_train_val_split(new_x,new_y,test_size = test_size,val_size = val_size)
+    if (test_size != 0) or (val_size != 0):
+        new_x, new_y = test_train_val_split(new_x,new_y,test_size = test_size,val_size = val_size)
 
     return new_x, new_y
         
@@ -216,7 +216,6 @@ def make_split_dict(list_of_keys, test_size, val_size, seed = 1234):
     return d
 
 
-from collections import defaultdict
 
 def test_train_val_split(x,y,test_size, val_size):
     new_x = defaultdict(lambda: defaultdict(dict))
@@ -241,6 +240,38 @@ def test_train_val_split(x,y,test_size, val_size):
             new_y["val"][iso] = label
     return new_x, new_y
 
+def test_train_val_split_continents(x,y,test_size, val_size):
+    def rec_dd():
+        return defaultdict(rec_dd)
+
+
+    #return new_x, new_y
+    new_x = rec_dd()
+    d = rec_dd()
+    #We just sample from CosDist. The reason is that we see no reason to sample independently from the different
+    #distance metrics, since the goal is simply to split the data up and compare the different distance metrics equally.
+    test_size = 0.2
+    val_size = 0
+    for distance_metric, idk in x.items():
+        for continent, x_dict in idk.items():
+            d[continent] = make_split_dict(list(x["CosDist"][continent].keys()), test_size, val_size)
+            for iso, feature in x_dict.items():
+                if iso in d[continent]["train"]:
+                    new_x["train"][distance_metric][continent][iso] = feature
+                elif iso in d[continent]["test"]:
+                    new_x["test"][distance_metric][continent][iso] = feature
+                elif iso in d[continent]["val"]:
+                    new_x["val"][distance_metric][continent][iso] = feature
+    new_y = rec_dd()
+    for continent, val in y.items():
+        for iso, label in val.items():
+            if iso in d[continent]["train"]:
+                new_y["train"][continent][iso] = label
+            if iso in d[continent]["test"]:
+                new_y["test"][continent][iso] = label
+            if iso in d[continent]["val"]:
+                new_y["val"][continent][iso] = label
+    return new_x, new_y
 
 
 def load_everthing(test_size = 0, val_size = 0):
@@ -297,10 +328,9 @@ def sort_by_country(file_name):
     elif "americas" in file_name:
         return "americas"
 
-def load_everthing_with_continents():
+def load_everthing_with_continents(test_size = 0, val_size = 0):
     """Loads in everything so the data is ready to be used for training and transforming"""
 
-    X_dict = defaultdict(dict)
     Y_dict = defaultdict(dict)
     d = dict()
     d["CosDist"] = defaultdict(list)
@@ -350,12 +380,16 @@ def load_everthing_with_continents():
             final[distance][country] = create_label_dict(label_names, val)
 
     #We need to sort the continents
-    new = defaultdict(dict)
+    new_x = defaultdict(dict)
     for distance_metric, x_dict in final.items():
-        new[distance_metric] = dict( sorted(x_dict.items(), key=lambda a: a[0].lower()) )
-    
-    return new, dict(sorted(Y_dict.items(), key=lambda x: x[0].lower()) )
+        new_x[distance_metric] = dict( sorted(x_dict.items(), key=lambda a: a[0].lower()) )
+    new_y = dict(sorted(Y_dict.items(), key=lambda x: x[0].lower()) )
 
+    if (test_size != 0) or (val_size != 0):
+        new_x, new_y = test_train_val_split(new_x,new_y,test_size,val_size) 
+    #x,y = test_train_val_split_continents(new_x, new_y, test_size= 0.2, val_size= 0)
+    return new_x, new_y
+    
 
 
 

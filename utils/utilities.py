@@ -10,6 +10,8 @@ from sklearn.feature_selection import chi2, f_regression
 from utils.load import load
 from collections import defaultdict
 from utils.load import load_everthing_with_continents
+from utils.load import load_everthing_with_distance
+
 
 def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
@@ -95,6 +97,8 @@ def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge
     obj_list = []
     print("Loading in data")
     x_dict, y_dict = load_everthing_with_continents()
+    x_dict = x_dict["train"]
+    y_dict = y_dict["train"]
     for distance_metrics in x_dict.keys():
         print(distance_metrics)
         for x_d, y_d in zip(x_dict[distance_metrics].items(),y_dict.items()):
@@ -142,9 +146,13 @@ def get_pred_and_labels(clf,n = 50, with_distance = False):
     """samples n amount of datapoints and uses the model clf to predict
     if n = 0, then we dont sample anything and use the entire dataset"""
     if with_distance == True:
-        x,y = load_everthing_with_distance()
+        x,y = load_everthing_with_distance(test_size= 0.2, val_size= 0)
+        x = x["test"]
+        y = y["test"]
     else:
-        x, y = load_everthing()
+        x, y = load_everthing(test_size= 0.2, val_size= 0)
+        x = x["test"]
+        y = y["test"]
     x_l = list(x["CosDist"].values())
     
     y_l = list(y.values())
@@ -165,7 +173,6 @@ def get_pred_and_labels(clf,n = 50, with_distance = False):
     labels = [item for sublist in labels for item in sublist]
     return pred, labels
 
-from utils.load import load_everthing_with_distance
 def bootstrap(pipeline, param_grid,n = 100, with_dist = False):
     print("running bootstrap")
     print("number of sample runs:", n)
@@ -183,8 +190,6 @@ def bootstrap(pipeline, param_grid,n = 100, with_dist = False):
         bts_index = [random.choice(index_to_pick_from) for _ in xlist]
         bts_x = [xlist[x] for x in bts_index]
         bts_y = np.log10([ylist[x][0] for x in bts_index])
-        
-        param_grid = {}
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
         search.fit(bts_x, bts_y)
         result.append(search)
@@ -198,7 +203,7 @@ def bootstrap_continents(pipeline, param_grid,n = 100):
     for i in range(n):
         if i%10 == 0:
             print(i)
-        x_dict,y_dict = load_everthing_with_countries()
+        x_dict,y_dict = load_everthing_with_continents()
         x_dict = x_dict["CosDist"]
         for x,y in zip(x_dict.items(), y_dict.values()):
             
@@ -210,7 +215,6 @@ def bootstrap_continents(pipeline, param_grid,n = 100):
             bts_index = [random.choice(index_to_pick_from) for _ in xlist]
             bts_x = [xlist[x] for x in bts_index]
             bts_y = np.log10([ylist[x][0] for x in bts_index])
-            param_grid = {}
             search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
             search.fit(bts_x, bts_y)
             result[continent].append(search)
