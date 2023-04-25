@@ -97,9 +97,9 @@ def myplot(score,coeff,labels=None):
     for i in range(n):
         plt.arrow(0, 0, coeff[i,0], coeff[i,1],color = 'r',alpha = 0.5)
         if labels is None:
-            plt.text(coeff[i,0]* 1, coeff[i,1] * 1, "Var"+str(i+1), color = 'green', ha = 'center', va = 'center', weight='bold')
+            plt.text(coeff[i,0]* 1, coeff[i,1] * 1, "Var"+str(i+1), color = 'green', ha = 'center', va = 'center')
         else:
-            plt.text(coeff[i,0]* 1, coeff[i,1] * 1, labels[i], color = 'green', ha = 'center', va = 'center', weight='bold')
+            plt.text(coeff[i,0]* 1, coeff[i,1] * 1, labels[i], color = 'green', ha = 'center', va = 'center')
  
     plt.xlabel("PC{}".format(1))
     plt.ylabel("PC{}".format(2))
