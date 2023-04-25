@@ -100,12 +100,9 @@ def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge
         for x_d, y_d in zip(x_dict[distance_metrics].items(),y_dict.items()):
             continent = x_d[0]
             X = list(x_d[1].values())
-
             labels = list(y_d[1].values())
-
             labels = [x[0] for x in labels]
 
-            
             if log_transform == True:
                 Y = np.log10(labels)
            
@@ -122,6 +119,8 @@ def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge
             merge_dfs()
     return obj_list
 
+    
+
 def get_params(path):
     """It returns a list of tuples, where the tuples are the featurenames and the coefficient
     the path is the path to the given pkl model"""
@@ -136,66 +135,6 @@ def get_params(path):
     for coef, feature in zip(clf.best_estimator_.steps[-1][-1].coef_, feature_list):
         li.append((feature, coef))
     return li
-
-def gridsearchJulie(pipeline, param_grid):
-    """
-
-    print("Loading in data")
-    X_dict, Y_dict =load_everthing()
-
-    for X_d, Y_d in zip(X_dict.items(),Y_dict):
-        dataset = X_d[0]
-
-        names = get_feature_names(dataset)
-        
-        X = list(X_d[1].values())
-        Y = [x[0] for x in Y_dict.values()]
-        Y = np.log10(Y)
-        print(dataset) # The metric we are looking at
-        print("running gridsearch")
-
-        search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
-        search.fit(X, Y)
-        print("Best Parameters", search.best_params_)
-        print("Best parameter (CV score=%0.3f):" % search.best_score_)
-        print("-"*75)
-
-    """
-    # All data together
-    X_dict, Y_dict = load_everthing_old()
-    distance  = pd.read_csv("data/distance_data/processed_distances.csv")
-    distance = distance['0'].to_list()
-
-    for key, value, new_number in zip(X_dict.keys(), X_dict.values(), distance):
-        X_dict[key] = value + (new_number,)
-
-
-    X = list(X_dict.values())
-    Y = [i[0] for i in Y_dict.values()]
-    Y = np.log10(Y)
-
-    print("all metrics together without distance") # The metric we are looking at
-    print("running gridsearch...")
-    search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
-    search.fit(X, Y)
-    print("Best Parameters", search.best_params_)
-    print("Best parameter (CV score=%0.3f):" % search.best_score_)
-    print("-"*75)
-
-
-    for dist, X_d, Y_d in zip(distance, X_dict.values(),Y_dict.values()):
-        X = list(X_d)
-        X.append(dist) #adding distance
-        Y = np.log10(Y_d[0]).to_list()
-        print("all metrics together with distance") # The metric we are looking at
-        print("running gridsearch...")
-        search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
-        search.fit(X, Y)
-        print("Best Parameters", search.best_params_)
-        print("Best parameter (CV score=%0.3f):" % search.best_score_)
-        print("-"*75)
-
-    return 
 
 
 

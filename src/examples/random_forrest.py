@@ -55,8 +55,11 @@ def model():
         ('rf', RandomForestRegressor())])
 
 
-    rf_random = gridsearchJulie(pipe, param_grid)
+    print("Random Forest without distance")
+    rf_random = gridsearch(pipe, param_grid, remove_threshold = 0, log_transform = True, update_merge_df = True, with_distance = False)
     
+    print("Random Forest with distance")
+    rf_random = gridsearch(pipe, param_grid, remove_threshold = 0, log_transform = True, update_merge_df = True, with_distance = True)
 
 
 

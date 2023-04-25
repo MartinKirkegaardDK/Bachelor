@@ -117,3 +117,17 @@ def myplot(score,coeff,labels=None):
 
 
 
+names = []
+for i in x.columns:
+    discard, cat = i.split("_")
+    cat = cat.strip(".")
+
+    if cat in "NonLocalBus":
+        cat = "NonLocalBusiness"
+    names.append(cat)
+
+
+
+myplot(pca[:,0:2],np.transpose(pcamodel.components_[0:2, :]),names)
+print(names)
+
