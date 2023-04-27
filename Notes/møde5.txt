@@ -1,0 +1,2 @@
+1. Hvorfor 100 resamples i bootstrapping? Det er et random tal, men hvordan kan vi argumentere for det? 
+
