@@ -1,2 +1,4 @@
 1. Hvorfor 100 resamples i bootstrapping? Det er et random tal, men hvordan kan vi argumentere for det? 
 
+2. Spørge Vedran om "The data is constructed as a 225 x 59,763 matrix". Hvad betyder dette tal?
+"Given data on the number of Facebook users and the number of users interested in each of the 59,763 Facebook interests in each of the 225 countries and territories, we construct a matrix of size (225 x 59,763) with the share of Facebook users that have a given interest in each country. Thus, the element in row k and column i of the matrix gives the share of Facebook users in location k that have interest i, and each row vector has the shares of users for all interests for a given location."
