@@ -72,11 +72,14 @@ def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, u
 
     for X_d, Y_d in zip(X_dict.items(),Y_dict):
         dataset = X_d[0]
+        print(dataset)
+        if (dataset in ["CosDist","EucDist","HetDist"]) and (with_distance == True):
+            continue
         X = list(X_d[1].values())
         Y = [x[0] for x in Y_dict.values()]
         if log_transform == True:
             Y = np.log10(Y)
-        print(dataset)
+        #print(dataset)
 
         print("running gridsearch")
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")

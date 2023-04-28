@@ -52,6 +52,7 @@ def model():
 
     pipe = Pipeline(
         [("StandardScaler",StandardScaler()),
+         ("PCA",)
         ('rf', RandomForestRegressor())])
 
 
