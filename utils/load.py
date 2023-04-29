@@ -314,6 +314,20 @@ def load_everthing(test_size = 0, val_size = 0):
     return X_dict, Y_dict
 
 
+def load_all_distance_metrics(test_size = 0, val_size = 0, with_distance = False):
+    if with_distance:
+        x,y = load_everthing_with_distance(test_size= test_size, val_size= val_size)
+    else:
+        x,y = load_everthing(test_size= test_size, val_size= val_size)
+    new_dict = {}
+    for row in x:
+        new_dict[row] = {}
+        for distance_metric in x[row]:
+            for iso_code in x[row][distance_metric]:
+                if iso_code not in new_dict[row]:
+                    new_dict[row][iso_code] = []
+                new_dict[row][iso_code].extend(x[row][distance_metric][iso_code])
+    return new_dict, y
 
 
 def sort_by_country(file_name):

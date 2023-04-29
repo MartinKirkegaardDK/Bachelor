@@ -5,19 +5,19 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from utils.utilities import bootstrap_continents
 
-n = 10
+n = 100
 
 def confidence_plot_lasso_without_dist():
     pipe = Pipeline([("StandardScaler",StandardScaler()),("Lasso_regressor",LassoCV(max_iter= 10000))])
-    s = bootstrap(pipeline= pipe, param_grid= {}, n = n)
+    s = bootstrap(pipeline= pipe, param_grid= {}, n = 10)
     feature_dict = gen_feature_dict_lasso(s)
-    plot_confidence_interval(feature_dict,"Coefficient_estimate_lasso_without_distance")
+    plot_confidence_interval(feature_dict,"Coefficient_estimate_for_LASSO_without_distance")
 
 def confidence_plot_lasso_with_dist():
     pipe = Pipeline([("StandardScaler",StandardScaler()),("Lasso_regressor",LassoCV(max_iter= 10000))])
     s = bootstrap(pipeline= pipe, param_grid= {},with_dist= True, n = n)
     feature_dict = gen_feature_dict_lasso(s, with_dist= True)
-    plot_confidence_interval(feature_dict,"Coefficient_estimate_lasso_with_distance")
+    plot_confidence_interval(feature_dict,"Coefficient_estimate_for_LASSO_with_distance")
 
 
 def confidence_plot_lasso_continents():

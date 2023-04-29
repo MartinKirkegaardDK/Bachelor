@@ -11,7 +11,7 @@ from utils.load import load
 from collections import defaultdict
 from utils.load import load_everthing_with_continents
 from utils.load import load_everthing_with_distance
-
+from utils.load import load_all_distance_metrics
 
 def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
@@ -94,6 +94,31 @@ def gridsearch(pipeline,param_grid, remove_threshold = 0,log_transform = True, u
         merge_dfs()
     return obj_list
 
+def gridsearch_all_distance_metrics(pipeline,param_grid, remove_threshold = 0,log_transform = True, update_merge_df = True, with_distance = False):
+    import numpy as np
+    if with_distance == True:
+        x,y = load_all_distance_metrics(test_size = 0.2, val_size= 0, with_distance = True)
+        x = x["train"]
+        y = y["train"]
+    else:
+        x,y = load_all_distance_metrics(test_size = 0.2, val_size= 0, with_distance = False)
+        x = x["train"]
+        y = y["train"]
+    
+    X = list(x.values())
+    Y = [x[0] for x in y.values()]
+    if log_transform == True:
+        Y = np.log10(Y)
+    #print(dataset)
+    dataset = "all_distance_metrics"
+    print("running gridsearch")
+    search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
+
+    search.fit(X, Y)
+    print("Best parameter (CV score=%0.3f):" % search.best_score_)
+    print(search.best_params_)
+    obj = result_object(search, dataset,X,Y,"world",with_distance)
+    return obj
 
 
 def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge_df = True):
@@ -176,17 +201,25 @@ def get_pred_and_labels(clf,n = 50, with_distance = False):
     labels = [item for sublist in labels for item in sublist]
     return pred, labels
 
-def bootstrap(pipeline, param_grid,n = 100, with_dist = False):
-    print("running bootstrap")
+def bootstrap(pipeline, param_grid,n = 100, with_dist = False, all_data = False):
+    
     print("number of sample runs:", n)
+    print("loading in data")
     result = []
+    if with_dist:
+        x,y = load_everthing_with_distance(test_size= 0.2, val_size=0.0)
+        x = x["train"]
+        y = y=["train"]
+    else:
+        x,y = load_everthing(test_size= 0.2, val_size= 0)
+        x = x["train"]
+        y = y["train"]
+    print("running bootstrap")
     for i in range(n):
+
         if i%10 == 0:
             print(i)
-        if with_dist:
-            x,y = load_everthing_with_distance()
-        else:
-            x,y = load_everthing()
+
         ylist = list(y.values())
         xlist = list(x["CosDist"].values())
         index_to_pick_from = range(len(xlist))
