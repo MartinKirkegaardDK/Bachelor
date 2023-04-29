@@ -27,7 +27,7 @@ def plot_gpt4(pred, labels):
 
 def plot_r2(pred, labels, title):
     """This is the scatterplot with the r2 line"""
-    plt.figure(figsize=(5,5))
+    plt.figure(figsize=(7,7))
     plt.scatter(labels, pred, c='crimson')
     plt.yscale('log')
     plt.xscale('log')
@@ -35,7 +35,10 @@ def plot_r2(pred, labels, title):
     p2 = min(min(pred), min(labels))
     title = title.replace("rf","Random Forrest")
     title = title.replace("lasso","LASSO")
-    title = title.replace("dist", "distance")
+    print(title)
+    title = title.replace("dist ", "distance ")
+    if title.endswith("dist"):
+        title = title.replace("dist","distance")
     plt.plot([p1, p2], [p1, p2], 'b-',label = f"$R^2$ score = {round(r2_score(labels, pred),2)}")
     plt.xlabel('True Values', fontsize=15)
     plt.ylabel('Predictions', fontsize=15)
@@ -45,13 +48,38 @@ def plot_r2(pred, labels, title):
     plt.savefig(f"plots/{title}.png")
     plt.show()
 
-def plot_confidence_interval(feature_dict,name, continent = None):
+def plot_confidence_interval_old(feature_dict,name, continent = None):
     data_dict = defaultdict(list)
     for key, val in feature_dict.items():
         data_dict['category'].append(key)
         data_dict['lower'].append(min(val))
         data_dict['upper'].append(max(val))
     dataset = pd.DataFrame(data_dict)
+    for lower,upper,y in zip(dataset['lower'],dataset['upper'],range(len(dataset))):
+        plt.plot((lower,upper),(y,y),'ro-',color='orange')
+    title = name.replace("_", " ")
+    if continent:
+        title = title + " "+ continent.capitalize()
+    plt.title(title)
+    plt.axvline(x = 0, color = 'b', label = 'axvline - full height')
+    plt.xlabel("Coefficient estimate")
+    plt.yticks(range(len(dataset)),list(dataset['category']))
+    plt.subplots_adjust(left = 0.25)
+    plt.savefig(f"plots/{name}.png")
+    plt.show()
+
+
+def plot_confidence_interval(feature_dict, name, continent=None):
+    data_dict = defaultdict(list)
+    for key, val in feature_dict.items():
+        data_dict['category'].append(key)
+        data_dict['lower'].append(min(val))
+        data_dict['upper'].append(max(val))
+    dataset = pd.DataFrame(data_dict)
+    
+    # Set figure size
+    plt.figure(figsize=(10, len(dataset)*0.2))
+    
     for lower,upper,y in zip(dataset['lower'],dataset['upper'],range(len(dataset))):
         plt.plot((lower,upper),(y,y),'ro-',color='orange')
     title = name.replace("_", " ")

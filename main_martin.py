@@ -1,2 +1,2 @@
-from src.drivers.train_models.rf import run
+from src.drivers.plots.plot_all_pred_vs_label import run
 run()

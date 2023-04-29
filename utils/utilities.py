@@ -16,15 +16,14 @@ from utils.load import load_all_distance_metrics
 def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
 
-def merge_dfs():
-    path = "martin_runs/"
+def merge_dfs(path = "martin_runs/"):
     df_list = []
     for elm in os.listdir(path):
         if "merged" in elm:
             continue
         df_list.append(pd.read_csv(path + elm))
     df = pd.concat(df_list)
-    df.to_csv("martin_runs/merged_df.csv",index = False)
+    df.to_csv(f"{path}/merged_df.csv",index = False)
 
 class result_object():
     def __init__(self, grid_search: object, dataset: str,X,Y,region,with_distance):
@@ -170,18 +169,25 @@ def get_params(path):
 
 
 
-def get_pred_and_labels(clf,n = 50, with_distance = False):
+def get_pred_and_labels(clf,n = 50, with_distance = False, all_distance_metrics = False):
     """samples n amount of datapoints and uses the model clf to predict
     if n = 0, then we dont sample anything and use the entire dataset"""
-    if with_distance == True:
-        x,y = load_everthing_with_distance(test_size= 0.2, val_size= 0)
+    if all_distance_metrics:
+        x,y = load_all_distance_metrics(test_size= 0.2, val_size= 0,with_distance= with_distance)
         x = x["test"]
         y = y["test"]
+        x_l = list(x.values())
+
     else:
-        x, y = load_everthing(test_size= 0.2, val_size= 0)
-        x = x["test"]
-        y = y["test"]
-    x_l = list(x["CosDist"].values())
+        if with_distance == True:
+            x,y = load_everthing_with_distance(test_size= 0.2, val_size= 0)
+            x = x["test"]
+            y = y["test"]
+        else:
+            x, y = load_everthing(test_size= 0.2, val_size= 0)
+            x = x["test"]
+            y = y["test"]
+        x_l = list(x["CosDist"].values())
     
     y_l = list(y.values())
     
@@ -231,6 +237,35 @@ def bootstrap(pipeline, param_grid,n = 100, with_dist = False, all_data = False)
         result.append(search)
     return result
 
+from utils.load import load_all_distance_metrics
+
+import numpy as np
+def bootstrap_all_distance_metrics(pipeline, param_grid,n = 100, with_dist = False, all_data = False):
+    
+    print("number of sample runs:", n)
+    print("loading in data")
+    result = []
+
+    x,y = load_all_distance_metrics(test_size= 0.2, val_size=0.0, with_distance= with_dist)
+    x = x["train"]
+    y = y["train"]
+    X = list(x.values())
+    Y = [x[0] for x in y.values()]
+    Y = np.log10(Y)
+        
+    print("running bootstrap")
+    for i in range(n):
+
+        if i%10 == 0:
+            print(i)
+        
+        search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
+
+        search.fit(X, Y)
+        result.append(search)
+    return result
+        
+
 def bootstrap_continents(pipeline, param_grid,n = 100):
     print("running bootstrap")
     print("number of sample runs:", n)
@@ -268,21 +303,27 @@ def remove_outside_confidence_interval(n, li):
 
 
 
-def gen_feature_dict_lasso(bootstrap_results, with_dist = False):
+def gen_feature_dict_lasso(bootstrap_results, with_dist = False, all_distance = False):
     param_list = [x.best_estimator_.steps[-1][-1].coef_ for x in bootstrap_results]
     feature_list = []
     for file in os.listdir("data/fb_data/"):
-        if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
-            feature = file.split("_")[1]
-            feature = feature.replace(".csv","")
-            feature_list.append(feature)
+        if all_distance:
+            if (file.endswith(".csv")) and ("_" in file):
+                #print(file)
+                feature = file.replace(".csv","")
+                feature_list.append(feature)
+        else:
+            if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
+                feature = file.split("_")[1]
+                feature = feature.replace(".csv","")
+                feature_list.append(feature)
     if with_dist == True:
         feature_list.append("distance")
     d = defaultdict(list)
     for run in param_list:
         for feature, value in zip(feature_list,run):
+            #print(feature)
             d[feature].append(value)
-
     #Removes values outside n% confidence interval
     for key, val in d.items():
         n = 0.95
