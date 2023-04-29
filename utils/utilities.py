@@ -240,7 +240,7 @@ def bootstrap(pipeline, param_grid,n = 100, with_dist = False, all_data = False)
 from utils.load import load_all_distance_metrics
 
 import numpy as np
-def bootstrap_all_distance_metrics(pipeline, param_grid,n = 100, with_dist = False, all_data = False):
+def bootstrap_all_distance_metrics(pipeline, param_grid,n = 100, with_dist = False):
     
     print("number of sample runs:", n)
     print("loading in data")
@@ -249,19 +249,22 @@ def bootstrap_all_distance_metrics(pipeline, param_grid,n = 100, with_dist = Fal
     x,y = load_all_distance_metrics(test_size= 0.2, val_size=0.0, with_distance= with_dist)
     x = x["train"]
     y = y["train"]
-    X = list(x.values())
-    Y = [x[0] for x in y.values()]
-    Y = np.log10(Y)
+
         
     print("running bootstrap")
     for i in range(n):
 
         if i%10 == 0:
             print(i)
-        
+        xlist = list(x.values())
+        ylist = list(y.values())
+        index_to_pick_from = range(len(xlist))
+        bts_index = [random.choice(index_to_pick_from) for _ in xlist]
+        bts_x = [xlist[x] for x in bts_index]
+        bts_y = np.log10([ylist[x][0] for x in bts_index])
         search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
 
-        search.fit(X, Y)
+        search.fit(bts_x, bts_y)
         result.append(search)
     return result
         
@@ -330,24 +333,50 @@ def gen_feature_dict_lasso(bootstrap_results, with_dist = False, all_distance = 
         d[key] = remove_outside_confidence_interval(n,val)
     return d
 
-
-def gen_feature_dict_d_tree(bootstrap_results, with_dist = False):
+def gen_feature_dict_rf(bootstrap_results, with_dist = False, all_distance = False):
     param_list = [x.best_estimator_.steps[-1][-1].feature_importances_ for x in bootstrap_results]
     feature_list = []
     for file in os.listdir("data/fb_data/"):
-        if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
-            feature = file.split("_")[1]
-            feature = feature.replace(".csv","")
-            feature_list.append(feature)
+        if all_distance:
+            if (file.endswith(".csv")) and ("_" in file):
+                #print(file)
+                feature = file.replace(".csv","")
+                feature_list.append(feature)
+        else:
+            if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
+                feature = file.split("_")[1]
+                feature = feature.replace(".csv","")
+                feature_list.append(feature)
     if with_dist == True:
         feature_list.append("distance")
     d = defaultdict(list)
     for run in param_list:
         for feature, value in zip(feature_list,run):
+            #print(feature)
             d[feature].append(value)
-
     #Removes values outside n% confidence interval
     for key, val in d.items():
         n = 0.95
         d[key] = remove_outside_confidence_interval(n,val)
     return d
+
+# def gen_feature_dict_d_tree(bootstrap_results, with_dist = False):
+#     param_list = [x.best_estimator_.steps[-1][-1].feature_importances_ for x in bootstrap_results]
+#     feature_list = []
+#     for file in os.listdir("data/fb_data/"):
+#         if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
+#             feature = file.split("_")[1]
+#             feature = feature.replace(".csv","")
+#             feature_list.append(feature)
+#     if with_dist == True:
+#         feature_list.append("distance")
+#     d = defaultdict(list)
+#     for run in param_list:
+#         for feature, value in zip(feature_list,run):
+#             d[feature].append(value)
+
+#     #Removes values outside n% confidence interval
+#     for key, val in d.items():
+#         n = 0.95
+#         d[key] = remove_outside_confidence_interval(n,val)
+#     return d

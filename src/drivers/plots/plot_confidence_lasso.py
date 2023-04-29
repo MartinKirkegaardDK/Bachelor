@@ -28,11 +28,10 @@ def confidence_plot_lasso_continents():
         feature_dict = gen_feature_dict_lasso(value)
         plot_confidence_interval(feature_dict,f"Coefficient_estimate_lasso",continent= continent)
 
+
 def run():
     print("plotting confidence_plot_lasso_without_dist")
     confidence_plot_lasso_without_dist()
     print("plotting confidence_plot_lasso_with_dist")
     confidence_plot_lasso_with_dist()
-    #print("plotting confidence_plot_lasso_continents")
-    #confidence_plot_lasso_continents()
 

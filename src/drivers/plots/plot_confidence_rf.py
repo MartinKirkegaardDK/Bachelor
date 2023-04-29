@@ -1,4 +1,3 @@
-from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 from utils.utilities import bootstrap_continents
@@ -35,8 +34,6 @@ def confidence_plot_rf_with_dist():
     plot_confidence_interval(feature_dict,"Coefficient_estimate_d_tree_with_distance")
 
 def run():
-    print("plotting confidence_plot_rf_continents")
-    confidence_plot_rf_continents()
     print("plotting confidence_plot_rf_without_dist")
     confidence_plot_rf_without_dist()
     print("plotting confidence_plot_rf_with_dist")

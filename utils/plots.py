@@ -78,7 +78,8 @@ def plot_confidence_interval(feature_dict, name, continent=None):
     dataset = pd.DataFrame(data_dict)
     
     # Set figure size
-    plt.figure(figsize=(10, len(dataset)*0.2))
+    if len(dataset) > 50:
+        plt.figure(figsize=(10, len(dataset)*0.2))
     
     for lower,upper,y in zip(dataset['lower'],dataset['upper'],range(len(dataset))):
         plt.plot((lower,upper),(y,y),'ro-',color='orange')
