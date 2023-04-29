@@ -37,6 +37,19 @@ def rf_with_distance():
     print(r2)
 
 
+def get_full_data():
+
+        X_dict, Y_dict = load_everthing_old()
+    distance  = pd.read_csv("data/distance_data/processed_distances.csv")
+    distance["0"] = distance["0"].fillna(0)
+    distance = distance['0'].to_list()
+
+    for key, value, new_number in zip(X_dict.keys(), X_dict.values(), distance):
+        X_dict[key] = value + (new_number,)
+
+    return X_dict, Y_dict
+
+
 
 def rf_without_distance():
 
@@ -48,7 +61,8 @@ def rf_without_distance():
     Y = np.log10(Y)
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=42)
 
-    rf = RandomForestRegressor(n_estimators = 150, max_features = 'sqrt', max_depth = None, min_samples_leaf=2, min_samples_split=2, random_state = 18).fit(X_train, y_train)
+   # rf = RandomForestRegressor(n_estimators = 150, max_features = 'sqrt', max_depth = None, min_samples_leaf=2, min_samples_split=2, random_state = 18).fit(X_train, y_train)
+    rf = RandomForestRegressor().fit(X_train, y_train)
 
     prediction = rf.predict(X_test)
     r2 = r2_score(y_test, prediction)
@@ -67,7 +81,8 @@ def rf_only_distance():
     Y = [i[0] for i in Y_dict.values()]
     Y = np.log10(Y)
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=42)
-    rf = RandomForestRegressor(n_estimators = 150, max_features = 'sqrt', max_depth = None, min_samples_leaf=2, min_samples_split=2, random_state = 18).fit(X_train, y_train)
+   # rf = RandomForestRegressor(n_estimators = 150, max_features = 'sqrt', max_depth = None, min_samples_leaf=2, min_samples_split=2, random_state = 18).fit(X_train, y_train)
+    rf = RandomForestRegressor().fit(X_train, y_train)
 
     prediction = rf.predict(X_test)
     r2 = r2_score(y_test, prediction)
