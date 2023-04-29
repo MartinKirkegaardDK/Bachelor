@@ -10,10 +10,12 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
+n = 10
+
 def confidence_plot_rf_continents():
     pipe = Pipeline( [("StandardScaler",StandardScaler()), ('rf', RandomForestRegressor())]) 
     param_grid = {}
-    s = bootstrap_continents(pipeline= pipe, param_grid= param_grid, n = 100)
+    s = bootstrap_continents(pipeline= pipe, param_grid= param_grid, n = n)
     for continent, value in s.items():
         feature_dict = gen_feature_dict_d_tree(value)
         plot_confidence_interval(feature_dict,f"Coefficient_estimate_d_tree_{continent}",continent= continent)
@@ -21,14 +23,14 @@ def confidence_plot_rf_continents():
 def confidence_plot_rf_without_dist():
     pipe = Pipeline( [("StandardScaler",StandardScaler()), ('rf', RandomForestRegressor())]) 
     param_grid = {}
-    s = bootstrap(pipeline= pipe, param_grid= param_grid, n = 100)
+    s = bootstrap(pipeline= pipe, param_grid= param_grid, n = n)
     feature_dict = gen_feature_dict_d_tree(s)
     plot_confidence_interval(feature_dict,"Coefficient_estimate_d_tree")
 
 def confidence_plot_rf_with_dist():
     pipe = Pipeline( [("StandardScaler",StandardScaler()), ('rf', RandomForestRegressor())]) 
     param_grid = {}
-    s = bootstrap(pipeline= pipe, param_grid= param_grid, n = 100,with_dist= True)
+    s = bootstrap(pipeline= pipe, param_grid= param_grid, n = n,with_dist= True)
     feature_dict = gen_feature_dict_d_tree(s,with_dist= True)
     plot_confidence_interval(feature_dict,"Coefficient_estimate_d_tree_with_distance")
 
