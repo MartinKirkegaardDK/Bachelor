@@ -37,17 +37,21 @@ def rf_with_distance():
     print(r2)
 
 
-def get_full_data():
+def get_full_data(distance = True):
 
-        X_dict, Y_dict = load_everthing_old()
-    distance  = pd.read_csv("data/distance_data/processed_distances.csv")
-    distance["0"] = distance["0"].fillna(0)
-    distance = distance['0'].to_list()
+    X_dict, Y_dict = load_everthing_old()
 
-    for key, value, new_number in zip(X_dict.keys(), X_dict.values(), distance):
-        X_dict[key] = value + (new_number,)
+    if distance:
+        distance  = pd.read_csv("data/distance_data/processed_distances.csv")
+        distance["0"] = distance["0"].fillna(0)
+        distance = distance['0'].to_list()
+
+        for key, value, new_number in zip(X_dict.keys(), X_dict.values(), distance):
+            X_dict[key] = value + (new_number,)
 
     return X_dict, Y_dict
+
+    
 
 
 
