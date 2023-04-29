@@ -13,4 +13,4 @@ def run():
                 pred, labels = get_pred_and_labels(clf,n = 0, with_distance= False)
             name = file.replace(".pkl","")
             name = name.replace("_"," ")
-            plot_r2(pred, labels,f"Pred vs labels {name}")
+            plot_r2(pred, labels,f"Predicted vs labels {name}")
