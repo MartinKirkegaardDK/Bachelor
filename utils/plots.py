@@ -39,6 +39,7 @@ def plot_r2(pred, labels, title):
     title = title.replace("dist ", "distance ")
     if title.endswith("dist"):
         title = title.replace("dist","distance")
+    title = title.replace("pca", "PCA")
     plt.plot([p1, p2], [p1, p2], 'b-',label = f"$R^2$ score = {round(r2_score(labels, pred),2)}")
     plt.xlabel('True Values', fontsize=15)
     plt.ylabel('Predictions', fontsize=15)
