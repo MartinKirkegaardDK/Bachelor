@@ -1,2 +1,2 @@
-from src.drivers.plots.plot_all_pred_vs_label import run
+from src.drivers.train_models.all_distance_metrics_without_pca import run
 run()
