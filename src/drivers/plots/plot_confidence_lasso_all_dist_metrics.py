@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from utils.utilities import bootstrap_all_distance_metrics
 
-n = 100
+n = 10
 
 def confidence_plot_lasso_without_dist_all_metrics_without_pca():
     pipe = Pipeline([("StandardScaler",StandardScaler()),("Lasso_regressor",LassoCV(max_iter= 10000))])

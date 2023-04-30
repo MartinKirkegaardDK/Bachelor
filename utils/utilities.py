@@ -215,7 +215,7 @@ def bootstrap(pipeline, param_grid,n = 100, with_dist = False, all_data = False)
     if with_dist:
         x,y = load_everthing_with_distance(test_size= 0.2, val_size=0.0)
         x = x["train"]
-        y = y=["train"]
+        y = y["train"]
     else:
         x,y = load_everthing(test_size= 0.2, val_size= 0)
         x = x["train"]
