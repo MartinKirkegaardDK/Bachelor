@@ -327,6 +327,7 @@ def gen_feature_dict_lasso(bootstrap_results, with_dist = False, all_distance = 
         for feature, value in zip(feature_list,run):
             #print(feature)
             d[feature].append(value)
+
     #Removes values outside n% confidence interval
     for key, val in d.items():
         n = 0.95

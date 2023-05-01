@@ -17,21 +17,21 @@ def confidence_plot_rf_continents():
     s = bootstrap_continents(pipeline= pipe, param_grid= param_grid, n = n)
     for continent, value in s.items():
         feature_dict = gen_feature_dict_rf(value)
-        plot_confidence_interval(feature_dict,f"Coefficient_estimate_d_tree_{continent}",continent= continent)
+        plot_confidence_interval(feature_dict,f"Coefficient_estimate_rf_{continent}",continent= continent)
 
 def confidence_plot_rf_without_dist():
     pipe = Pipeline( [("StandardScaler",StandardScaler()), ('rf', RandomForestRegressor())]) 
     param_grid = {}
     s = bootstrap(pipeline= pipe, param_grid= param_grid, n = n)
     feature_dict = gen_feature_dict_rf(s)
-    plot_confidence_interval(feature_dict,"Coefficient_estimate_d_tree")
+    plot_confidence_interval(feature_dict,"Coefficient_estimate_RF_without_dist")
 
 def confidence_plot_rf_with_dist():
     pipe = Pipeline( [("StandardScaler",StandardScaler()), ('rf', RandomForestRegressor())]) 
     param_grid = {}
     s = bootstrap(pipeline= pipe, param_grid= param_grid, n = n,with_dist= True)
     feature_dict = gen_feature_dict_rf(s,with_dist= True)
-    plot_confidence_interval(feature_dict,"Coefficient_estimate_d_tree_with_distance")
+    plot_confidence_interval(feature_dict,"Coefficient_estimate_RF_with_distance")
 
 def run():
     print("plotting confidence_plot_rf_without_dist")
