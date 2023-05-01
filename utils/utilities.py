@@ -173,6 +173,8 @@ def get_pred_and_labels(clf,n = 50, with_distance = False, all_distance_metrics 
     """samples n amount of datapoints and uses the model clf to predict
     if n = 0, then we dont sample anything and use the entire dataset"""
     if all_distance_metrics:
+        print("1")
+        print("with_distance",with_distance)
         x,y = load_all_distance_metrics(test_size= 0.2, val_size= 0,with_distance= with_distance)
         x = x["test"]
         y = y["test"]
@@ -180,10 +182,12 @@ def get_pred_and_labels(clf,n = 50, with_distance = False, all_distance_metrics 
 
     else:
         if with_distance == True:
+            print("2")
             x,y = load_everthing_with_distance(test_size= 0.2, val_size= 0)
             x = x["test"]
             y = y["test"]
         else:
+            print("3")
             x, y = load_everthing(test_size= 0.2, val_size= 0)
             x = x["test"]
             y = y["test"]

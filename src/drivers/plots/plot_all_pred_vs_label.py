@@ -19,3 +19,5 @@ def run():
             name = file.replace(".pkl","")
             name = name.replace("_"," ")
             plot_r2(pred, labels,f"Predicted vs labels {name}")
+            #break
+        
