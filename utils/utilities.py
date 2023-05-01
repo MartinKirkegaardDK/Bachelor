@@ -106,6 +106,7 @@ def gridsearch_all_distance_metrics(pipeline,param_grid, remove_threshold = 0,lo
     
     X = list(x.values())
     Y = [x[0] for x in y.values()]
+    print(Y)
     if log_transform == True:
         Y = np.log10(Y)
     #print(dataset)
@@ -169,7 +170,7 @@ def get_params(path):
 
 
 
-def get_pred_and_labels(clf,n = 50, with_distance = False, all_distance_metrics = False):
+def get_pred_and_labels(clf,n = 0, with_distance = False, all_distance_metrics = False):
     """samples n amount of datapoints and uses the model clf to predict
     if n = 0, then we dont sample anything and use the entire dataset"""
     if all_distance_metrics:
@@ -207,8 +208,8 @@ def get_pred_and_labels(clf,n = 50, with_distance = False, all_distance_metrics 
         x_final = x_l
         labels = np.log10(y_l)
 
-    pred = clf.best_estimator_.predict(x_final)
-    labels = [item for sublist in labels for item in sublist]
+    pred = clf.predict(x_final)
+    #labels = [item for sublist in labels for item in sublist]
     return pred, labels
 
 def bootstrap(pipeline, param_grid,n = 100, with_dist = False, all_data = False):
