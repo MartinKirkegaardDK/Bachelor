@@ -200,8 +200,6 @@ def make_split_dict(list_of_keys, test_size, val_size, seed = 1234):
     """Takes a list of keys, and the size of the test and val dataset as percentages"""
     random.seed(seed)
     d = dict()
-    test_size = 0.2
-    val_size = 0.1
     total = len(list_of_keys)
     all_keys = list_of_keys
     test = int(total*test_size)
