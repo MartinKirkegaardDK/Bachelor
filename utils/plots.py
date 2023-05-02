@@ -47,6 +47,7 @@ def plot_r2(pred, labels, title):
     plt.legend()
     plt.title(title)
     plt.savefig(f"plots/{title}.png")
+    plt.clf()
     #plt.show()
 
 def plot_confidence_interval_old(feature_dict,name, continent = None):
@@ -77,7 +78,7 @@ def plot_confidence_interval(feature_dict, name, continent=None):
         data_dict['lower'].append(min(val))
         data_dict['upper'].append(max(val))
     dataset = pd.DataFrame(data_dict)
-    
+   
     # Set figure size
     if len(dataset) > 50:
         plt.figure(figsize=(10, 10))
@@ -91,6 +92,8 @@ def plot_confidence_interval(feature_dict, name, continent=None):
     plt.axvline(x = 0, color = 'b', label = 'axvline - full height')
     plt.xlabel("Coefficient estimate")
     plt.yticks(range(len(dataset)),list(dataset['category']))
+
     plt.subplots_adjust(left = 0.25)
     plt.savefig(f"plots/{name}.png")
+    plt.clf()
     #plt.show()

@@ -51,7 +51,6 @@ def gridsearch(x_train,y_train, pipeline, param_grid,distance_metric,with_distan
     print("Best parameter (CV score=%0.3f):" % search.best_score_)
     print(search.best_params_)
     obj = result_object(search, distance_metric,x_train,y_train,"world",with_distance, save_model= False)
-    print("-"*75)
     return obj
 
 def run_confidence_interval(pipeline, param_grid,distance_metric, with_distance, all_distance_metrics, title):
@@ -92,7 +91,7 @@ def naming(with_distance, with_all_dist_metrics, pipeline, distance_metrics = No
     return name
 def do_everything(with_distance, with_all_dist_metrics, model):
     pipeline, param_grid = model()
-    print(pipeline.steps)
+    #print(pipeline.steps)
     x,y = loader(with_distance, with_all_dist_metrics)
     x_train, y_train, x_test, y_test = process(x,y)
     #If we use all the dist metrics, then we dont loop and simply run gridsearch and so on
@@ -123,6 +122,7 @@ def do_everything(with_distance, with_all_dist_metrics, model):
             plot_r2(pred, y_test,f"Predicted vs labels {name}")
 
 
+
 def run():
     with_all_dist_metrics = [True,False] 
     with_distances = [True, False]
@@ -130,5 +130,9 @@ def run():
     for all_dist_metric in with_all_dist_metrics:
         for with_distance in with_distances:
             for model in models:
+                print("with_distance: ",with_distance) 
+                print("all_dist_metric: ",all_dist_metric)
+                print("model: ",model)
                 do_everything(with_distance, all_dist_metric, model)
+                print("*"*75)
 run()
