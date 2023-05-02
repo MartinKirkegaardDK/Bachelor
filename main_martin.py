@@ -131,3 +131,4 @@ def run():
         for with_distance in with_distances:
             for model in models:
                 do_everything(with_distance, all_dist_metric, model)
+run()

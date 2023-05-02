@@ -21,7 +21,7 @@ def plot_gpt4(pred, labels):
     plt.title("Vores awesome plot som gpt-4 har hjulpet med :)")
     plt.legend()
     plt.savefig("plots/idk.png")
-    plt.show()
+    #plt.show()
 
 
 
@@ -47,7 +47,7 @@ def plot_r2(pred, labels, title):
     plt.legend()
     plt.title(title)
     plt.savefig(f"plots/{title}.png")
-    plt.show()
+    #plt.show()
 
 def plot_confidence_interval_old(feature_dict,name, continent = None):
     data_dict = defaultdict(list)
@@ -67,7 +67,7 @@ def plot_confidence_interval_old(feature_dict,name, continent = None):
     plt.yticks(range(len(dataset)),list(dataset['category']))
     plt.subplots_adjust(left = 0.25)
     plt.savefig(f"plots/{name}.png")
-    plt.show()
+    #plt.show()
 
 
 def plot_confidence_interval(feature_dict, name, continent=None):
@@ -93,4 +93,4 @@ def plot_confidence_interval(feature_dict, name, continent=None):
     plt.yticks(range(len(dataset)),list(dataset['category']))
     plt.subplots_adjust(left = 0.25)
     plt.savefig(f"plots/{name}.png")
-    plt.show()
+    #plt.show()
