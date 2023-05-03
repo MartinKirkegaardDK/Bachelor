@@ -123,7 +123,7 @@ def do_everything(with_distance, with_all_dist_metrics, model):
 
 
 
-def run():
+def run_all():
     with_all_dist_metrics = [True,False] 
     with_distances = [True, False]
     models = [lasso, lasso_pca, rf, rf_pca]
@@ -135,4 +135,56 @@ def run():
                 print("model: ",model)
                 do_everything(with_distance, all_dist_metric, model)
                 print("*"*75)
-run()
+
+
+def run1():
+    with_all_dist_metrics = [True] 
+    with_distances = [True]
+    models = [lasso, lasso_pca, rf, rf_pca]
+    for all_dist_metric in with_all_dist_metrics:
+        for with_distance in with_distances:
+            for model in models:
+                print("with_distance: ",with_distance) 
+                print("all_dist_metric: ",all_dist_metric)
+                print("model: ",model)
+                do_everything(with_distance, all_dist_metric, model)
+                print("*"*75)
+
+def run2():
+    with_all_dist_metrics = [False] 
+    with_distances = [False]
+    models = [lasso, lasso_pca, rf, rf_pca]
+    for all_dist_metric in with_all_dist_metrics:
+        for with_distance in with_distances:
+            for model in models:
+                print("with_distance: ",with_distance) 
+                print("all_dist_metric: ",all_dist_metric)
+                print("model: ",model)
+                do_everything(with_distance, all_dist_metric, model)
+                print("*"*75)
+
+def run3():
+    with_all_dist_metrics = [True] 
+    with_distances = [False]
+    models = [lasso, lasso_pca, rf, rf_pca]
+    for all_dist_metric in with_all_dist_metrics:
+        for with_distance in with_distances:
+            for model in models:
+                print("with_distance: ",with_distance) 
+                print("all_dist_metric: ",all_dist_metric)
+                print("model: ",model)
+                do_everything(with_distance, all_dist_metric, model)
+                print("*"*75)
+
+def run4():
+    with_all_dist_metrics = [False] 
+    with_distances = [True]
+    models = [lasso, lasso_pca, rf, rf_pca]
+    for all_dist_metric in with_all_dist_metrics:
+        for with_distance in with_distances:
+            for model in models:
+                print("with_distance: ",with_distance) 
+                print("all_dist_metric: ",all_dist_metric)
+                print("model: ",model)
+                do_everything(with_distance, all_dist_metric, model)
+                print("*"*75)
