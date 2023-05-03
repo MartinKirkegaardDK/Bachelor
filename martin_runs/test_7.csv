@@ -1,9 +1,0 @@
-params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
-"{'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5958179795453697,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
-"{'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.40982830046684715,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
-"{'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4629172742888816,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
-"{'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.5057345380442755,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
