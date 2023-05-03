@@ -1,3 +1,9 @@
 params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
-{},0.5445992078545784,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
+"{'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5570146710240322,EucDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.4259360631264081,EucDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4656436403351842,EucDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4972599915953394,EucDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
