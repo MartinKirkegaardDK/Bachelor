@@ -41,7 +41,7 @@ class result_object():
         d["dataset"] =  [dataset for _ in range(len(d)) ]
         #d["score"] = grid_search.best_score_
         d["model_file_name"] =  [self.model_name for _ in range(len(d)) ]
-        d["pipeline"] = self.pipeline
+        d["pipeline"] = [self.pipeline for _ in range(len(d)) ] 
         d["region"] = [self.region for _ in range(len(d))]
         d["with_distance"] = [self.with_distance for _ in range(len(d))]
         d["model_name"] = [self.pipeline[-1] for _ in range(len(d)) ] 

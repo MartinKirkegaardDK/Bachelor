@@ -54,7 +54,7 @@ def gridsearch(x_train,y_train, pipeline, param_grid,distance_metric,with_distan
     return obj
 
 def run_confidence_interval(pipeline, param_grid,distance_metric, with_distance, all_distance_metrics, title):
-    n = 5
+    n = 100
     if "Lasso_regressor" == pipeline.steps[-1][0]:
         feature_dict_function = gen_feature_dict_lasso
     elif "rf" == pipeline.steps[-1][0]:
