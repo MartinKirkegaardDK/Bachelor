@@ -76,3 +76,18 @@ def Choropleth_map(country_code):
 
 
 
+
+
+def make_flourish_data():
+    # Converting the country codes
+    iso3_codes = friendship_data['user_loc'].to_list()
+    iso2_codes_list = coco.convert(names=iso3_codes, to='ISO3', not_found='NULL')
+    friendship_data['user'] = iso2_codes_list
+    # There are some countries for which the converter could not find a country code. 
+    # We will drop these countries.
+
+    iso3_codes = friendship_data['fr_loc'].to_list()
+    iso2_codes_list = coco.convert(names=iso3_codes, to='ISO3', not_found='NULL')
+    friendship_data['friend'] = iso2_codes_list
+
+    friendship_data = friendship_data.drop(friendship_data.loc[friendship_data['iso2_code'] == 'NULL'].index)
