@@ -3,7 +3,7 @@ from sklearn.pipeline import Pipeline
 from utils.utilities import result_object
 from utils.load import load_everthing, load_everthing_with_distance, load_all_distance_metrics
 import numpy as np
-from utils.ml_models import lasso, lasso_pca, rf, rf_pca
+from utils.ml_models import lasso, lasso_pca, rf, rf_pca, ridge
 from utils.utilities import bootstrap_all_distance_metrics, bootstrap, gen_feature_dict_lasso, gen_feature_dict_rf
 from utils.plots import plot_confidence_interval
 from utils.plots import plot_r2
@@ -77,7 +77,8 @@ def naming(with_distance, with_all_dist_metrics, pipeline, distance_metrics = No
         name+= "LASSO "
     elif "rf" == pipeline.steps[-1][0]:
         name+= "RF "
-    
+    elif "Ridge_regressor" == pipeline.steps[-1][0]:
+        name+= "RIDGE "
     if with_distance:
         name+= " with distance"
     if with_all_dist_metrics:
@@ -103,7 +104,8 @@ def do_everything(with_distance, with_all_dist_metrics, model):
         obj = gridsearch(x_train, y_train, pipeline, param_grid, distance_metric, with_distance)
         search = obj.gridsearch
         if "PCA" not in name:
-            run_confidence_interval(pipeline, param_grid, distance_metric, with_distance,with_all_dist_metrics,f"Coefficient estimate {name}")
+            pass
+            #run_confidence_interval(pipeline, param_grid, distance_metric, with_distance,with_all_dist_metrics,f"Coefficient estimate {name}")
         pred = search.best_estimator_.predict(x_test)
         plot_r2(pred, y_test,f"Predicted vs labels {name}")
     else:
@@ -117,7 +119,7 @@ def do_everything(with_distance, with_all_dist_metrics, model):
             x_test_elm = x_test_elm[1]
             obj = gridsearch(x_train_elm, y_train, pipeline, param_grid, distance_metric, with_distance)
             search = obj.gridsearch
-            run_confidence_interval(pipeline, param_grid, distance_metric, with_distance,with_all_dist_metrics,f"Coefficient estimate {name}")
+            #run_confidence_interval(pipeline, param_grid, distance_metric, with_distance,with_all_dist_metrics,f"Coefficient estimate {name}")
             pred = search.best_estimator_.predict(x_test_elm)
             plot_r2(pred, y_test,f"Predicted vs labels {name}")
 
@@ -188,3 +190,18 @@ def run4():
                 print("model: ",model)
                 do_everything(with_distance, all_dist_metric, model)
                 print("*"*75)
+
+def run5():
+    with_all_dist_metrics = [True,False] 
+    with_distances = [True, False]
+    models = [ridge]
+    for all_dist_metric in with_all_dist_metrics:
+        for with_distance in with_distances:
+            for model in models:
+                print("with_distance: ",with_distance) 
+                print("all_dist_metric: ",all_dist_metric)
+                print("model: ",model)
+                do_everything(with_distance, all_dist_metric, model)
+                print("*"*75)
+
+run5()

@@ -1,0 +1,3 @@
+params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
+{},0.4070331767514106,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,True,RidgeCV()

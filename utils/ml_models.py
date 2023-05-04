@@ -1,6 +1,6 @@
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LassoCV
+from sklearn.linear_model import LassoCV, RidgeCV
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestRegressor
 
@@ -29,4 +29,9 @@ def rf_pca():
                   "rf__criterion": ["squared_error"],
                   #"rf__criterion": ["squared_error","absolute_error"],
                   "rf__max_depth": [None, 3,5,7]}
+    return pipe, param_grid
+
+def ridge():
+    pipe =  Pipeline([("StandardScaler",StandardScaler()),("Ridge_regressor",RidgeCV())])
+    param_grid = {}
     return pipe, param_grid
