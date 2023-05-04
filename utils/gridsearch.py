@@ -105,3 +105,13 @@ def gridsearch_continent(pipeline,param_grid, log_transform = True, update_merge
         if update_merge_df == True:
             merge_dfs()
     return obj_list
+
+def gridsearch_new(x_train,y_train, pipeline, param_grid,distance_metric,with_distance):
+    print("running gridsearch")
+    search = GridSearchCV(pipeline, param_grid, n_jobs=2,scoring= "r2")
+
+    search.fit(x_train, y_train)
+    print("Best parameter (CV score=%0.3f):" % search.best_score_)
+    print(search.best_params_)
+    obj = result_object(search, distance_metric,x_train,y_train,"world",with_distance, save_model= False)
+    return obj

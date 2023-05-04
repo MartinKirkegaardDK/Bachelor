@@ -3,15 +3,15 @@ import pandas as pd
 import joblib
 import numpy as np
 import random
-from utils.load import load_everthing, get_feature_names, load_everthing_old
-from sklearn.model_selection import GridSearchCV
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2, f_regression
-from utils.load import load
 from collections import defaultdict
+from sklearn.model_selection import GridSearchCV
+from utils.load import load_everthing
+from utils.load import load
 from utils.load import load_everthing_with_continents
 from utils.load import load_everthing_with_distance
 from utils.load import load_all_distance_metrics
+from utils.load import loader
+from utils.plots import plot_confidence_interval
 
 def naming(path: str, name: str, extension: str) -> str:
     return path + name + "_" + str(len(os.listdir(path)) + 1) +"." + extension
@@ -215,6 +215,7 @@ def remove_outside_confidence_interval(n, li):
 
 
 
+
 def gen_feature_dict_lasso(bootstrap_results, with_dist = False, all_distance = False):
     param_list = [x.best_estimator_.steps[-1][-1].coef_ for x in bootstrap_results]
     feature_list = []
@@ -270,23 +271,108 @@ def gen_feature_dict_rf(bootstrap_results, with_dist = False, all_distance = Fal
         d[key] = remove_outside_confidence_interval(n,val)
     return d
 
-# def gen_feature_dict_d_tree(bootstrap_results, with_dist = False):
-#     param_list = [x.best_estimator_.steps[-1][-1].feature_importances_ for x in bootstrap_results]
-#     feature_list = []
-#     for file in os.listdir("data/fb_data/"):
-#         if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
-#             feature = file.split("_")[1]
-#             feature = feature.replace(".csv","")
-#             feature_list.append(feature)
-#     if with_dist == True:
-#         feature_list.append("distance")
-#     d = defaultdict(list)
-#     for run in param_list:
-#         for feature, value in zip(feature_list,run):
-#             d[feature].append(value)
 
-#     #Removes values outside n% confidence interval
-#     for key, val in d.items():
-#         n = 0.95
-#         d[key] = remove_outside_confidence_interval(n,val)
-#     return d
+def gen_feature_dict(bootstrap_results, model_type, with_dist = False, all_distance = False):
+    """NOT IN USE"""
+    if model_type not in ["lasso","rf","ridge"]:
+        raise ValueError('model_type not ["lasso","rf","ridge"]')
+    if model_type in ["lasso", "ridge"]:
+        param_list = [x.best_estimator_.steps[-1][-1].coef_ for x in bootstrap_results]
+    elif model_type == "rf":
+        param_list = [x.best_estimator_.steps[-1][-1].feature_importances_ for x in bootstrap_results]
+
+    feature_list = []
+    for file in os.listdir("data/fb_data/"):
+        if all_distance:
+            if (file.endswith(".csv")) and ("_" in file):
+                #print(file)
+                feature = file.replace(".csv","")
+                feature_list.append(feature)
+        else:
+            if ("CosDist" in file) and (file.endswith(".csv")) and (file != "FBCosDist.csv"):
+                feature = file.split("_")[1]
+                feature = feature.replace(".csv","")
+                feature_list.append(feature)
+    if with_dist == True:
+        feature_list.append("distance")
+    d = defaultdict(list)
+    for run in param_list:
+        for feature, value in zip(feature_list,run):
+            #print(feature)
+            d[feature].append(value)
+
+    #Removes values outside n% confidence interval
+    for key, val in d.items():
+        n = 0.95
+        d[key] = remove_outside_confidence_interval(n,val)
+    return d
+
+
+def process(x,y):
+    """This function converts the data into the train and test data. It also performs log transormation of labels(Y)"""
+    if "CosDist" in x["train"]:
+        x_train = dict()
+        x_test = dict()
+        for distance_metric, val in x["train"].items():
+            x_train_temp = list(val.values())
+            x_train[distance_metric] = x_train_temp
+        for distance_metric, val in x["test"].items():
+            x_test_temp = list(val.values())
+            x_test[distance_metric] = x_test_temp
+    else:
+        x_train = x["train"]
+        x_test = x["test"]
+        x_train = list(x_train.values())
+        x_test = list(x_test.values())
+    y_train = y["train"]
+    y_test = y["test"]
+    y_train = [np.log10(x[0]) for x in list(y_train.values())]
+    y_test = [np.log10(x[0]) for x in list(y_test.values())]
+    return x_train, y_train, x_test, y_test
+
+def file_name(with_distance, with_all_dist_metrics, pipeline, distance_metrics = None):
+    
+    name = ""
+
+    if "Lasso_regressor" == pipeline.steps[-1][0]:
+        name+= "LASSO "
+    elif "rf" == pipeline.steps[-1][0]:
+        name+= "RF "
+    elif "Ridge_regressor" == pipeline.steps[-1][0]:
+        name+= "RIDGE "
+    if with_distance:
+        name+= " with distance"
+    if with_all_dist_metrics:
+        name+= " all distance metrics"
+
+    if "PCA" == pipeline.steps[-2][0]:
+        name+= " with PCA" 
+    
+    if distance_metrics != None:
+        name+= " " +distance_metrics
+    return name
+
+
+def run_confidence_interval(pipeline, param_grid,distance_metric, with_distance, all_distance_metrics, title):
+    n = 1
+    if n != 100:
+        print(f"n={n} "*20)
+    if "Lasso_regressor" == pipeline.steps[-1][0]:
+        feature_dict_function = gen_feature_dict_lasso
+    elif "rf" == pipeline.steps[-1][0]:
+        feature_dict_function = gen_feature_dict_rf
+    elif "Ridge_regressor" == pipeline.steps[-1][0]:
+        feature_dict_function = gen_feature_dict_lasso
+
+    
+    if all_distance_metrics:
+        s = bootstrap_all_distance_metrics(pipeline= pipeline, param_grid= param_grid,with_dist= with_distance, n = n)
+        feature_dict = feature_dict_function(s, with_dist= with_distance, all_distance= all_distance_metrics)
+        feature_dict = dict( sorted(feature_dict.items(), key=lambda x: x[0].lower()) )
+    else:
+        s = bootstrap(pipeline= pipeline, param_grid= param_grid,distance_metric=distance_metric,with_dist= with_distance, n = n)
+        feature_dict = feature_dict_function(s, with_dist= with_distance)
+    plot_confidence_interval(feature_dict,title)
+
+
+

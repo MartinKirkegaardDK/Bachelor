@@ -35,3 +35,4 @@ def ridge():
     pipe =  Pipeline([("StandardScaler",StandardScaler()),("Ridge_regressor",RidgeCV())])
     param_grid = {}
     return pipe, param_grid
+

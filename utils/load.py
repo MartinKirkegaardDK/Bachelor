@@ -480,3 +480,16 @@ def load_iso_dict():
             f = f.readlines()
             d[file.replace(".txt","")] = [x.replace("\n","") for x in f]
     return d
+
+def loader(with_distance, all_dist_metrics):
+    """This function simply loads our data"""
+    test_size = 0.2
+    val_size = 0
+    if all_dist_metrics:
+        x,y = load_all_distance_metrics(test_size = test_size, val_size = val_size, with_distance = with_distance)
+    else:
+        if with_distance:
+            x,y = load_everthing_with_distance(test_size = test_size, val_size = val_size)
+        else:
+            x,y = load_everthing(test_size = test_size, val_size = val_size)
+    return x,y
