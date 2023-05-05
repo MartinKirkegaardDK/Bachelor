@@ -1,15 +1,12 @@
 #from src.examples.random_forrest import model
-from src.Random_forest.rf_all_data import rf_with_distance, rf_without_distance, rf_with_distance_pipe
+from src.drivers.plots.hist_compare_r2_scores import rf, train_lr_only_dist,lf
 
+rf()
+print("Done with rf")
 
-#print("with distance")
-#rf_with_distance()
+print("Training lr")
+train_lr_only_dist()
+print("Done Training lr")
 
-
-
-#print("without distance")
-#rf_without_distance()
-
-
-print("pipe")
-rf_with_distance_pipe()
+lf()
+print("Done making lr plot")

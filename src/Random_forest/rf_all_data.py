@@ -39,8 +39,6 @@ def rf_with_distance():
 
 
 
-
-
 def rf_with_distance_pipe():
 
     X_dict, Y_dict = load_everthing_old()
@@ -56,7 +54,6 @@ def rf_with_distance_pipe():
 
     Y = [i[0] for i in Y_dict.values()]
     Y = np.log10(Y)
-
 
 
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=42)
