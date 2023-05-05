@@ -1,0 +1,161 @@
+params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.18102885615007983,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.2455389914984149,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.29251529145400956,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.2937294965295097,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.3253210935635358,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.2453613732711819,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.31175674949229865,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.3335007497269885,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.4648339199065835,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3316088586665876,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4259299086113648,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.46007151218492126,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5008538703050285,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.332688116488542,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.43312809251748474,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.47277912028882063,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5224598729775345,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3331556935065387,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.43314184686903073,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.478417608931834,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5267172923061072,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.33453350472314675,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4335877166529622,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4790739548248214,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5328798533844559,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3353421754125642,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.43479679707773633,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4809875722412487,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5413867170669983,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.33289335888546373,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.435671498390256,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4842550133984636,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5430227920709816,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3337597868099983,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4358849407555507,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4846024103238177,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5519408863198638,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3358010573268121,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.441195194527735,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.48797134487829447,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5536181874756366,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.33591532901453014,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44124627660958693,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.48934991635347325,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5601270087042647,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.33430834160768763,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4424824242840934,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.48981583177982635,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5665960040754263,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3321682684477194,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4422758562921737,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4936347235060127,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5671704192962979,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3342444882784564,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44160191023252776,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.49283714858975447,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5679633336275325,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3342286816554362,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44188447032057654,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4932954897684493,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5728286232993745,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3349216630237418,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44342635021846083,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4959810241933463,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5723592095646917,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.33406936149869043,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44220560863946423,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.49327964939632596,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5705261207447249,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.335368540767205,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.442620219174547,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4951536461518603,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.56911941085106,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.33566602447397453,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44332176021782954,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.49357736061335855,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
