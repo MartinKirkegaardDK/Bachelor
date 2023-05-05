@@ -1,0 +1,161 @@
+params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 0, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.0015164834764467504,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.11678244010164415,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.13840606051812723,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 2, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.14067277101826614,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.41129275125520215,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3558945635676364,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.3929140085768532,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 4, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4156448294430821,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.49505263269743016,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.35903959614734865,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4288697100799205,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 6, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4679618925904358,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5271216799628087,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3633736382652297,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4358757509228046,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 8, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.48155291360421604,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5407858298973883,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.36577342624816017,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.43546063957789033,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 10, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4838558593692287,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5530614635478679,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.36371953210399643,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.43762069092260864,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 12, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.4864187873331434,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5695766944934467,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.3614883881920147,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.44102120091886493,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 14, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.49593448047259026,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",0.5828265856529473,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",0.36612023920804004,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",0.4487212532103646,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 16, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",0.5053018440427444,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 18, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 20, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 22, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 24, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 26, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 28, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 30, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 32, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 34, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 36, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': None}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': 3}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': 5}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
+"{'PCA__n_components': 38, 'rf__criterion': 'squared_error', 'rf__max_depth': 7}",,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+                ('rf', RandomForestRegressor())])",world,True,RandomForestRegressor()
