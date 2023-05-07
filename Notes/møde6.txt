@@ -51,3 +51,10 @@ ville være en god ide at havde med. Hvad synes du?
 
 q9
 Skal vi kunne argumentere for hvordan det kan være at nogle af vores features coefficient estimates er minus.
+
+
+Q10. 
+Hvorfor skal vi rykke comparing with distance ned i resultater?
+
+Q11.
+Hvorfor skal vi slette bootstrapping
