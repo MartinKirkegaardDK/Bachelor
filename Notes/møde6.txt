@@ -48,3 +48,6 @@ og "all data without distance" for at se om facebooks interesse kategorier har e
 q8
 vi har også lavet et SHAP-plot, men skal vi bruge det? Vi har skrevet lidt om det og synes det 
 ville være en god ide at havde med. Hvad synes du?
+
+q9
+Skal vi kunne argumentere for hvordan det kan være at nogle af vores features coefficient estimates er minus.
