@@ -1,3 +1,0 @@
-params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
-{},0.5883490409252964,all_distance_metrics,martin_models/test_3.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
-                ('rf', RandomForestRegressor())])",world,False,RandomForestRegressor()
