@@ -1,63 +1,51 @@
-q1
-A study called Individual differences predicting social connectedness derived from Face-
-book: Some unexpected findings examined the predictors of social connectedness from
-Facebook use. It determined that older age and positive attitudes toward Face-
-book were found to enhance social connectedness. Personality factors, including
-extraversion, openness to experiences, and emotional stability, further strengthened
-these effects. These findings suggest implications for social connectedness among
-older adults and highlight the role of emotional stability in generating social capi-
-tal. (Grieve and Kemp, 2015
-
-vores tanker:
-Grunden til at det er relevant er grundet at de også har fundet ud af at facebook kan bruges som en proxy
- til at måle og afspejler menneskelige træk som venskaber.
- Da de også har fundet ud af at facebook kan bruges som en proxy, 
-det kan være endnu et argument for at besvare spørgsmålet
- om facebook data kan bruges til at forudsige forbindelser
-
-er det for tyndt eller er det et godt argument?
-
-
-q2
+Q0.
 The reason we want to standardize is that many learning algorithms are under the assumption that features
 are centered around mean 0, and have a variance within the same order of magnitude. 
 This is because standardizing features helps prevent numerical instability, 
 which occurs when the scale of the features is too different from each other, 
 which can also lead to bias towards features with larger scales.
 
-q3
-sektion 3.4
-Giver det mening at havde med? Vi har ikke nogle resultater lige pt, skal vi skaffe dem?`
-
-q4
+Q1.
 Vi har som sådan ikke lave en gridsearch på hyper parameters på lasso. 
 Dog har vi fundet tol og iter som gør at den ikke crasher. Er det gridsearch nok eller skal vi gøre mere?
 
-q5
+Q2.
 Hvor meget skal vi citere? Er det efter hvert afsnit eller hvordan?
 
-q6
+Q3.
 Vi har prøvet at undersøge meget hvad "bilateral distance on a city-level basis" helt konkret betyder
 Er det noget du kan hjælpe med?
 Skal vi overhoved vide det, eller er det nok at skrive at det er en fysisk distance imellem to lande?
 
-q7
+Q4.
 Giver det mere mening at lave en hypotese test imellem en baseline model som fx "distance" 
 og "all data without distance" for at se om facebooks interesse kategorier har en statisk signifikans
 
-q8
+Q5.
 vi har også lavet et SHAP-plot, men skal vi bruge det? Vi har skrevet lidt om det og synes det 
 ville være en god ide at havde med. Hvad synes du?
 
-q9
+Q6.
 Skal vi kunne argumentere for hvordan det kan være at nogle af vores features coefficient estimates er minus.
 
 
-Q10. 
+Q7. 
 Hvorfor skal vi rykke comparing with distance ned i resultater?
 
-Q11.
+Q8.
 Hvorfor skal vi slette bootstrapping
 
-Q12.
+Q9.
 Hvem har definieret interest categories? Facebook eller the paper? 
+
+Q10. 
+Skal vi kalde det social connectedness eller bare connectedness?
+
+Q11.
+Giver denne sætning mening:
+To define and query groups, location is the only mandatory field in the Facebook Marketing API, which is worth mentioning since locational data is an essential component of our study.
+
+Q12.
+Hvordan er det med appendix? 
+Skal man referere til det? Vi har f.eks. logget og lavet i plot og lagt det i appendix. Kan/skal vi så referere til plottet, f.eks.: "See appendix"
+
