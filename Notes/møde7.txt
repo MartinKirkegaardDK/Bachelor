@@ -49,3 +49,6 @@ Q12.
 Hvordan er det med appendix? 
 Skal man referere til det? Vi har f.eks. logget og lavet i plot og lagt det i appendix. Kan/skal vi så referere til plottet, f.eks.: "See appendix"
 
+
+Q13.
+Skal vi fokusere på kun cosinus eller alle distance metrics sammen når vi kigger på coefficient plotsne.?
