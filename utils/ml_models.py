@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 def lasso():
     pipe =  Pipeline([("StandardScaler",StandardScaler()),("Lasso_regressor",LassoCV(max_iter= 100000, tol= 0.001))])
-    param_grid = {}
+    param_grid = {"Lasso_regressor__alphas":[1,2,3]}
     return pipe, param_grid
 
 def lasso_pca():
