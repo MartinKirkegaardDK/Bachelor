@@ -1,21 +1,21 @@
 params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
 {'PCA__n_components': 0},,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{'PCA__n_components': 2},0.0400546709346421,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+{'PCA__n_components': 2},0.040054670767169086,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{'PCA__n_components': 4},0.28297403473057886,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+{'PCA__n_components': 4},0.28297403558879886,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
 {'PCA__n_components': 6},0.3151560787899478,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{'PCA__n_components': 8},0.3401431657988957,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+{'PCA__n_components': 8},0.3401431657988958,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
 {'PCA__n_components': 10},0.3452990442360015,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{'PCA__n_components': 12},0.34736059597625096,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+{'PCA__n_components': 12},0.34736059597625113,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{'PCA__n_components': 14},0.38663540479574526,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+{'PCA__n_components': 14},0.3866354047957453,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
-{'PCA__n_components': 16},0.40615738140933716,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
+{'PCA__n_components': 16},0.40615738140933705,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"
 {'PCA__n_components': 18},,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()), ('PCA', PCA()),
                 ('Lasso_regressor', LassoCV(max_iter=100000, tol=0.001))])",world,True,"LassoCV(max_iter=100000, tol=0.001)"

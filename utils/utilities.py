@@ -354,7 +354,7 @@ def file_name(with_distance, with_all_dist_metrics, pipeline, distance_metrics =
 
 
 def run_confidence_interval(pipeline, param_grid,distance_metric, with_distance, all_distance_metrics, title):
-    n = 1
+    n = 100
     if n != 100:
         print(f"n={n} "*20)
     if "Lasso_regressor" == pipeline.steps[-1][0]:
