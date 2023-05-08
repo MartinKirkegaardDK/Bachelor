@@ -58,3 +58,7 @@ Hvorfor skal vi rykke comparing with distance ned i resultater?
 
 Q11.
 Hvorfor skal vi slette bootstrapping
+
+Q12.
+Hvis vi gerne vil snakke om vores modeller der er trænet ved hjælp af PCA kan vi så godt sige at vi prøvede men det
+blev ikke så godt i vores results sektion
