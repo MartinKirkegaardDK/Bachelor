@@ -2,11 +2,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from utils.utilities import process, run_confidence_interval, file_name
 from utils.gridsearch import gridsearch_new
-from utils.load import load_everthing, load_everthing_with_distance, load_all_distance_metrics, loader
-import numpy as np
+from utils.load import loader
 from utils.ml_models import lasso, lasso_pca, rf, rf_pca, ridge
-from utils.utilities import bootstrap_all_distance_metrics, bootstrap, gen_feature_dict_lasso, gen_feature_dict_rf
-from utils.plots import plot_confidence_interval
 from utils.plots import plot_r2
 import warnings
 warnings.filterwarnings('ignore')

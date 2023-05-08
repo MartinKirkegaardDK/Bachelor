@@ -22,20 +22,20 @@ def get_common(fb_data, friendship_data):
 def get_intersection():
     """Gets all the correct ISO-codes. This means the intersection of all ISO-codes in our datasets"""
     friendship_data = pd.read_csv("data/friendship_data/countries-countries-fb-social-connectedness-index-october-2021.tsv", delimiter= "\t",keep_default_na=False)
-    friendship_data = remove_self_loops(friendship_data,"user_loc","fr_loc")
+    friendship_data = remove_self_loops(friendship_data)
     fb_data = pd.read_csv("data/fb_data/FBCosDist.csv", delimiter= ",",keep_default_na=False)
-    fb_data = remove_self_loops(fb_data,"ISO_CODE_1","ISO_CODE_2")
+    fb_data = remove_self_loops(fb_data)
     fb_data, friendship_data = get_common(fb_data, friendship_data)
 
     all_uniques = set(fb_data["ISO_CODE_1"])
-    for file in os.listdir("fb_data"):
+    for file in os.listdir("data/fb_data/"):
         #We only look for csv files, not the other files
         if file.endswith(".csv"):
             #Since we already analyse the dist files, we skip them
             if file in ["FBCosDist.csv","FBEucDist.csv"]:
                 continue
 
-            file = "fb_data/" + file
+            file = "data/fb_data/" + file
             fb_data_file = pd.read_csv(file, delimiter= ",",keep_default_na = False)
             row_uniques = set(fb_data_file["ISO_CODE"])
             col_uniques = set(fb_data_file.columns)

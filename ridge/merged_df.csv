@@ -1,0 +1,21 @@
+params,mean_test_score,dataset,model_file_name,pipeline,region,with_distance,model_name
+{},0.4070331767514106,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,True,RidgeCV()
+{},0.4023069227804122,EucDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,True,RidgeCV()
+{},0.2237903186726795,EucDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,False,RidgeCV()
+{},0.537486829117516,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,False,RidgeCV()
+{},0.2963481838111164,HetDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,True,RidgeCV()
+{},0.2179293838967103,ManDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,False,RidgeCV()
+{},0.5444855549617925,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,True,RidgeCV()
+{},0.604967979458576,all,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,True,RidgeCV()
+{},0.0307294238770053,HetDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,False,RidgeCV()
+{},0.4497328799101724,CosDist,martin_models/test_1.pkl,"Pipeline(steps=[('StandardScaler', StandardScaler()),
+                ('Ridge_regressor', RidgeCV())])",world,False,RidgeCV()
