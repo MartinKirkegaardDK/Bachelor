@@ -1,4 +1,7 @@
 Q0.
+Skal vi beskrive hvorfor det giver mening/er godt at være mean 0 og det med variance?
+
+
 The reason we want to standardize is that many learning algorithms are under the assumption that features
 are centered around mean 0, and have a variance within the same order of magnitude. 
 This is because standardizing features helps prevent numerical instability, 
@@ -8,6 +11,7 @@ which can also lead to bias towards features with larger scales.
 Q1.
 Vi har som sådan ikke lave en gridsearch på hyper parameters på lasso. 
 Dog har vi fundet tol og iter som gør at den ikke crasher. Er det gridsearch nok eller skal vi gøre mere?
+Hvilken parameter skal det være
 
 Q2.
 Hvor meget skal vi citere? Er det efter hvert afsnit eller hvordan?
@@ -18,8 +22,7 @@ Er det noget du kan hjælpe med?
 Skal vi overhoved vide det, eller er det nok at skrive at det er en fysisk distance imellem to lande?
 
 Q4.
-Giver det mere mening at lave en hypotese test imellem en baseline model som fx "distance" 
-og "all data without distance" for at se om facebooks interesse kategorier har en statisk signifikans
+Spørger verdran om SCI-score burde være bi-directional
 
 Q5.
 vi har også lavet et SHAP-plot, men skal vi bruge det? Vi har skrevet lidt om det og synes det 
@@ -28,7 +31,6 @@ ville være en god ide at havde med. Hvad synes du?
 Q6.
 Skal vi kunne argumentere for hvordan det kan være at nogle af vores features coefficient estimates er minus.
 
-
 Q7. 
 Hvorfor skal vi rykke comparing with distance ned i resultater?
 
@@ -36,10 +38,7 @@ Q8.
 Hvorfor skal vi slette bootstrapping
 
 Q9.
-Hvem har definieret interest categories? Facebook eller the paper? 
-
-Q10. 
-Skal vi kalde det social connectedness eller bare connectedness?
+Hvem har definieret interest categories? Facebook eller the paper? (de 15 kategorier)
 
 Q11.
 Giver denne sætning mening:
@@ -52,3 +51,19 @@ Skal man referere til det? Vi har f.eks. logget og lavet i plot og lagt det i ap
 
 Q13.
 Skal vi fokusere på kun cosinus eller alle distance metrics sammen når vi kigger på coefficient plotsne.?
+
+q14
+Hvor mege skal vi vide om være feature? Altså skal vi vide PRÆCIS hvad TravelPlacesEvents er?
+
+q15
+
+
+Hvis to lande er ens, så er cosinus minus 1
+Hivs to lande er forskellige, så er cosinus 1
+
+
+Hvis to lande er ens og er til venstre, så giver outputtet positivt.
+Hvis to lande er forskellige og til venstre, så er outputtet negativt
+His to lande er ens og til højre, så giver ouputtet negativt
+Hvis to lande er forskellige og til højre, så giver outputtet positivt
+
