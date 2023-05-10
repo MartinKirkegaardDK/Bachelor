@@ -1,9 +1,9 @@
 Q1. Ift. hyper-parametre for LR: Har vi beskrevet dem nok? 
 
-Q2. Hvem har defineret interest categories? FB eller papiret? 
-
 Q3. Skal vi fjerne bootstrapping? 
 
 Q4. Skal vi rykke "comparing with distance" ned i resultater?
 
 Q5.  I PCA er længden af vektoren så det der bestemmer dens importance?
+
+Q6. Hvorfor standardizer vi overhovet vores cosine når den allerede er mellem 0-1?
