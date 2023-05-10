@@ -7,3 +7,7 @@ Q3. Skal vi fjerne bootstrapping?
 Q4. Skal vi rykke "comparing with distance" ned i resultater?
 
 Q5.  I PCA er længden af vektoren så det der bestemmer dens importance?
+
+Q6. Hvordan kan vi titlen slutte? Estimating country connections from similarity of cultures and interests: A bottom-up approach of... 
+- analyzing Facebook data
+- using Facebook data
