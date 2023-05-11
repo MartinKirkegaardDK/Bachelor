@@ -14,3 +14,5 @@ Q6. Hvis vi refererer til en papar skal vi så inkludere sidetallet?
 Q7. skal vi refererer til hver modul til sklearn eller bare sklearn
 
 Q8. Significance test på random forest - hvordan
+
+Q9. I appendix skal vi så have alle plots med selv om vi ikke refererer til dem.
