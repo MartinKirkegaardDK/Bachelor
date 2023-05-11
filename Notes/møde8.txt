@@ -12,3 +12,4 @@ Q6. Hvorfor standardizer vi overhovet vores cosine når den allerede er mellem 0
 Q6. Hvis vi refererer til en papar skal vi så inkludere sidetallet?
 
 
+Q7. skal vi refererer til hver modul til sklearn eller bare sklearn
