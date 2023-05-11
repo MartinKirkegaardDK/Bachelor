@@ -1,4 +1,5 @@
-Q1. Ift. hyper-parametre for LR: Har vi beskrevet dem nok? 
+Q1. Hvad mener du med den kommentar du har skrevet under future work? 
+
 
 Q3. Skal vi fjerne bootstrapping? 
 
@@ -9,3 +10,5 @@ Q5.  I PCA er længden af vektoren så det der bestemmer dens importance?
 Q6. Hvorfor standardizer vi overhovet vores cosine når den allerede er mellem 0-1?
 
 Q6. Hvis vi refererer til en papar skal vi så inkludere sidetallet?
+
+
