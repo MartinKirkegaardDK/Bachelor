@@ -6,5 +6,6 @@ Q4. Skal vi rykke "comparing with distance" ned i resultater?
 
 Q5.  I PCA er længden af vektoren så det der bestemmer dens importance?
 
+Q6. Hvorfor standardizer vi overhovet vores cosine når den allerede er mellem 0-1?
 
 Q6. Hvis vi refererer til en papar skal vi så inkludere sidetallet?
